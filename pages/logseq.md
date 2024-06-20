@@ -34,22 +34,19 @@
 	- 能够使用markdown的链接语法给链接起别名，比如 [这样]([[Hello, World]])，`[这样]([[Hello, World]])`。
 	- 每个page最顶上使用第一个block可以添加别名，语法如：`alias:_ HW`，[[HW]]，这里的`_`需要替换成`:`因为我没研究出来它怎么转义。该语法实际上是页面的`属性`。
 - # Indentation
-- Block可以有嵌套关系，每次按Tab都会增加一层缩进，该Block就是上一个Block的Child。
-- 点击Bullet能让视图聚焦到特定Block（而非Page），此时该Block就是当前的顶层元素（此时只能有一个顶层元素），所有其他Block都是它的子孙。
-- Indentation很重要——链接到其他Page时，在该Page的链接引用中将看到整个继承层级，比如这里在多次嵌套后引用HelloWorld页面，跳转到HelloWorld页面就会看到：
-- 第一级
-	- 第二级
-		- 第三级
-			- 第四级同级
-			- [[Hello, World]]
-- ![image.png](../assets/image_1718888863126_0.png)
-- 其实这还蛮抽象的hhhh，一个好用的点是很容易利用嵌套去在日志中组织和折叠内容，避免内容太多，此时第一级就像是标题一样的存在：
-- ![image.png](../assets/image_1718888970497_0.png)
-- ![image.png](../assets/image_1718889000774_0.png){:height 465, :width 815}
+  collapsed:: true
+	- Block可以有嵌套关系，每次按Tab都会增加一层缩进，该Block就是上一个Block的Child。
+	- 点击Bullet能让视图聚焦到特定Block（而非Page），此时该Block就是当前的顶层元素（此时只能有一个顶层元素），所有其他Block都是它的子孙。
+	- Indentation很重要——链接到其他Page时，在该Page的链接引用中将看到整个继承层级，比如这里在多次嵌套后引用HelloWorld页面，跳转到HelloWorld页面就会看到：
+	- 第一级
+		- 第二级
+			- 第三级
+				- 第四级同级
+				- [[Hello, World]]
+	- ![image.png](../assets/image_1718888863126_0.png)
+	- 其实这还蛮抽象的hhhh，一个好用的点是很容易利用嵌套去在日志中组织和折叠内容，避免内容太多，此时第一级就像是标题一样的存在：
+	- ![image.png](../assets/image_1718888970497_0.png)
+	- ![image.png](../assets/image_1718889000774_0.png){:height 465, :width 815}
 - # Block Link
-- TODO 关于块的link
-- 引用ss我！
-  id:: 66742cc6-a575-4a07-a99a-6f46cdf9863c
-- ((66742cc6-a575-4a07-a99a-6f46cdf9863c))
-- {{embed [[Hello, World]]}}
--
+	- TODO 关于块的link
+	- Block Link的话没法
