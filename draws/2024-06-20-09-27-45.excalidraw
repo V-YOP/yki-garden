@@ -4,12 +4,48 @@
   "source": "file://",
   "elements": [
     {
-      "id": "JRpeephZ150C-a3Oepfry",
       "type": "text",
+      "version": 39,
+      "versionNonce": 551343455,
+      "isDeleted": false,
+      "id": "JRpeephZ150C-a3Oepfry",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
       "x": 107.00003051757812,
       "y": 137.66668701171875,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
       "width": 353.1199951171875,
       "height": 25,
+      "seed": 1054864671,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "boundElements": [],
+      "updated": 1718866679101,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "考虑找到点A的沿短边中垂线的轴对称点",
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "考虑找到点A的沿短边中垂线的轴对称点",
+      "lineHeight": 1.25,
+      "baseline": 17
+    },
+    {
+      "id": "xOGPYtcyBCeQ4qGWMfIkK",
+      "type": "line",
+      "x": 114.66665649414062,
+      "y": 199,
+      "width": 196,
+      "height": 2,
       "angle": 0,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
@@ -20,24 +56,208 @@
       "opacity": 100,
       "groupIds": [],
       "frameId": null,
-      "roundness": null,
-      "seed": 1054864671,
-      "version": 36,
-      "versionNonce": 1730850239,
+      "roundness": {
+        "type": 2
+      },
+      "seed": 617434463,
+      "version": 65,
+      "versionNonce": 41472383,
       "isDeleted": false,
       "boundElements": null,
-      "updated": 1718866630554,
+      "updated": 1718866679101,
       "link": null,
       "locked": false,
-      "text": "考虑找到点A的沿短边中垂线的轴对称点",
-      "fontSize": 20,
-      "fontFamily": 1,
-      "textAlign": "left",
-      "verticalAlign": "top",
-      "baseline": 17,
-      "containerId": null,
-      "originalText": "考虑找到点A的沿短边中垂线的轴对称点",
-      "lineHeight": 1.25
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          196,
+          -2
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "OAfKDtiP4c2n7ykPkTflI",
+      "type": "line",
+      "x": 310.0000305175781,
+      "y": 194.33334350585938,
+      "width": 4,
+      "height": 220,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 2
+      },
+      "seed": 179954641,
+      "version": 29,
+      "versionNonce": 1931875615,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1718866687847,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          4,
+          220
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "nlsz1qLwzt3l1sq8TOa5u",
+      "type": "line",
+      "x": 314.0000305175781,
+      "y": 414.3333435058594,
+      "width": 194,
+      "height": 0.66668701171875,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 2
+      },
+      "seed": 17045823,
+      "version": 29,
+      "versionNonce": 127892689,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1718866690969,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -194,
+          0.66668701171875
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "7-OGdxTdSzJLr9NlCLRYX",
+      "type": "line",
+      "x": 120.00003051757812,
+      "y": 415.0000305175781,
+      "width": 4,
+      "height": 218.00003051757812,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1092205233,
+      "version": 37,
+      "versionNonce": 1174708543,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1718866692942,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -4,
+          -218.00003051757812
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "wV2WbyH6fy8fmVxSrku1V",
+      "type": "line",
+      "x": 311.3333435058594,
+      "y": 194.33334350585938,
+      "width": 188,
+      "height": 221.33331298828125,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 2
+      },
+      "seed": 1820074335,
+      "version": 35,
+      "versionNonce": 1483880945,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1718866697031,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -188,
+          221.33331298828125
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
     }
   ],
   "appState": {
