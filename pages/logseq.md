@@ -49,5 +49,6 @@
 	- ![image.png](../assets/image_1718889000774_0.png){:height 465, :width 815}
 - # Block Link
 	- TODO 关于块的link
-	- Block没有名字，只有一个唯一的ID，要引用一个Block，右击Bullet
+	- Block没有名字，只有一个唯一的ID，要引用一个Block，右击Bullet，点击`拷贝块引用 Copy Block Ref`便会连带引用语法去拷贝块的地址，粘贴它便完成块的引用。
 	  id:: 66742fd6-965a-49b5-94ae-c112cd27dec9
+	-
