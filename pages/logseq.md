@@ -49,4 +49,5 @@
 	- ![image.png](../assets/image_1718889000774_0.png){:height 465, :width 815}
 - # Block Link
 	- TODO 关于块的link
-	- Block没有名字,d
+	- Block没有名字，只有一个唯一的ID，要引用一个Block，右击Bullet
+	  id:: 66742fd6-965a-49b5-94ae-c112cd27dec9
