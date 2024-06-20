@@ -10,7 +10,7 @@
  ;; Available options:
  ;; - :now for NOW/LATER style (default)
  ;; - :todo for TODO/DOING style
- :preferred-workflow :now
+ :preferred-workflow :todo
 
  ;; Exclude directories/files.
  ;; Example usage:
@@ -299,7 +299,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites []
+ :favorites ["job dashboard"]
 
  ;; Set flashcards interval.
  ;; Expected value:
@@ -420,6 +420,11 @@
  ;;      ;use Percent-encoding for other invalid characters
  :file/name-format :triple-lowbar
  :graph/settings {:journal? false
- :excluded-pages? false
+ :excluded-pages? true
  :orphan-pages? false
- :builtin-pages? false}}
+ :builtin-pages? false}
+ :editor/preferred-pasting-file? true
+ :journal/page-title-format "yyyy-MM-dd"
+ :graph/forcesettings {:link-dist 180
+ :charge-strength -1000
+ :charge-range 500}}
