@@ -35,5 +35,6 @@
 - TODO 关于块的link
 - # Indentation
 - Block可以有嵌套关系，每次按Tab都会增加一层缩进，该Block就是上一个Block的Child。
-- 点击Bullet能让视图聚焦到特定Block（而非初始的Page），此时该Block就是当前的顶层元素（此时只能有一个顶层元素），所有其他Block都是它的子孙。
+- 点击Bullet能让视图聚焦到特定Block（而非Page），此时该Block就是当前的顶层元素（此时只能有一个顶层元素），所有其他Block都是它的子孙。
+- Indentation很重要——
 -
