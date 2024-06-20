@@ -33,5 +33,6 @@
 - 能够使用markdown的链接语法给链接起别名，比如 [这样]([[Hello, World]])，`[这样]([[Hello, World]])`。
 - 每个page最顶上使用第一个block可以添加别名，语法如：`alias:_ HW`，[[HW]]，这里的`_`需要替换成`:`因为我没研究出来它怎么转义。该语法实际上是页面的`属性`。
 - TODO 关于块的link
--
+- # Indentation
+- Block可以有嵌套关系，每次按Tab
 -
