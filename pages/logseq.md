@@ -51,4 +51,5 @@
 	- TODO 关于块的link
 	- Block没有名字，只有一个唯一的ID，要引用一个Block，右击Bullet，点击`拷贝块引用 Copy Block Ref`便会连带引用语法去拷贝块的地址，粘贴它便完成块的引用。
 	  id:: 66742fd6-965a-49b5-94ae-c112cd27dec9
+	- 就像这样，语法为`((dd))` ((66742fd6-965a-49b5-94ae-c112cd27dec9))
 	-
