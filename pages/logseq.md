@@ -50,11 +50,12 @@
 	- ![image.png](../assets/image_1718888970497_0.png)
 	- ![image.png](../assets/image_1718889000774_0.png){:height 465, :width 815}
 - # Block Link
-	- TODO 关于块的link
 	- Block没有名字，只有一个唯一的ID，要引用一个Block，右击Bullet，点击`拷贝块引用 Copy Block Ref`便会连带引用语法去拷贝块的地址，粘贴它便完成块的引用。
 	  id:: 66742fd6-965a-49b5-94ae-c112cd27dec9
 	- 就像这样，语法为`((块ID))` ((66742fd6-965a-49b5-94ae-c112cd27dec9))
+	- 块引用主要是为了避免重复。
 - # 引用和嵌入
 	- 要链接上其它Page或页面，不仅可以用引用，也可以用嵌入，嵌入的语法形如 `{{embed <块引用或页面引用>}}`
 	- {{embed [[logseq]]}}
 	- 看起来logseq还算聪明，递归引入不会渲染更嵌套的引用hh
+	-
