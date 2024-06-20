@@ -1,10 +1,48 @@
 {
   "type": "excalidraw",
   "version": 2,
-  "source": "https://logseq.com",
-  "elements": [],
+  "source": "file://",
+  "elements": [
+    {
+      "id": "JRpeephZ150C-a3Oepfry",
+      "type": "text",
+      "x": 107.00003051757812,
+      "y": 137.66668701171875,
+      "width": 353.1199951171875,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 1054864671,
+      "version": 36,
+      "versionNonce": 1730850239,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1718866630554,
+      "link": null,
+      "locked": false,
+      "text": "考虑找到点A的沿短边中垂线的轴对称点",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 17,
+      "containerId": null,
+      "originalText": "考虑找到点A的沿短边中垂线的轴对称点",
+      "lineHeight": 1.25
+    }
+  ],
   "appState": {
-    "viewBackgroundColor": "#FFF",
-    "gridSize": null
-  }
+    "gridSize": null,
+    "viewBackgroundColor": "#FFF"
+  },
+  "files": {}
 }
