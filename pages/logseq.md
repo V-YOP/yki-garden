@@ -1,4 +1,4 @@
-- #trick logseq的一些tips
+- #trick logseq 的一些问题和 tips
 	- 原文 <https://www.jianshu.com/p/4e9298c85a04>
 	- # logseq 使用 tips
 	- ✨配合everything引用硬盘中任意位置的文件
