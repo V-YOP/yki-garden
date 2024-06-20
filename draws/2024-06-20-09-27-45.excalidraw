@@ -657,6 +657,94 @@
       "endBinding": null,
       "startArrowhead": null,
       "endArrowhead": null
+    },
+    {
+      "id": "dGlrgZ99ilyvjrSsQgRAW",
+      "type": "line",
+      "x": 248.66665649414062,
+      "y": 268.3332824707031,
+      "width": 69.33331298828125,
+      "height": 0.66668701171875,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 2
+      },
+      "seed": 269530225,
+      "version": 37,
+      "versionNonce": 1673939839,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1718866946505,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -69.33331298828125,
+          0.66668701171875
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
+    },
+    {
+      "id": "o_iPGDvx2egIXNoMmRxjd",
+      "type": "line",
+      "x": 179.33334350585938,
+      "y": 268.9999694824219,
+      "width": 0.66668701171875,
+      "height": 32.66668701171875,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "dashed",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": {
+        "type": 2
+      },
+      "seed": 823034783,
+      "version": 18,
+      "versionNonce": 1838024657,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1718866948913,
+      "link": null,
+      "locked": false,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0.66668701171875,
+          -32.66668701171875
+        ]
+      ],
+      "lastCommittedPoint": null,
+      "startBinding": null,
+      "endBinding": null,
+      "startArrowhead": null,
+      "endArrowhead": null
     }
   ],
   "appState": {
