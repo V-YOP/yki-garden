@@ -20,6 +20,7 @@
 		- 默认一周从周日开始，无法设置。但其实某次PR中已经加入了隐藏设置功能。在配置文件`config.edn`中加入`:start-of-week 0`就可以设置成周一为每周第一天。
 			- [Add support for change start of week in calendar by shady2k · Pull Request #913 · logseq/logseq · GitHub](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fpull%2F913)
 - # Logseq 是啥
+	- 注意这里的组织方式！这里模仿了官方文档中的操作，这是否使得能更方便地组织
 	- **Logseq** 是一个**大纲编辑器**，每个自然段（前面一个点去标识的玩意儿）都是（大纲的）一个`块 block`，[[原子]]。但块，以及块的集合——称为`页面page`——之间能够方便地互相引用。有点像维基，最终得到的效果是网状的而非树状的。虽然这么说，但似乎引用更多的是对page而非block，尽管page本质上只是个block的集合。
 	- 注意嵌套关系——`图Graph` -> `页面page` -> `块block`，页面可以有层级关系，比如`hello`和`hello/world`，这两者都是单独页面，之间会有一种特殊的链接关系、
 	- 在最开始使用logseq时，不需要太关心结构，结构在使用中会自己浮现，但至少关于双链笔记的概念需要熟悉..
