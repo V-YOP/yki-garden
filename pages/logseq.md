@@ -44,4 +44,6 @@
 			- [[Hello, World]]
 - ![image.png](../assets/image_1718888863126_0.png)
 - 其实这还蛮抽象的hhhh，一个好用的点是很容易利用嵌套去在日志中组织和折叠内容，避免内容太多，此时第一级就像是标题一样的存在：
+- ![image.png](../assets/image_1718888970497_0.png)
+- ![image.png](../assets/image_1718889000774_0.png){:height 465, :width 815}
 -
