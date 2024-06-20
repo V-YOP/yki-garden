@@ -36,5 +36,5 @@
 - # Indentation
 - Block可以有嵌套关系，每次按Tab都会增加一层缩进，该Block就是上一个Block的Child。
 - 点击Bullet能让视图聚焦到特定Block（而非Page），此时该Block就是当前的顶层元素（此时只能有一个顶层元素），所有其他Block都是它的子孙。
-- Indentation很重要——链接到其他
+- Indentation很重要——链接到其他Page时，在该Page的链接引用中将看到整个继承层级。
 -
