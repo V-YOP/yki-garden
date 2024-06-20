@@ -47,6 +47,8 @@
 - ![image.png](../assets/image_1718889000774_0.png){:height 465, :width 815}
 - # Block Link
 - TODO 关于块的link
-- test
+- 引用ss我！
   id:: 66742cc6-a575-4a07-a99a-6f46cdf9863c
 - ((66742cc6-a575-4a07-a99a-6f46cdf9863c))
+- {{embed [[Hello, World]]}}
+-
