@@ -1,4 +1,5 @@
 - #trick logseq的一些tips
+  collapsed:: true
 	- # logseq 使用 tips
 	- ✨配合everything引用硬盘中任意位置的文件
 		- ❓问题
