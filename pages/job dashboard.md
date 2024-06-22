@@ -5,4 +5,6 @@
 - {{query (and (or [[LATER]] [[TODO]]) (not (page [[LATER]])) (not (page [[TODO]]) ) ) }}
 -
 -
+- {{query (and [[TODO]] [[目标]] [[Hello, World]])}}
+-
 -
