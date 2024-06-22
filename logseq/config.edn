@@ -419,7 +419,7 @@
  ;;      ;use triple underscore `___` for slash `/` in page title
  ;;      ;use Percent-encoding for other invalid characters
  :file/name-format :triple-lowbar
- :graph/settings {:journal? false
+ :graph/settings {:journal? true
  :excluded-pages? true
  :orphan-pages? false
  :builtin-pages? false}
