@@ -21,7 +21,6 @@
 			- [Add support for change start of week in calendar by shady2k · Pull Request #913 · logseq/logseq · GitHub](https://links.jianshu.com/go?to=https%3A%2F%2Fgithub.com%2Flogseq%2Flogseq%2Fpull%2F913)
 - # Logseq 基础
 	- # Logseq 是啥
-	  collapsed:: true
 		- 注意这里的组织方式！这里模仿了官方文档中的操作，每个section的内容都缩进为标题的子孙（多级标题也同样缩进），这是否使得能更方便地组织和操作结构？
 		- **Logseq** 是一个**大纲编辑器**，每个自然段（前面一个点去标识的玩意儿）都是（大纲的）一个`块 block`，[[原子]]。但块，以及块的集合——称为`页面page`——之间能够方便地互相引用。有点像维基，最终得到的效果是网状的而非树状的。虽然这么说，但似乎引用更多的是对page而非block，尽管page本质上只是个block的集合。
 		- 注意嵌套关系——`图Graph` -> `页面page` -> `块block`，页面可以有层级关系，比如`hello`和`hello/world`，这两者都是单独页面，之间会有一种特殊的链接关系、
