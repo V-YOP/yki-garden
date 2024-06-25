@@ -7,5 +7,4 @@ file-path:: ../assets/科创供应链运行评估方案初稿5.31_1719305844408_
   hl-color:: yellow
   id:: 667a8702-2aa6-4d07-b05c-7d7da7b10a3c
 -
-- {{query}}
 -
