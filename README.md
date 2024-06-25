@@ -1,1 +1,3 @@
-- {{embed [[Contents]]}}
+# YkiGarden
+
+my logseq repo
