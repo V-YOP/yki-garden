@@ -1,4 +1,4 @@
 alias:: snippet/shell
 
-- ![科创供应链运行评估方案初稿5.31.pdf](../assets/科创供应链运行评估方案初稿5.31_1719305844408_0.pdf)
+- [localhost-1717863863025.log](../assets/localhost-1717863863025_1719305786043_0.log)
 -
