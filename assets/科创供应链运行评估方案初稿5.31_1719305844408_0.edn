@@ -179,5 +179,17 @@
                                    :height 862.6894003023687}),
                           :page 1},
                :content {:text "经 5 月 25 日、5 月 26 日科创局向博士与江城实验室科创供应链研究团队两轮会议"},
-               :properties {:color "yellow"}}],
+               :properties {:color "yellow"}}
+              {:id #uuid "667a8788-2b02-40cf-906b-cd7e61ff0f92",
+               :page 1,
+               :position {:bounding {:x1 447,
+                                     :y1 224,
+                                     :x2 563,
+                                     :y2 376,
+                                     :width 610,
+                                     :height 862.6894003023687},
+                          :rects (),
+                          :page 1},
+               :content {:text "[:span]", :image 1719306119368},
+               :properties {:color "green"}}],
  :extra {:page 1}}
