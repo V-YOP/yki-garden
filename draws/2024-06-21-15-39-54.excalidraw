@@ -13314,8 +13314,8 @@
     },
     {
       "type": "text",
-      "version": 14,
-      "versionNonce": 1251738514,
+      "version": 15,
+      "versionNonce": 859442662,
       "isDeleted": false,
       "id": "aP1IoH2BUgaxMEZGTNfNU",
       "fillStyle": "hachure",
@@ -13335,7 +13335,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1719241586956,
+      "updated": 1719365496414,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -13346,7 +13346,7 @@
       "containerId": null,
       "originalText": "date",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "rectangle",
