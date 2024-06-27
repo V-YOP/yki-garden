@@ -210,7 +210,7 @@
 :collapsedHeight 92.66669076628727
 :nonce 1719479850958}}
 :block/updated-at 1719479993440} 
-{:block/created-at 1719478998061
+{:block/created-at 1719480719423
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -227,25 +227,26 @@
 :id "eef4ec12-3463-11ef-ac78-25b07add2ef8"
 :fontWeight 400
 :noFill true
-:point [353 276.33]
+:point [356 276.33]
 :fontSize 20
 :handles 
 {:start 
 {:id "start"
 :canBind true
-:point [0 1.48]
+:point [0 1.46]
 :bindingId "eef4ec10-3463-11ef-ac78-25b07add2ef8"}
 :end 
 {:id "end"
 :canBind true
-:point [315 0]
+:point [312 0]
 :bindingId "eef4ec11-3463-11ef-ac78-25b07add2ef8"}}
 :decorations 
-{:end "arrow"}
+{:start nil
+:end "arrow"}
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
-:nonce 1719478928791
+:nonce 1719478928796
 :italic false}}
-:block/updated-at 1719478998061} 
+:block/updated-at 1719480719423} 
 {:block/content ""
 :block/format :markdown
 :block/left 
@@ -894,7 +895,7 @@
 :size [1372 673]}]
 :shapes-index ("a44867f0-3463-11ef-807f-0d415a1359d0" "b6a4b930-3463-11ef-807f-0d415a1359d0" "eef4ec12-3463-11ef-ac78-25b07add2ef8" "03afb4d0-3466-11ef-ac78-25b07add2ef8" "1498ee10-3466-11ef-ac78-25b07add2ef8" "34f08060-3466-11ef-ac78-25b07add2ef8" "3f1fec60-3466-11ef-ac78-25b07add2ef8" "4cf11032-3466-11ef-ac78-25b07add2ef8" "50b08932-3466-11ef-ac78-25b07add2ef8" "520ae912-3466-11ef-ac78-25b07add2ef8" "699389c0-3466-11ef-ac78-25b07add2ef8" "8b681f20-3466-11ef-ac78-25b07add2ef8" "8b8cbe20-3466-11ef-ac78-25b07add2ef8" "8bdf7200-3466-11ef-ac78-25b07add2ef8" "8c2f66c0-3466-11ef-ac78-25b07add2ef8" "8c70b580-3466-11ef-ac78-25b07add2ef8" "8ca66b80-3466-11ef-ac78-25b07add2ef8" "8cdb3720-3466-11ef-ac78-25b07add2ef8" "8d4f0790-3466-11ef-ac78-25b07add2ef8" "8d8f1dd0-3466-11ef-ac78-25b07add2ef8" "8dad7b40-3466-11ef-ac78-25b07add2ef8" "8df00280-3466-11ef-ac78-25b07add2ef8" "8e472330-3466-11ef-ac78-25b07add2ef8" "8ea4faa0-3466-11ef-ac78-25b07add2ef8" "8ee537f0-3466-11ef-ac78-25b07add2ef8" "8f453240-3466-11ef-ac78-25b07add2ef8" "900e9cc0-3466-11ef-ac78-25b07add2ef8" "904d2c60-3466-11ef-ac78-25b07add2ef8" "9087c460-3466-11ef-ac78-25b07add2ef8" "cccd57e0-3467-11ef-ac78-25b07add2ef8")}}
 :block/journal? false
-:block/updated-at 1719480687222
+:block/updated-at 1719480719431
 :block/created-at 1719478686178
 :block/format :markdown
 :block/type "whiteboard"
