@@ -108,7 +108,7 @@
 :block/properties 
 {}
 :block/uuid #uuid "667d2aec-797e-4f48-b8bb-187636fca53c"} 
-{:block/created-at 1719479064018
+{:block/created-at 1719479311787
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -134,8 +134,8 @@
 :point [832 832]
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
 :collapsedHeight 0
-:nonce 1719479020130}}
-:block/updated-at 1719479157109} 
+:nonce 1719479020132}}
+:block/updated-at 1719479311787} 
 {:block/content " "
 :block/format :markdown
 :block/left 
@@ -143,7 +143,7 @@
 :block/parent 
 {:block/uuid #uuid "667d299e-7220-4557-b85a-06c20d4b231b"}
 :block/uuid #uuid "667d2b37-b8b5-433f-b41d-3f671b27fc7e"} 
-{:block/created-at 1719479211750
+{:block/created-at 1719479298616
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -166,11 +166,11 @@
 :opacity 1
 :id "7f787770-3464-11ef-ac78-25b07add2ef8"
 :noFill false
-:point [658.5957815162926 502.4409119867437]
+:point [928 432]
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
 :collapsedHeight 0
-:nonce 1719479171243}}
-:block/updated-at 1719479211750})
+:nonce 1719479171277}}
+:block/updated-at 1719479298616})
 :pages (
 {:block/uuid #uuid "667d299e-7220-4557-b85a-06c20d4b231b"
 :block/properties 
@@ -199,7 +199,7 @@
 :assets []
 :shapes-index ("a44867f0-3463-11ef-807f-0d415a1359d0" "b6a4b930-3463-11ef-807f-0d415a1359d0" "eef4ec12-3463-11ef-ac78-25b07add2ef8" "2567fa80-3464-11ef-ac78-25b07add2ef8" "7f787770-3464-11ef-ac78-25b07add2ef8")}}
 :block/journal? false
-:block/updated-at 1719479211750
+:block/updated-at 1719479311786
 :block/created-at 1719478686178
 :block/format :markdown
 :block/type "whiteboard"
