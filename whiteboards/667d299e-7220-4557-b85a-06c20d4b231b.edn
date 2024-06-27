@@ -184,34 +184,60 @@
 :block/parent 
 {:block/uuid #uuid "667d299e-7220-4557-b85a-06c20d4b231b"}
 :block/uuid #uuid "667d2dea-e0f7-4c19-8f57-9926dd7fe140"} 
-{:block/created-at 1719479797385
+{:block/created-at 1719479853775
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
-{:blockType "B"
+{:blockType "P"
 :stroke ""
-:rotation 0
-:collapsed false
+:collapsed true
 :borderRadius 8
 :index 4
 :scale [1 1]
-:pageId "667d2dea-e0f7-4c19-8f57-9926dd7fe140"
+:pageId "绘画/色彩"
 :scaleLevel "md"
 :fill ""
-:compact true
+:compact false
 :isAutoResizing false
 :type "logseq-portal"
-:size [184 40.666704054536694]
+:size [400 40]
 :strokeType "line"
 :strokeWidth 2
 :opacity 1
-:id "eb66aa50-3465-11ef-ac78-25b07add2ef8"
+:id "03afb4d0-3466-11ef-ac78-25b07add2ef8"
 :noFill false
-:point [704 1072]
+:point [904 1016]
+:parentId "667d299e-7220-4557-b85a-06c20d4b231b"
+:collapsedHeight 92.6666644866726
+:nonce 1719479822497}}
+:block/updated-at 1719479853775} 
+{:block/created-at 1719479853793
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:blockType "P"
+:stroke ""
+:collapsed false
+:borderRadius 8
+:index 5
+:scale [1 1]
+:pageId "画画"
+:scaleLevel "md"
+:fill ""
+:compact false
+:isAutoResizing true
+:type "logseq-portal"
+:size [400 92.66669076628727]
+:strokeType "line"
+:strokeWidth 2
+:opacity 1
+:id "1498ee10-3466-11ef-ac78-25b07add2ef8"
+:noFill false
+:point [568 1176]
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
 :collapsedHeight 0
-:nonce 1719479781787}}
-:block/updated-at 1719479797385})
+:nonce 1719479850867}}
+:block/updated-at 1719479853793})
 :pages (
 {:block/uuid #uuid "667d299e-7220-4557-b85a-06c20d4b231b"
 :block/properties 
@@ -238,9 +264,9 @@
 :distance 4}}
 :nonce 1
 :assets []
-:shapes-index ("a44867f0-3463-11ef-807f-0d415a1359d0" "b6a4b930-3463-11ef-807f-0d415a1359d0" "eef4ec12-3463-11ef-ac78-25b07add2ef8" "7f787770-3464-11ef-ac78-25b07add2ef8" "eb66aa50-3465-11ef-ac78-25b07add2ef8")}}
+:shapes-index ("a44867f0-3463-11ef-807f-0d415a1359d0" "b6a4b930-3463-11ef-807f-0d415a1359d0" "eef4ec12-3463-11ef-ac78-25b07add2ef8" "7f787770-3464-11ef-ac78-25b07add2ef8" "03afb4d0-3466-11ef-ac78-25b07add2ef8" "1498ee10-3466-11ef-ac78-25b07add2ef8")}}
 :block/journal? false
-:block/updated-at 1719479797385
+:block/updated-at 1719479853793
 :block/created-at 1719478686178
 :block/format :markdown
 :block/type "whiteboard"
