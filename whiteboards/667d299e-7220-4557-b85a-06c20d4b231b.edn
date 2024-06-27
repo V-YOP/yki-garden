@@ -159,33 +159,6 @@
 :block/properties 
 {}
 :block/uuid #uuid "667d2d18-888c-441b-8ea9-5ea553c8e73e"} 
-{:block/created-at 1719479632127
-:block/properties 
-{:ls-type :whiteboard-shape
-:logseq.tldraw.shape 
-{:blockType "B"
-:stroke ""
-:collapsed false
-:borderRadius 8
-:index 4
-:scale [1 1]
-:pageId "667d2d18-888c-441b-8ea9-5ea553c8e73e"
-:scaleLevel "md"
-:fill ""
-:compact false
-:isAutoResizing false
-:type "logseq-portal"
-:size [400 176.66669032989952]
-:strokeType "line"
-:strokeWidth 2
-:opacity 1
-:id "70748380-3465-11ef-ac78-25b07add2ef8"
-:noFill false
-:point [568 864]
-:parentId "667d299e-7220-4557-b85a-06c20d4b231b"
-:collapsedHeight 0
-:nonce 1719479575506}}
-:block/updated-at 1719479632127} 
 {:block/content "222"
 :block/format :markdown
 :block/left 
@@ -203,7 +176,42 @@
 {:block/uuid #uuid "667d2d18-888c-441b-8ea9-5ea553c8e73e"}
 :block/properties 
 {}
-:block/uuid #uuid "667d2d46-204c-4d8b-b9f2-159fb3a25f0c"})
+:block/uuid #uuid "667d2d46-204c-4d8b-b9f2-159fb3a25f0c"} 
+{:block/content "画画"
+:block/format :markdown
+:block/left 
+{:block/uuid #uuid "667d2d18-888c-441b-8ea9-5ea553c8e73e"}
+:block/parent 
+{:block/uuid #uuid "667d299e-7220-4557-b85a-06c20d4b231b"}
+:block/uuid #uuid "667d2dea-e0f7-4c19-8f57-9926dd7fe140"} 
+{:block/created-at 1719479797385
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:blockType "B"
+:stroke ""
+:rotation 0
+:collapsed false
+:borderRadius 8
+:index 4
+:scale [1 1]
+:pageId "667d2dea-e0f7-4c19-8f57-9926dd7fe140"
+:scaleLevel "md"
+:fill ""
+:compact true
+:isAutoResizing false
+:type "logseq-portal"
+:size [184 40.666704054536694]
+:strokeType "line"
+:strokeWidth 2
+:opacity 1
+:id "eb66aa50-3465-11ef-ac78-25b07add2ef8"
+:noFill false
+:point [704 1072]
+:parentId "667d299e-7220-4557-b85a-06c20d4b231b"
+:collapsedHeight 0
+:nonce 1719479781787}}
+:block/updated-at 1719479797385})
 :pages (
 {:block/uuid #uuid "667d299e-7220-4557-b85a-06c20d4b231b"
 :block/properties 
@@ -230,9 +238,9 @@
 :distance 4}}
 :nonce 1
 :assets []
-:shapes-index ("a44867f0-3463-11ef-807f-0d415a1359d0" "b6a4b930-3463-11ef-807f-0d415a1359d0" "eef4ec12-3463-11ef-ac78-25b07add2ef8" "7f787770-3464-11ef-ac78-25b07add2ef8" "70748380-3465-11ef-ac78-25b07add2ef8")}}
+:shapes-index ("a44867f0-3463-11ef-807f-0d415a1359d0" "b6a4b930-3463-11ef-807f-0d415a1359d0" "eef4ec12-3463-11ef-ac78-25b07add2ef8" "7f787770-3464-11ef-ac78-25b07add2ef8" "eb66aa50-3465-11ef-ac78-25b07add2ef8")}}
 :block/journal? false
-:block/updated-at 1719479632168
+:block/updated-at 1719479797385
 :block/created-at 1719478686178
 :block/format :markdown
 :block/type "whiteboard"
