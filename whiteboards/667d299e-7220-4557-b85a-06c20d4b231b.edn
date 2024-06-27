@@ -8,7 +8,7 @@
 :block/properties 
 {}
 :block/uuid #uuid "667d29eb-20e9-4ca9-aaac-5c07f7aea396"} 
-{:block/created-at 1719478866038
+{:block/created-at 1719478998060
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -31,11 +31,11 @@
 :opacity 1
 :id "a44867f0-3463-11ef-807f-0d415a1359d0"
 :noFill false
-:point [-416 -128]
+:point [-368 -344]
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
 :collapsedHeight 0
-:nonce 1719478803493}}
-:block/updated-at 1719478866038} 
+:nonce 1719478803581}}
+:block/updated-at 1719478998060} 
 {:block/created-at 1719478849123
 :block/properties 
 {:ls-type :whiteboard-shape
@@ -63,7 +63,8 @@
 :collapsedHeight 0
 :nonce 1719478834269}}
 :block/updated-at 1719478849123} 
-{:block/properties 
+{:block/created-at 1719478998061
+:block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
 {:stroke ""
@@ -79,25 +80,25 @@
 :id "eef4ec12-3463-11ef-ac78-25b07add2ef8"
 :fontWeight 400
 :noFill true
-:point [305 342.8]
+:point [353 276.33]
 :fontSize 20
 :handles 
 {:start 
 {:id "start"
 :canBind true
-:point [0 76.56]
+:point [0 1.48]
 :bindingId "eef4ec10-3463-11ef-ac78-25b07add2ef8"}
 :end 
 {:id "end"
 :canBind true
-:point [363 0]
+:point [315 0]
 :bindingId "eef4ec11-3463-11ef-ac78-25b07add2ef8"}}
 :decorations 
 {:end "arrow"}
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
-:nonce 1719478928759
+:nonce 1719478928791
 :italic false}}
-:block/updated-at 1719478929606})
+:block/updated-at 1719478998061})
 :pages (
 {:block/uuid #uuid "667d299e-7220-4557-b85a-06c20d4b231b"
 :block/properties 
@@ -126,7 +127,7 @@
 :assets []
 :shapes-index ("a44867f0-3463-11ef-807f-0d415a1359d0" "b6a4b930-3463-11ef-807f-0d415a1359d0" "eef4ec12-3463-11ef-ac78-25b07add2ef8")}}
 :block/journal? false
-:block/updated-at 1719478929606
+:block/updated-at 1719478998060
 :block/created-at 1719478686178
 :block/format :markdown
 :block/type "whiteboard"
