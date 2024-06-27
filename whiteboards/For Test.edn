@@ -253,7 +253,44 @@
 {:block/uuid #uuid "667d2d18-888c-441b-8ea9-5ea553c8e73e"}
 :block/properties 
 {}
-:block/uuid #uuid "667d2d46-204c-4d8b-b9f2-159fb3a25f0c"})
+:block/uuid #uuid "667d2d46-204c-4d8b-b9f2-159fb3a25f0c"} 
+{:block/content "[[draws/2024-06-27-23-09-35.excalidraw]]"
+:block/format :markdown
+:block/left 
+{:block/uuid #uuid "667d310e-a45e-48b1-bffd-076e216642c8"}
+:block/parent 
+{:block/uuid #uuid "93a27bb3-e601-4615-adcc-ea337d0eeea9"}
+:block/properties 
+{}
+:block/uuid #uuid "667d80ab-04d3-4ec1-99b2-021f73f12dbc"} 
+{:block/created-at 1719500980588
+:block/properties 
+{:ls-type :whiteboard-shape
+:logseq.tldraw.shape 
+{:blockType "B"
+:stroke ""
+:rotation 0
+:collapsed false
+:borderRadius 8
+:index 6
+:scale [1 1]
+:pageId "667d80ab-04d3-4ec1-99b2-021f73f12dbc"
+:scaleLevel "md"
+:fill ""
+:compact true
+:isAutoResizing true
+:type "logseq-portal"
+:size [1064 689.7998777775607]
+:strokeType "line"
+:strokeWidth 2
+:opacity 1
+:id "3cfeeae0-3497-11ef-a0e6-c17ffb31ade8"
+:noFill false
+:point [-272 1040]
+:parentId "93a27bb3-e601-4615-adcc-ea337d0eeea9"
+:collapsedHeight 0
+:nonce 1719500964021}}
+:block/updated-at 1719500980588})
 :pages (
 {:block/uuid #uuid "93a27bb3-e601-4615-adcc-ea337d0eeea9"
 :block/properties 
@@ -280,11 +317,11 @@
 :distance 4}}
 :nonce 1
 :assets []
-:shapes-index ("b6a4b930-3463-11ef-807f-0d415a1359d0" "03afb4d0-3466-11ef-ac78-25b07add2ef8" "34f08060-3466-11ef-ac78-25b07add2ef8" "3f1fec60-3466-11ef-ac78-25b07add2ef8" "a44867f0-3463-11ef-807f-0d415a1359d0" "eef4ec12-3463-11ef-ac78-25b07add2ef8")}}
+:shapes-index ("b6a4b930-3463-11ef-807f-0d415a1359d0" "03afb4d0-3466-11ef-ac78-25b07add2ef8" "34f08060-3466-11ef-ac78-25b07add2ef8" "3f1fec60-3466-11ef-ac78-25b07add2ef8" "a44867f0-3463-11ef-807f-0d415a1359d0" "eef4ec12-3463-11ef-ac78-25b07add2ef8" "3cfeeae0-3497-11ef-a0e6-c17ffb31ade8")}}
 :block/journal? false
-:block/updated-at 1719498575852
+:block/updated-at 1719500980588
 :block/created-at 1719478686178
 :block/format :markdown
 :block/type "whiteboard"
 :block/name "for test"
-:block/original-name "For Test"})}
+:block/original-name "for test"})}
