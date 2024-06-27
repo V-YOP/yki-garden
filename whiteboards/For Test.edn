@@ -1,5 +1,5 @@
 {:blocks (
-{:block/created-at 1719479993439
+{:block/created-at 1719480913978
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -7,7 +7,7 @@
 :stroke ""
 :collapsed true
 :borderRadius 8
-:index 5
+:index 3
 :scale [1 1]
 :pageId "绘画/透视"
 :scaleLevel "md"
@@ -21,11 +21,11 @@
 :opacity 1
 :id "34f08060-3466-11ef-ac78-25b07add2ef8"
 :noFill false
-:point [928 1184]
+:point [1008 768]
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
 :collapsedHeight 92.66669076628727
-:nonce 1719479905129}}
-:block/updated-at 1719479993439} 
+:nonce 1719479905204}}
+:block/updated-at 1719480913978} 
 {:block/content "画画"
 :block/format :markdown
 :block/left 
@@ -33,7 +33,7 @@
 :block/parent 
 {:block/uuid #uuid "667d299e-7220-4557-b85a-06c20d4b231b"}
 :block/uuid #uuid "667d2dea-e0f7-4c19-8f57-9926dd7fe140"} 
-{:block/created-at 1719478998060
+{:block/created-at 1719480919452
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -42,7 +42,7 @@
 :rotation 0
 :collapsed false
 :borderRadius 8
-:index 0
+:index 8
 :scale [1 1]
 :pageId "logseq"
 :scaleLevel "md"
@@ -56,12 +56,12 @@
 :opacity 1
 :id "a44867f0-3463-11ef-807f-0d415a1359d0"
 :noFill false
-:point [-368 -344]
+:point [-488 -360]
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
 :collapsedHeight 0
-:nonce 1719478803581}}
-:block/updated-at 1719478998060} 
-{:block/created-at 1719478849123
+:nonce 1719478804127}}
+:block/updated-at 1719480919452} 
+{:block/created-at 1719480883729
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -69,7 +69,7 @@
 :stroke ""
 :collapsed false
 :borderRadius 8
-:index 1
+:index 0
 :scale [1 1]
 :pageId "Hello, World"
 :scaleLevel "md"
@@ -86,8 +86,8 @@
 :point [672 176]
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
 :collapsedHeight 0
-:nonce 1719478834269}}
-:block/updated-at 1719478849123} 
+:nonce 1719478834270}}
+:block/updated-at 1719480883729} 
 {:block/content "一个块儿"
 :block/format :markdown
 :block/left 
@@ -106,7 +106,7 @@
 :block/properties 
 {}
 :block/uuid #uuid "667d2d2f-6dbe-402c-adbc-595131de8fff"} 
-{:block/created-at 1719479993440
+{:block/created-at 1719480913977
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -114,7 +114,7 @@
 :stroke ""
 :collapsed true
 :borderRadius 8
-:index 6
+:index 4
 :scale [1 1]
 :pageId "绘画/线条"
 :scaleLevel "md"
@@ -128,11 +128,11 @@
 :opacity 1
 :id "3f1fec60-3466-11ef-ac78-25b07add2ef8"
 :noFill false
-:point [928 1336]
+:point [1008 920]
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
 :collapsedHeight 92.66660694613114
-:nonce 1719479922217}}
-:block/updated-at 1719479993440} 
+:nonce 1719479922292}}
+:block/updated-at 1719480913977} 
 {:block/content " "
 :block/format :markdown
 :block/left 
@@ -140,7 +140,7 @@
 :block/parent 
 {:block/uuid #uuid "667d299e-7220-4557-b85a-06c20d4b231b"}
 :block/uuid #uuid "667d2b37-b8b5-433f-b41d-3f671b27fc7e"} 
-{:block/created-at 1719479993440
+{:block/created-at 1719480913978
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -148,7 +148,7 @@
 :stroke ""
 :collapsed true
 :borderRadius 8
-:index 3
+:index 1
 :scale [1 1]
 :pageId "绘画/色彩"
 :scaleLevel "md"
@@ -162,11 +162,11 @@
 :opacity 1
 :id "03afb4d0-3466-11ef-ac78-25b07add2ef8"
 :noFill false
-:point [904 1016]
+:point [984 600]
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
 :collapsedHeight 92.6666644866726
-:nonce 1719479822497}}
-:block/updated-at 1719479993440} 
+:nonce 1719479822572}}
+:block/updated-at 1719480913978} 
 {:block/content "123132\n\n213\n\n123"
 :block/format :markdown
 :block/left 
@@ -183,7 +183,7 @@
 :block/parent 
 {:block/uuid #uuid "667d299e-7220-4557-b85a-06c20d4b231b"}
 :block/uuid #uuid "667d2c24-ab99-4a69-aaad-49e0b29e24fc"} 
-{:block/created-at 1719479993440
+{:block/created-at 1719480913978
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -191,7 +191,7 @@
 :stroke ""
 :collapsed true
 :borderRadius 8
-:index 4
+:index 2
 :scale [1 1]
 :pageId "画画"
 :scaleLevel "md"
@@ -205,17 +205,17 @@
 :opacity 1
 :id "1498ee10-3466-11ef-ac78-25b07add2ef8"
 :noFill false
-:point [272 1160]
+:point [352 744]
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
 :collapsedHeight 92.66669076628727
-:nonce 1719479850958}}
-:block/updated-at 1719479993440} 
-{:block/created-at 1719480719423
+:nonce 1719479851033}}
+:block/updated-at 1719480913978} 
+{:block/created-at 1719480896650
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
 {:stroke ""
-:index 2
+:index 9
 :scale [1 1]
 :scaleLevel "md"
 :fill ""
@@ -227,26 +227,26 @@
 :id "eef4ec12-3463-11ef-ac78-25b07add2ef8"
 :fontWeight 400
 :noFill true
-:point [356 276.33]
+:point [236 267.18]
 :fontSize 20
 :handles 
 {:start 
 {:id "start"
 :canBind true
-:point [0 1.46]
+:point [0 0]
 :bindingId "eef4ec10-3463-11ef-ac78-25b07add2ef8"}
 :end 
 {:id "end"
 :canBind true
-:point [312 0]
+:point [432 4.38]
 :bindingId "eef4ec11-3463-11ef-ac78-25b07add2ef8"}}
 :decorations 
 {:start nil
 :end "arrow"}
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
-:nonce 1719478928796
+:nonce 1719478928959
 :italic false}}
-:block/updated-at 1719480719423} 
+:block/updated-at 1719480896650} 
 {:block/content ""
 :block/format :markdown
 :block/left 
@@ -272,12 +272,12 @@
 :block/properties 
 {}
 :block/uuid #uuid "667d2d46-204c-4d8b-b9f2-159fb3a25f0c"} 
-{:block/created-at 1719479993440
+{:block/created-at 1719480913978
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
 {:stroke ""
-:index 7
+:index 5
 :scale [1 1]
 :scaleLevel "md"
 :fill ""
@@ -289,7 +289,7 @@
 :id "4cf11032-3466-11ef-ac78-25b07add2ef8"
 :fontWeight 400
 :noFill true
-:point [553.33 1060]
+:point [633.33 644]
 :fontSize 20
 :handles 
 {:start 
@@ -305,15 +305,15 @@
 :decorations 
 {:end "arrow"}
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
-:nonce 1719479945432
+:nonce 1719479945507
 :italic false}}
-:block/updated-at 1719479993440} 
-{:block/created-at 1719479993440
+:block/updated-at 1719480913978} 
+{:block/created-at 1719480913978
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
 {:stroke ""
-:index 8
+:index 6
 :scale [1 1]
 :scaleLevel "md"
 :fill ""
@@ -325,7 +325,7 @@
 :id "50b08932-3466-11ef-ac78-25b07add2ef8"
 :fontWeight 400
 :noFill true
-:point [673 1183.27]
+:point [753 767.27]
 :fontSize 20
 :handles 
 {:start 
@@ -341,15 +341,15 @@
 :decorations 
 {:end "arrow"}
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
-:nonce 1719479951706
+:nonce 1719479951781
 :italic false}}
-:block/updated-at 1719479993440} 
-{:block/created-at 1719479993440
+:block/updated-at 1719480913978} 
+{:block/created-at 1719480913978
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
 {:stroke ""
-:index 9
+:index 7
 :scale [1 1]
 :scaleLevel "md"
 :fill ""
@@ -361,7 +361,7 @@
 :id "520ae912-3466-11ef-ac78-25b07add2ef8"
 :fontWeight 400
 :noFill true
-:point [548 1201]
+:point [628 785]
 :fontSize 20
 :handles 
 {:start 
@@ -377,9 +377,9 @@
 :decorations 
 {:end "arrow"}
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
-:nonce 1719479953979
+:nonce 1719479954054
 :italic false}}
-:block/updated-at 1719479993440} 
+:block/updated-at 1719480913978} 
 {:block/content "11"
 :block/format :markdown
 :block/left 
@@ -397,23 +397,7 @@
 {:id "667d299e-7220-4557-b85a-06c20d4b231b"
 :name "for test"
 :bindings 
-{:eef4ec10-3463-11ef-ac78-25b07add2ef8 
-{:id "eef4ec10-3463-11ef-ac78-25b07add2ef8"
-:type "line"
-:fromId "eef4ec12-3463-11ef-ac78-25b07add2ef8"
-:toId "a44867f0-3463-11ef-807f-0d415a1359d0"
-:handleId "start"
-:point [0.5 0.5]
-:distance 4}
-:eef4ec11-3463-11ef-ac78-25b07add2ef8 
-{:id "eef4ec11-3463-11ef-ac78-25b07add2ef8"
-:type "line"
-:fromId "eef4ec12-3463-11ef-ac78-25b07add2ef8"
-:toId "b6a4b930-3463-11ef-807f-0d415a1359d0"
-:handleId "end"
-:point [0.79 0.53]
-:distance 4}
-:4cf11030-3466-11ef-ac78-25b07add2ef8 
+{:4cf11030-3466-11ef-ac78-25b07add2ef8 
 {:id "4cf11030-3466-11ef-ac78-25b07add2ef8"
 :type "line"
 :fromId "4cf11032-3466-11ef-ac78-25b07add2ef8"
@@ -460,12 +444,28 @@
 :toId "3f1fec60-3466-11ef-ac78-25b07add2ef8"
 :handleId "end"
 :point [0.53 0.68]
+:distance 4}
+:eef4ec10-3463-11ef-ac78-25b07add2ef8 
+{:id "eef4ec10-3463-11ef-ac78-25b07add2ef8"
+:type "line"
+:fromId "eef4ec12-3463-11ef-ac78-25b07add2ef8"
+:toId "a44867f0-3463-11ef-807f-0d415a1359d0"
+:handleId "start"
+:point [0.5 0.5]
+:distance 4}
+:eef4ec11-3463-11ef-ac78-25b07add2ef8 
+{:id "eef4ec11-3463-11ef-ac78-25b07add2ef8"
+:type "line"
+:fromId "eef4ec12-3463-11ef-ac78-25b07add2ef8"
+:toId "b6a4b930-3463-11ef-807f-0d415a1359d0"
+:handleId "end"
+:point [0.79 0.53]
 :distance 4}}
 :nonce 1
 :assets []
-:shapes-index ("a44867f0-3463-11ef-807f-0d415a1359d0" "b6a4b930-3463-11ef-807f-0d415a1359d0" "eef4ec12-3463-11ef-ac78-25b07add2ef8" "03afb4d0-3466-11ef-ac78-25b07add2ef8" "1498ee10-3466-11ef-ac78-25b07add2ef8" "34f08060-3466-11ef-ac78-25b07add2ef8" "3f1fec60-3466-11ef-ac78-25b07add2ef8" "4cf11032-3466-11ef-ac78-25b07add2ef8" "50b08932-3466-11ef-ac78-25b07add2ef8" "520ae912-3466-11ef-ac78-25b07add2ef8")}}
+:shapes-index ("b6a4b930-3463-11ef-807f-0d415a1359d0" "03afb4d0-3466-11ef-ac78-25b07add2ef8" "1498ee10-3466-11ef-ac78-25b07add2ef8" "34f08060-3466-11ef-ac78-25b07add2ef8" "3f1fec60-3466-11ef-ac78-25b07add2ef8" "4cf11032-3466-11ef-ac78-25b07add2ef8" "50b08932-3466-11ef-ac78-25b07add2ef8" "520ae912-3466-11ef-ac78-25b07add2ef8" "a44867f0-3463-11ef-807f-0d415a1359d0" "eef4ec12-3463-11ef-ac78-25b07add2ef8")}}
 :block/journal? false
-:block/updated-at 1719480861064
+:block/updated-at 1719480919457
 :block/created-at 1719478686178
 :block/format :markdown
 :block/type "whiteboard"
