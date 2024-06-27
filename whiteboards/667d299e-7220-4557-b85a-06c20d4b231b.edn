@@ -159,7 +159,7 @@
 :block/properties 
 {}
 :block/uuid #uuid "667d2d18-888c-441b-8ea9-5ea553c8e73e"} 
-{:block/created-at 1719479618349
+{:block/created-at 1719479632127
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
@@ -184,9 +184,9 @@
 :point [568 864]
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
 :collapsedHeight 0
-:nonce 1719479575504}}
-:block/updated-at 1719479618349} 
-{:block/content ""
+:nonce 1719479575506}}
+:block/updated-at 1719479632127} 
+{:block/content "222"
 :block/format :markdown
 :block/left 
 {:block/uuid #uuid "667d2d18-888c-441b-8ea9-5ea553c8e73e"}
@@ -232,7 +232,7 @@
 :assets []
 :shapes-index ("a44867f0-3463-11ef-807f-0d415a1359d0" "b6a4b930-3463-11ef-807f-0d415a1359d0" "eef4ec12-3463-11ef-ac78-25b07add2ef8" "7f787770-3464-11ef-ac78-25b07add2ef8" "70748380-3465-11ef-ac78-25b07add2ef8")}}
 :block/journal? false
-:block/updated-at 1719479618352
+:block/updated-at 1719479632168
 :block/created-at 1719478686178
 :block/format :markdown
 :block/type "whiteboard"
