@@ -135,7 +135,7 @@
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
 :collapsedHeight 0
 :nonce 1719479020130}}
-:block/updated-at 1719479064018} 
+:block/updated-at 1719479157109} 
 {:block/content " "
 :block/format :markdown
 :block/left 
@@ -143,33 +143,34 @@
 :block/parent 
 {:block/uuid #uuid "667d299e-7220-4557-b85a-06c20d4b231b"}
 :block/uuid #uuid "667d2b37-b8b5-433f-b41d-3f671b27fc7e"} 
-{:block/created-at 1719479095475
+{:block/created-at 1719479191065
 :block/properties 
 {:ls-type :whiteboard-shape
 :logseq.tldraw.shape 
-{:blockType "B"
+{:blockType "P"
 :stroke ""
+:rotation 0
 :collapsed false
 :borderRadius 8
 :index 4
 :scale [1 1]
-:pageId "667d2b37-b8b5-433f-b41d-3f671b27fc7e"
+:pageId "/"
 :scaleLevel "md"
 :fill ""
-:compact true
+:compact false
 :isAutoResizing true
 :type "logseq-portal"
-:size [400 40.66666235061629]
+:size [357.2915304413243 64.00003774150098]
 :strokeType "line"
 :strokeWidth 2
 :opacity 1
-:id "51f37b60-3464-11ef-ac78-25b07add2ef8"
+:id "7f787770-3464-11ef-ac78-25b07add2ef8"
 :noFill false
-:point [862.3556598037512 604.7718705860673]
+:point [658.5957815162926 502.4409119867437]
 :parentId "667d299e-7220-4557-b85a-06c20d4b231b"
 :collapsedHeight 0
-:nonce 1719479094808}}
-:block/updated-at 1719479095475})
+:nonce 1719479171253}}
+:block/updated-at 1719479191065})
 :pages (
 {:block/uuid #uuid "667d299e-7220-4557-b85a-06c20d4b231b"
 :block/properties 
@@ -196,9 +197,9 @@
 :distance 4}}
 :nonce 1
 :assets []
-:shapes-index ("a44867f0-3463-11ef-807f-0d415a1359d0" "b6a4b930-3463-11ef-807f-0d415a1359d0" "eef4ec12-3463-11ef-ac78-25b07add2ef8" "2567fa80-3464-11ef-ac78-25b07add2ef8" "51f37b60-3464-11ef-ac78-25b07add2ef8")}}
+:shapes-index ("a44867f0-3463-11ef-807f-0d415a1359d0" "b6a4b930-3463-11ef-807f-0d415a1359d0" "eef4ec12-3463-11ef-ac78-25b07add2ef8" "2567fa80-3464-11ef-ac78-25b07add2ef8" "7f787770-3464-11ef-ac78-25b07add2ef8")}}
 :block/journal? false
-:block/updated-at 1719479096549
+:block/updated-at 1719479196195
 :block/created-at 1719478686178
 :block/format :markdown
 :block/type "whiteboard"
