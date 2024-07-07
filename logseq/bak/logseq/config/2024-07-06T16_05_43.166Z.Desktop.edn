@@ -421,10 +421,11 @@
  :file/name-format :triple-lowbar
  :graph/settings {:journal? false
  :excluded-pages? true
- :orphan-pages? true
+ :orphan-pages? false
  :builtin-pages? false}
  :editor/preferred-pasting-file? true
  :journal/page-title-format "yyyy-MM-dd"
  :graph/forcesettings {:link-dist 180
  :charge-strength -1000
- :charge-range 500}}
+ :charge-range 500}
+ :publishing/all-pages-public? true}
