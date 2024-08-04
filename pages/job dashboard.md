@@ -1,6 +1,6 @@
 # 正在进行
 - {{query (and (or [[NOW]] [[DOING]]) (not (page [[NOW]])) (not (page [[DOING]]) ) ) }}
-  query-table:: true
+  query-table:: false
 	-
 -
 - # 待办
