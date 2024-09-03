@@ -1,4 +1,3 @@
-/* 修改代码块的字体 */
-.markdown-preview .code-block .code {
-  font-family: 'Fira Code', monospace;
+html {
+    font-family: 'Iosevka Curly Slab' !important;
 }
