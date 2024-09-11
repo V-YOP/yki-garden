@@ -108,5 +108,20 @@
 		  }
 		  ```
 	- **Coroutine**，Coroutine就是协程，就行为上可以当成生成器去理解，**async函数返回的东西就是Coroutine**，直接执行async函数时，什么都不会发生，除了得到一个Coroutine对象（就像调用生成器函数得到一个生成器一样，需要东西去触发它），该对象只有使用await（类似yield from）才能使之真正执行，并得到它的返回值；未执行的Coroutine会得到警告。
-	- **Task**，Task继承自Future，它负责运行Coroutine，在这些概念中，Task和js的Promise最为接近。**Coroutine不会自动地被调度器去调度，而Task会**。
-	-
+	- **Task**，Task继承自Future，它负责运行Coroutine，在这些概念中，**Task和js的Promise最为接近**。
+	- **Coroutine不会自动地被调度器去调度，而Task会**。
+	  id:: 66e19162-ccb3-4889-a45f-0557c7417861
+	- js和python有一个重大的不同——在js中，要另外开启一个和当前循环无关的任务时，直接执行相应异步函数，不管它的结果或后面再await它便可，而python中需要调用create_task去把Coroutine转换成Task，原因上面也说了—— ((66e19162-ccb3-4889-a45f-0557c7417861))
+	- ```javascript
+	  // javascript
+	  async function someFn() {
+	    const result = someAsyncTaskIDontCare()
+	    // my logic...
+	    await result // if necessary
+	  }
+	  ```
+	- ```python
+	  # python
+	  async def some_fn():
+	    result = 
+	  ```
