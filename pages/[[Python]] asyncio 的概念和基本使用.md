@@ -202,7 +202,7 @@
 	  ```
 - ## 协程间同步
 	- asyncio提供了`Lock`和`Semaphare`去处理临界区的访问，它们都支持使用异步的with。
-	- asyncio提供`wait_for`方法，使能够超时地await。
-	- asyncio提供了`wait`方法，以提供js类似`Promise.all/any`的方法，它允许指定是任意个
-	- asyncio提供了`gather`方法，同js的`Promise.all`
+	- asyncio提供`wait_for`函数，使能够超时地await。
+	- asyncio提供了`wait`函数，以提供js类似`Promise.all/any`的方法，它允许指定策略——`ALL_COMPLETED`，`FIRST_COMPLETED`，`FIRST_EXCEPTION`；`wait`函数接受Task列表，返回两个Task集合，表示当前已完成
+	- asyncio提供了`gather`函数，同js的`Promise.all`
 	-
