@@ -8,7 +8,7 @@
 - 问题：
 	- ~~事件循环是什么，怎么用~~
 	  logseq.order-list-type:: number
-	- 理解Future，Coroutine，Task（和js对比）
+	- ~~理解Future，Coroutine，Task（和js对比）~~
 	  logseq.order-list-type:: number
 	- 创建和当前协程无关的异步任务，以及挪到其他线程/线程池去执行的任务
 	  logseq.order-list-type:: number
@@ -111,17 +111,21 @@
 	- **Task**，Task继承自Future，它负责运行Coroutine，在这些概念中，**Task和js的Promise最为接近**。
 	- **Coroutine不会自动地被调度器去调度，而Task会**。
 	  id:: 66e19162-ccb3-4889-a45f-0557c7417861
-	- js和python有一个重大的不同——在js中，要另外开启一个和当前循环无关的任务时，直接执行相应异步函数，不管它的结果或后面再await它便可，而python中需要调用create_task去把Coroutine转换成Task，原因上面也说了—— ((66e19162-ccb3-4889-a45f-0557c7417861))
+	- js和python有一个重大的不同——在js中，要另外开启一个和当前循环无关的任务时，直接执行相应异步函数，不管它的结果或后面再await它便可，而python中需要调用`asyncio.create_task`去把Coroutine转换成Task，原因上面也说了—— ((66e19162-ccb3-4889-a45f-0557c7417861))，如果不使用`asyncio.create_task`的话，该协程会在await时才**开始**执行。
 	- ```javascript
 	  // javascript
 	  async function someFn() {
-	    const result = someAsyncTaskIDontCare()
+	    const task = someAsyncTaskIDontCare()
 	    // my logic...
-	    await result // if necessary
+	    const res = await task // if necessary
 	  }
 	  ```
 	- ```python
 	  # python
 	  async def some_fn():
-	    result = 
+	    task = asyncio.create_task(some_async_task_i_dont_care())
+	    # my logic...
+	    await task
 	  ```
+- ## 执行昂贵阻塞任务
+	-
