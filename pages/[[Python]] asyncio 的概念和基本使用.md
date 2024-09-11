@@ -51,7 +51,7 @@
 - ## Future，Coroutine和Task
 	- 在使用asyncio中，有三个概念会常常遇到，Future，Task和Coroutine。
 	- **Future**，Future是一个低级的异步原语，如果拿Promise做比较的话，它就像一个不包含任何业务逻辑的Promise，但和Promise不同，Future通过调用方法`set_result`等去设定返回结果，并通知事件循环去调度所有await它的协程。
-	- 下面使用Future实现Lock，同时在js中通过promise去实现Lock，去体现它的性质，两边的区别在于Promise是直接把resolve函数放进等待队列中，而Future是把自己放进等待队列中，两种操作本质上都是相同的，都是为了在释放锁时能通知调度器再调一个：
+	- 下面使用Future实现Lock，同时在js中通过promise去实现Lock，去体现它的性质，两边的区别在于Promise是直接把resolve函数放进等待队列中，而Future是把自己放进等待队列中，两种操作本质上都是相同的，都是为了在释放锁时能通知调度器再调一个；同时，**Python的版本会提供超时功能——处理异常，如果await时发生异常（这个异常将会是事件循环调度器给的），直接把future从队列里移除掉，避免占坑**：
 	- ```python
 	  # python
 	  
