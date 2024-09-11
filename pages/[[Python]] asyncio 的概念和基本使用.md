@@ -10,9 +10,9 @@
 	  logseq.order-list-type:: number
 	- ~~理解Future，Coroutine，Task（和js对比）~~
 	  logseq.order-list-type:: number
-	- 创建和当前协程无关的异步任务，以及挪到其他线程/线程池去执行的任务
+	- 执行昂贵阻塞任务
 	  logseq.order-list-type:: number
-	- 在同步代码中调用异步任务
+	- 在其他线程中向事件循环提交任务
 	  logseq.order-list-type:: number
 	- 协程间同步操作（锁，信号量，超时，any，all）
 	  logseq.order-list-type:: number
@@ -128,4 +128,4 @@
 	    await task
 	  ```
 - ## 执行昂贵阻塞任务
-	-
+	- 事件循环允许有配套的对于昂贵的IO任务，可以将它
