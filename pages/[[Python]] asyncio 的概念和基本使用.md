@@ -50,7 +50,7 @@
 	  ```
 - ## Future，Coroutine和Task
 	- 在使用asyncio中，有三个概念会常常遇到，Future，Task和Coroutine。
-	- **Future**，Future是一个低级的异步原语，如果拿Promise做比较的话，它就像一个不包含任何业务逻辑的Promise，但和Promise不同，Future通过调用方法`set_result`等去设定返回结果，并通知事件循环去调度所有await它的协程。
+	- **Future**，Future是一个底层的异步原语，如果拿Promise做比较的话，它就像一个不包含任何业务逻辑的Promise，但和Promise不同，Future通过调用方法`set_result`等去设定返回结果，并通知事件循环去调度所有await它的协程。**Future本质上是一种通知机制**。
 	- 下面使用Future实现Lock，同时在js中通过promise去实现Lock，去体现它的性质，两边的区别在于Promise是直接把resolve函数放进等待队列中，而Future是把自己放进等待队列中，两种操作本质上都是相同的，都是为了在释放锁时能通知调度器再调一个。注意这里的Python代码处理了异常，调度器可能会在await处抛出异常，如超时等；出现异常时必须要把它从队列里拿出去：
 	  collapsed:: true
 		- ```python
@@ -107,4 +107,6 @@
 		      return {acquire, release}
 		  }
 		  ```
-	- **Coroutine**，Coroutine就是协程，就行为上可以当成生成器去理解，async函数返回的东西就是Coroutine，直接执行async函数时，什么都不会发生，除了得到一个Coroutine对象。
+	- **Coroutine**，Coroutine就是协程，就行为上可以当成生成器去理解，**async函数返回的东西就是Coroutine**，直接执行async函数时，什么都不会发生，除了得到一个Coroutine对象（就像调用生成器函数得到一个生成器一样，需要东西去触发它），该对象只有使用await（类似yield from）才能使之真正执行，并得到它的返回值；未执行的Coroutine会得到警告。
+	- **Task**，Task继承自Future，它负责运行Coroutine，在这些概念中，Task和js的Promise最为接近。**Coroutine不会自动地被调度器去调度，而Task会**。
+	-
