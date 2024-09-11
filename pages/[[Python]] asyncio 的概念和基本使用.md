@@ -12,11 +12,12 @@
 	  logseq.order-list-type:: number
 	- ~~执行昂贵阻塞任务~~
 	  logseq.order-list-type:: number
-	- 在其他线程中向事件循环提交任务
+	- ~~在其他线程中向事件循环提交任务~~
 	  logseq.order-list-type:: number
 	- 协程间同步（锁，信号量，超时，any，all）
 	  logseq.order-list-type:: number
 - ## 事件循环和异步函数
+  collapsed:: true
 	- Python的事件循环和js的类似——事件，定时器，事件队列，回调……区别在于，js的事件循环更多是以回调函数为机制，而Python的事件循环则是基于协程，而且允许多线程，允许同时存在多个事件循环，但每个线程只能存在一个事件循环，代码逻辑均在该线程上执行，除了使用run_in_executor创建的任务，它们会在线程池或进程池上执行。因此，使用异步编程时大多数时候不需要担心线程安全问题，但仍可能需要做协程间的同步。
 	- 启动事件循环的最简单的方法是`async.run`，它只能在主线程上执行，通过一个协程（async函数返回的就是协程Coroutine，行为类似生成器）启动，创建一个事件循环并阻塞直到所有协程执行完毕：
 	- ```python
@@ -49,6 +50,7 @@
 	      loop.run_until_complete(main())
 	  ```
 - ## Future，Coroutine和Task
+  collapsed:: true
 	- 在使用asyncio中，有三个概念会常常遇到，Future，Task和Coroutine。
 	- **Future**，Future是一个底层的异步原语，如果拿Promise做比较的话，它就像一个不包含任何业务逻辑的Promise，但和Promise不同，Future通过调用方法`set_result`等去设定返回结果，并通知事件循环去调度所有await它的协程。**Future本质上是一种通知机制**。
 	- 下面使用Future实现Lock，同时在js中通过promise去实现Lock，去体现它的性质，两边的区别在于Promise是直接把resolve函数放进等待队列中，而Future是把自己放进等待队列中，两种操作本质上都是相同的，都是为了在释放锁时能通知调度器再调一个。注意这里的Python代码处理了异常，调度器可能会在await处抛出异常，如超时等；出现异常时必须要把它从队列里拿出去：
@@ -128,6 +130,7 @@
 	    await task
 	  ```
 - ## 执行昂贵阻塞任务
+  collapsed:: true
 	- 事件循环允许将任务提供给线程池或进程池（很吓人的词），得到一个Task对象去获取结果。
 	- ```python
 	  import asyncio
@@ -155,4 +158,51 @@
 	  ```
 	- 显然，IO密集型任务适合线程池，而CPU密集型任务适合进程池，但**进程池需要任务函数是可序列化的**。
 - ## 在其它线程中向事件循环提交任务
-	- 这个需求可能并不常见，但后面写Krita插件可能会用到，记一下。`asyncio.run_coroutine_threadsafe`方法接受一个事件循环和协程，支持把协程丢到事件循环中执行并获取对应Future对象，。
+  collapsed:: true
+	- 这个需求可能并不常见，但后面写Krita插件可能会用到，记一下。`asyncio.run_coroutine_threadsafe`方法接受一个事件循环和协程，支持把协程丢到事件循环中执行并获取一个对应的Future对象，使用它的`result`方法以**阻塞地等待Future的结果**。
+	- ```python
+	  import asyncio
+	  import threading
+	  
+	  # 定义一个异步任务
+	  async def async_task(x, y):
+	      await asyncio.sleep(1)  # 模拟异步操作
+	      return x + y
+	  
+	  # 定义一个函数，在另一个线程中提交任务给事件循环
+	  def run_in_thread(loop, x, y):
+	      # 使用 run_coroutine_threadsafe 提交任务
+	      future = asyncio.run_coroutine_threadsafe(async_task(x, y), loop)
+	      # 阻塞等待结果
+	      result = future.result()
+	      print(f"Result from thread: {result}")
+	  
+	  # 创建事件循环
+	  loop = asyncio.new_event_loop()
+	  
+	  def start_loop(loop):
+	      asyncio.set_event_loop(loop)
+	      loop.run_forever()
+	  
+	  # 启动事件循环线程
+	  loop_thread = threading.Thread(target=start_loop, args=(loop,))
+	  loop_thread.start()
+	  
+	  # 启动任务线程
+	  task_thread = threading.Thread(target=run_in_thread, args=(loop, 10, 20))
+	  task_thread.start()
+	  
+	  # 等待任务线程完成
+	  task_thread.join()
+	  
+	  # 停止事件循环并关闭
+	  loop.call_soon_threadsafe(loop.stop)
+	  loop_thread.join()
+	  
+	  ```
+- ## 协程间同步
+	- asyncio提供了`Lock`和`Semaphare`去处理临界区的访问，它们都支持使用异步的with。
+	- asyncio提供`wait_for`方法，使能够超时地await。
+	- asyncio提供了`wait`方法，以提供js类似`Promise.all/any`的方法，它允许指定是任意个
+	- asyncio提供了`gather`方法，同js的`Promise.all`
+	-
