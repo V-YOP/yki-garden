@@ -128,4 +128,29 @@
 	    await task
 	  ```
 - ## 执行昂贵阻塞任务
-	- 事件循环允许将任务提供给线程池或进程池（很吓人的词），供执行
+	- 事件循环允许将任务提供给线程池或进程池（很吓人的词），得到一个Task对象去获取结果。
+	- ```python
+	  import asyncio
+	  from concurrent.futures import ThreadPoolExecutor
+	  
+	  # 模拟一个阻塞的函数
+	  def blocking_task():
+	      print("开始一个阻塞任务...")
+	      import time
+	      time.sleep(2)
+	      print("阻塞任务完成")
+	      return "完成"
+	  
+	  async def main():
+	      # 创建一个线程池执行器
+	      loop = asyncio.get_running_loop()
+	      with ThreadPoolExecutor() as pool:
+	          # 将阻塞任务提交到线程池中
+	          result = await loop.run_in_executor(pool, blocking_task)
+	          print(result)
+	  
+	  # 运行事件循环
+	  if __name__ == '__main__':
+	      asyncio.run(main())
+	  ```
+	- 显然，IO密集型任务适合线程池，而CPU密集型任务适合进程池，但进程池的话需要
