@@ -10,11 +10,11 @@
 	  logseq.order-list-type:: number
 	- ~~理解Future，Coroutine，Task（和js对比）~~
 	  logseq.order-list-type:: number
-	- 执行昂贵阻塞任务
+	- ~~执行昂贵阻塞任务~~
 	  logseq.order-list-type:: number
 	- 在其他线程中向事件循环提交任务
 	  logseq.order-list-type:: number
-	- 协程间同步操作（锁，信号量，超时，any，all）
+	- 协程间同步（锁，信号量，超时，any，all）
 	  logseq.order-list-type:: number
 - ## 事件循环和异步函数
 	- Python的事件循环和js的类似——事件，定时器，事件队列，回调……区别在于，js的事件循环更多是以回调函数为机制，而Python的事件循环则是基于协程，而且允许多线程，允许同时存在多个事件循环，但每个线程只能存在一个事件循环，代码逻辑均在该线程上执行，除了使用run_in_executor创建的任务，它们会在线程池或进程池上执行。因此，使用异步编程时大多数时候不需要担心线程安全问题，但仍可能需要做协程间的同步。
@@ -154,3 +154,4 @@
 	      asyncio.run(main())
 	  ```
 	- 显然，IO密集型任务适合线程池，而CPU密集型任务适合进程池，但**进程池需要任务函数是可序列化的**。
+-
