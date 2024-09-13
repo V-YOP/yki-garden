@@ -796,7 +796,7 @@ article::
 	  print(r.encoding) # utf-8，可以赋值
 	  print(r) # <Response [200 OK]>
 	  print(r.status_code)  # 200    
-	  print(r.text) # 获取响应体，以str形式
+	  print(r.text) # 获取响应体，以str形式，似乎会有缓存 
 	  print(r.content) # 获取响应体，以bytes形式
 	  r.raise_for_status() # 抛出异常如果响应码是4xx，5xx
 	  
