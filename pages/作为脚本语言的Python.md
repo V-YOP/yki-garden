@@ -778,3 +778,8 @@ article::
 		  logseq.order-list-type:: number
 		- 能持久化和共享cookie
 		  logseq.order-list-type:: number
+- ## 图像处理
+	- DOING 简单图像处理时使用imagemagick很可能就足够，但复杂的时候就得上PIL了。
+	  :LOGBOOK:
+	  CLOCK: [2024-09-13 Fri 09:56:22]
+	  :END:
