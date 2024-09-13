@@ -781,7 +781,7 @@ article::
 		- 能持久化和共享cookie
 		  logseq.order-list-type:: number
 	- 这里使用`httpx`库。`pip install httpx 'httpx[cli]'`，这里同时安装了httpx的cli，能够替代curl，虽然没啥必要。详见[官方文档](https://www.python-httpx.org)。
-	- 直接发送HTTP请求（同步，但异步代码是类似的）：
+	- 同步发送HTTP请求（同步，但异步代码是类似的）：
 	- ```python
 	  import httpx
 	  
@@ -810,10 +810,26 @@ article::
 	  
 	  ### POST，multipart/form-data
 	  # 上面的json换成file即可
+	  ```
+	- 异步的话需要使用AsyncClient，它自带连接池和cookie持久化，**异步的返回结果的类型和同步的是相同的**……不太优雅：
+	- ```python
+	  import httpx
+	  import asyncio
+	  async def go():
+	      # client自带连接池和cookie持久化（在程序的生命周期内），创建是比较昂贵的，不要多次创建
+	      async with httpx.AsyncClient() as f: 
+	          # 虽然是异步，但是在这里已经得到了整个响应体了
+	          r = await f.post('https://httpbin.org/post', 
+	                      params=[('a', 1), ('a', 2)],
+	                      json={'hello': 'world'}) 
+	          print(r.text)
 	  
-	  ### POST的异步版
-	  def go():
-	    
+	          # 但要连响应体也异步，流式地读的话，使用stream方法
+	          async with f.stream('POST', 'https://httpbin.org/post', files={'hello': open('image.png', 'rb')}) as response:
+	              async for line in response.aiter_lines():
+	                  print(line)
+	  
+	  asyncio.run(go())
 	  ```
 - ## 图像处理
 	- DOING 简单图像处理时使用imagemagick很可能就足够，但复杂的时候就得上PIL了。
