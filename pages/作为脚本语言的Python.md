@@ -776,9 +776,12 @@ article::
 	- 关于HTTP请求，有如下需求：
 		- 异步，使得能直接地高并发
 		  logseq.order-list-type:: number
+		- 但在简单情况下也能同步执行
+		  logseq.order-list-type:: number
 		- 能持久化和共享cookie
 		  logseq.order-list-type:: number
-	- 这里使用`httpx`库。`pip install httpx 'httpx[cli]'`
+	- 这里使用`httpx`库。`pip install httpx 'httpx[cli]'`，这里同时安装了httpx的cli，能够替代curl，虽然没啥必要。详见[官方文档](https://www.python-httpx.org)。
+	-
 - ## 图像处理
 	- DOING 简单图像处理时使用imagemagick很可能就足够，但复杂的时候就得上PIL了。
 	  :LOGBOOK:
