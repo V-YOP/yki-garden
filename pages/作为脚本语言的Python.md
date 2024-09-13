@@ -799,7 +799,6 @@ article::
 	  
 	  ### POST application/json
 	  r = httpx.post('https://httpbin.org/post', 
-	                headers={'Cookie': '123456'}, 
 	                params=[('a', 1), ('a', 2)],
 	                json={'hello': 'world'}) 
 	  print(r.encoding) # utf-8，可以赋值
