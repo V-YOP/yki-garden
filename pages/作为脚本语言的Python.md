@@ -57,7 +57,6 @@ article::
 		  print(f"{now :%Y-%m-%d %H:%M:%S}")  # 输出: '2024-08-26 12:34:56'
 		  ```
 - ## 正则表达式
-  collapsed:: true
 	- 注意——`str.split`只能按纯文本分割，要用正则分割得使用`re.split`。
 	- 直接贴上GPT给的示例，注意其中的`\b`是零宽断言，匹配单词边界：
 	- ```python
