@@ -610,7 +610,7 @@ article::
 		  logseq.order-list-type:: number
 		- 打开浏览器，打开登录页面
 		  logseq.order-list-type:: number
-		- 主进程轮询是否登录或浏览器窗口关闭；当登录成功时，主动关闭浏览器并返回，当浏览器关闭时，抛出异常
+		- 主进程轮询是否登录或浏览器窗口关闭；当登录成功时，主动关闭浏览器并返回（这里提供了一个把selenium形式的cookie转换成CookieJar的函数），当浏览器关闭时，抛出异常
 		  logseq.order-list-type:: number
 	- ```python
 	  from typing import Callable, Dict
@@ -628,6 +628,28 @@ article::
 	      res = requests.get(CHECK_LOGIN_URL, cookies=cookie)
 	      return NOT_LOGIN_TEXT not in res.text
 	  
+	  def save_selenium_cookie(selenium_cookies: List[dict], cookiejar: CookieJar):
+	      for cookie in selenium_cookies:
+	          cookiejar.set_cookie(Cookie(
+	              version=0,
+	              name=cookie['name'],
+	              value=cookie['value'],
+	              port=None,
+	              port_specified=False,
+	              domain=cookie['domain'],
+	              domain_specified=True,
+	              domain_initial_dot=cookie['domain'].startswith('.'),
+	              path=cookie['path'],
+	              path_specified=True,
+	              secure=cookie.get('secure', False),
+	              expires=cookie.get('expiry', None),
+	              discard=False,
+	              comment=None,
+	              comment_url=None,
+	              rest={'HttpOnly': cookie.get('httpOnly', False)},
+	              rfc2109=False
+	          ))
+	    
 	  def user_login(check_login: Callable[[Dict[str, str]], bool], login_url: str):
 	      """用户手动登陆，返回cookie"""
 	      options = Options()
