@@ -781,7 +781,7 @@ article::
 		- 能持久化和共享cookie
 		  logseq.order-list-type:: number
 	- 这里使用`httpx`库。`pip install httpx 'httpx[cli]'`，这里同时安装了httpx的cli，能够替代curl，虽然没啥必要。详见[官方文档](https://www.python-httpx.org)。
-	- 同步发送HTTP请求（同步，但异步代码是类似的）：
+	- **同步**发送HTTP请求（同步，但异步代码是类似的）：
 	- ```python
 	  import httpx
 	  
@@ -811,7 +811,7 @@ article::
 	  ### POST，multipart/form-data
 	  # 上面的json换成file即可
 	  ```
-	- 异步的话需要使用AsyncClient，它自带连接池和cookie持久化，**异步的返回结果的类型和同步的是相同的**……不太优雅：
+	- **异步**的话需要使用AsyncClient，它自带连接池和cookie持久化，**异步的返回结果的类型和同步的是相同的**……不太优雅：
 	- ```python
 	  import httpx
 	  import asyncio
@@ -830,6 +830,9 @@ article::
 	                  print(line)
 	  
 	  asyncio.run(go())
+	  ```
+	- 关于**Cookie持久化**，Client的cookies属性能获取存储的cookies，该对象可以使用pickle去进行持久化：
+	- ```python
 	  ```
 - ## 图像处理
 	- DOING 简单图像处理时使用imagemagick很可能就足够，但复杂的时候就得上PIL了。
