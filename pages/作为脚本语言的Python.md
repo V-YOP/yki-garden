@@ -495,11 +495,10 @@ article::
 		  wb.save(r'D:\DESKTOP\TMP\dest.xlsx')
 		  ```
 - ## xml/html解析
-  collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:22]
   :END:
-	- Python提供了内置库`http.parser`去解析html，但这里选择使用第三方库`beautifulsoup4`（简称bs），它能同时解析`html`和`xml`，同时使用`lxml`作为它的“后端”。
+	- Python提供了内置库`http.parser`去解析html，但这里选择使用第三方库`beautifulsoup4`（简称bs4），它能同时解析`html`和`xml`，同时使用`lxml`作为它的“后端”。
 	- bs包装的html片段是有状态的，可以自由修改属性，内容，子元素等。
 	- ```sh
 	  pip install beautifulsoup4 lxml # lxml 作为bs4的“后端”，性能更高 
