@@ -784,11 +784,23 @@ article::
 	- 直接发送HTTP请求（同步，但异步代码是类似的）：
 	- ```python
 	  import httpx
-	  r = httpx.get('https://httpbin.org/get', headers=[('Accept', 'text/html'), ('Accept', 'text/plain'), ('Cookie', '1'), ('Referer', '3')], params=[('a', 1), ('a', 2)]) 
+	  
+	  ### GET请求
+	  # 这里的headers和params可以传字典也可以传这种键值对集合
+	  # 因为params本身就是可以重复的，而headers重复时会被其按逗号拼接
+	  r = httpx.get('https://httpbin.org/get', 
+	                headers=[('Accept', 'text/html'), ('Accept', 'text/plain')], 
+	                cookies={'hello': 'world'}, # cookie直接提供了字段去让你指定
+	                params=[('a', 1), ('a', 2)]) 
 	  print(r.encoding) # utf-8，可以赋值
 	  print(r) # <Response [200 OK]>
 	  print(r.status_code)  # 200    
 	  print(r.text) # ...
+	  
+	  ### POST json
+	  
+	  
+	  ### POST，x-www-form-urlencoded
 	  ```
 - ## 图像处理
 	- DOING 简单图像处理时使用imagemagick很可能就足够，但复杂的时候就得上PIL了。
