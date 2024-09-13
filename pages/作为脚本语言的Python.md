@@ -768,11 +768,11 @@ article::
 		  logseq.order-list-type:: number
 		- XXXBLOB -> `bytes`
 		  logseq.order-list-type:: number
-- ## DOING HTTP请求
+- ## HTTP请求
+  collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:18]
   :END:
-	- 等仔细学了asyncio后再记录，要用异步，可以并发的，并且维护和持久化cookie
 	- 关于HTTP请求，有如下需求：
 		- 异步，使得能直接地高并发
 		  logseq.order-list-type:: number
