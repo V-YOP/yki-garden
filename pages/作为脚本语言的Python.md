@@ -811,6 +811,10 @@ article::
 	  
 	  ### POST，multipart/form-data
 	  # 上面的json换成file即可
+	  
+	  ### POST的异步版
+	  def go():
+	    
 	  ```
 - ## 图像处理
 	- DOING 简单图像处理时使用imagemagick很可能就足够，但复杂的时候就得上PIL了。
