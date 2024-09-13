@@ -833,7 +833,23 @@ article::
 	  ```
 	- 关于**Cookie持久化**，Client的cookies属性能获取存储的cookies，该对象可以使用pickle去进行持久化：
 	- ```python
+	  import httpx
+	  
+	  async def go():
+	      cookie_file = Path('my_cookies.dat')
+	      cookies = None
+	      if cookie_file.exists():
+	          cookies = pickle.loads(cookie_file.read_bytes())
+	  
+	      async with httpx.AsyncClient(cookies=cookies) as f: 
+	          r = await f.post('https://blog.csdn.net/wayne_youlu/article/details/135596307', 
+	                      params=[('a', 1), ('a', 2)],
+	                      json={'hello': 'world'}) 
+	          print(r.text)
+	          cookie_file.write_bytes(pickle.dumps({**f.cookies}))
+	  asyncio.run(go())
 	  ```
+	- {{embed ((66e38f96-e83b-4fdc-a1d3-9b429e1aa8ce))}}
 - ## 图像处理
 	- DOING 简单图像处理时使用imagemagick很可能就足够，但复杂的时候就得上PIL了。
 	  :LOGBOOK:
