@@ -795,16 +795,14 @@ article::
 	  print(r.encoding) # utf-8，可以赋值
 	  print(r) # <Response [200 OK]>
 	  print(r.status_code)  # 200    
-	  print(r.text) # ...
+	  print(r.text) # 获取响应体，以str形式
+	  print(r.content) # 获取响应体，以bytes形式
+	  r.raise_for_status() # 抛出异常如果响应码是4xx，5xx
 	  
 	  ### POST application/json
 	  r = httpx.post('https://httpbin.org/post', 
 	                params=[('a', 1), ('a', 2)],
 	                json={'hello': 'world'}) 
-	  print(r.encoding) # utf-8，可以赋值
-	  print(r) # <Response [200 OK]>
-	  print(r.status_code)  # 200    
-	  print(r.text) # ...
 	  
 	  ### POST，application/x-www-form-urlencoded
 	  # 上面的json换成data即可
