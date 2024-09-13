@@ -495,7 +495,6 @@ article::
 		  wb.save(r'D:\DESKTOP\TMP\dest.xlsx')
 		  ```
 - ## xml/html解析
-  collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:22]
   :END:
@@ -600,6 +599,7 @@ article::
 		  body > p:last-of-type        # body 的最后一个 p 子元素
 		  ```
 - ## 浏览器自动化
+  collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:25]
   :END:
