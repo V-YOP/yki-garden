@@ -781,7 +781,15 @@ article::
 		- 能持久化和共享cookie
 		  logseq.order-list-type:: number
 	- 这里使用`httpx`库。`pip install httpx 'httpx[cli]'`，这里同时安装了httpx的cli，能够替代curl，虽然没啥必要。详见[官方文档](https://www.python-httpx.org)。
-	-
+	- 直接发送HTTP请求（同步，但异步代码是类似的）：
+	- ```python
+	  import httpx
+	  r = httpx.get('https://httpbin.org/get', headers=[('Accept', 'text/html'), ('Accept', 'text/plain'), ('Cookie', '1'), ('Referer', '3')], params=[('a', 1), ('a', 2)]) 
+	  print(r.encoding) # utf-8，可以赋值
+	  print(r) # <Response [200 OK]>
+	  print(r.status_code)  # 200    
+	  print(r.text) # ...
+	  ```
 - ## 图像处理
 	- DOING 简单图像处理时使用imagemagick很可能就足够，但复杂的时候就得上PIL了。
 	  :LOGBOOK:
