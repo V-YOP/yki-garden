@@ -790,8 +790,9 @@ article::
 	  # 因为params本身就是可以重复的，而headers重复时会被其按逗号拼接
 	  r = httpx.get('https://httpbin.org/get', 
 	                headers=[('Accept', 'text/html'), ('Accept', 'text/plain')], 
-	                cookies={'hello': 'world'}, # cookie直接提供了字段去让你指定
-	                params=[('a', 1), ('a', 2)]) # 查询参数 
+	                cookies={'hello': 'world'}, # cookie直接提供了字段
+	                params=[('a', 1), ('a', 2)], # URL 查询参数 
+	                timeout=10.0)  # 超时时间
 	  print(r.encoding) # utf-8，可以赋值
 	  print(r) # <Response [200 OK]>
 	  print(r.status_code)  # 200    
@@ -801,7 +802,7 @@ article::
 	  
 	  ### POST application/json
 	  r = httpx.post('https://httpbin.org/post', 
-	                params=[('a', 1), ('a', 2)],
+	                params=[('a', 1), ('b', 2)],
 	                json={'hello': 'world'}) 
 	  
 	  ### POST，application/x-www-form-urlencoded
