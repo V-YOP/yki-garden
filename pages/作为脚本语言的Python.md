@@ -791,16 +791,27 @@ article::
 	  r = httpx.get('https://httpbin.org/get', 
 	                headers=[('Accept', 'text/html'), ('Accept', 'text/plain')], 
 	                cookies={'hello': 'world'}, # cookie直接提供了字段去让你指定
-	                params=[('a', 1), ('a', 2)]) 
+	                params=[('a', 1), ('a', 2)]) # 查询参数 
 	  print(r.encoding) # utf-8，可以赋值
 	  print(r) # <Response [200 OK]>
 	  print(r.status_code)  # 200    
 	  print(r.text) # ...
 	  
-	  ### POST json
+	  ### POST application/json
+	  r = httpx.post('https://httpbin.org/post', 
+	                headers={'Cookie': '123456'}, 
+	                params=[('a', 1), ('a', 2)],
+	                json={'hello': 'world'}) 
+	  print(r.encoding) # utf-8，可以赋值
+	  print(r) # <Response [200 OK]>
+	  print(r.status_code)  # 200    
+	  print(r.text) # ...
 	  
+	  ### POST，application/x-www-form-urlencoded
+	  # 上面的json换成data即可
 	  
-	  ### POST，x-www-form-urlencoded
+	  ### POST，multipart/form-data
+	  # 上面的json换成file即可
 	  ```
 - ## 图像处理
 	- DOING 简单图像处理时使用imagemagick很可能就足够，但复杂的时候就得上PIL了。
