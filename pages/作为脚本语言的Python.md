@@ -57,6 +57,7 @@ article::
 		  print(f"{now :%Y-%m-%d %H:%M:%S}")  # 输出: '2024-08-26 12:34:56'
 		  ```
 - ## 正则表达式
+  collapsed:: true
 	- 注意——`str.split`只能按纯文本分割，要用正则分割得使用`re.split`。
 	- 直接贴上GPT给的示例，注意其中的`\b`是零宽断言，匹配单词边界：
 	- ```python
@@ -550,6 +551,11 @@ article::
 	  
 	  # 替换所有子元素
 	  last_p.clear() # 清空所有子元素，然后添加
+	  
+	  # 删除自己
+	  last_p.parent.decompose(last_p)
+	  # 从文档树中删除并获得自己
+	  me = last_p.parent.extract(last_p)
 	  
 	  # 创建，添加新元素
 	  some_a = soup.new_tag('a')
