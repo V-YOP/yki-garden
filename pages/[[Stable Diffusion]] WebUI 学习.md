@@ -1,4 +1,4 @@
-# [[Stable Diffusion]] WebUI 常用插件和Embeddings
+# WebUI 常用插件和Embeddings
 	- SD WebUI支持直接在界面中安装扩展——它自带一个“扩展市场”，同时支持使用git仓库去安装插件。
 	- [界面汉化](https://github.com/dtlnor/stable-diffusion-webui-localization-zh_CN)
 	  logseq.order-list-type:: number
@@ -10,12 +10,12 @@
 	  logseq.order-list-type:: number
 	- [OneButtonPrompt](https://github.com/Airjen/OneButtonPrompt)：根据配置随机生成提示词
 	  logseq.order-list-type:: number
-- # [[Stable Diffusion]] 相关资料：
+- # 相关资料：
 	- ## 模型下载渠道
 		- <https://civitai.com>，C站需要魔法网络
 		- <https://www.liblib.art>，国内好用的模型网站
 		- <https://tusi.cn>，相对没有liblib好用
-- # [[Stable Diffusion]]中的术语
+- # 术语
 	- **大模型/Checkpoint**：深度学习的模型，在它刚开始训练和训练完成后，它的“形状”是没有变化的，变化的只有其内部的权重，因此我们使用的大模型，总是某个**检查点**下的大模型，所以这里就直接叫它Checkpoint；以此类推，微调后的大模型也叫Checkpoint。
 	  logseq.order-list-type:: number
 		- 大模型主要可以分为真实凤，二次元和2.5D（厚涂之类的）。
@@ -90,4 +90,6 @@
 			- 二次元选 R-ESRGAN 4X+ Anime6B
 			  logseq.order-list-type:: number
 		- 同时，webUI在附加功能里也提供了仅放大和批量放大的功能，允许使用上面的放大算法进行放大，但这时候**似乎要倾向去选择使用深度学习的算法**，lanczos会糊，因为它没重绘嘛。
--
+- # 图生图
+	- 图生图会额外以一张图片作为输入，同时会增加一些相关参数，包括缩放模式，重绘尺寸，重绘幅度等，其他的都一样。
+	- 图生图功能这里也提供了**图片反推关键字**的功能，但需要下载。
