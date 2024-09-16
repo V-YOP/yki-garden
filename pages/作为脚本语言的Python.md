@@ -894,4 +894,20 @@ article::
 	- PIL太大，只给定可能常用的示例，后面有需要就现查。
 	- ### 水平拼接两张图片，放大高度更小的那一张使得高度一致
 		- PIL没有直接提供拼接方法，**要拼接图像就是创建一张新图像，然后把两张图像贴上去**。
-		-
+		- ```python
+		  from PIL import Image
+		  def horizontal_cocnat_image(a: Image.Image, b: Image.Image):
+		      w_a, h_a = a.size
+		      w_b, h_b = b.size
+		  
+		      if h_a > h_b:
+		          b = b.resize((int(w_b / h_b * h_a), h_a))
+		      else:
+		          a = a.resize((int(w_a / h_a * h_b), h_b))
+		  
+		      canvas = Image.new('RGBA', (a.size[0] + b.size[0], a.size[1]))
+		      canvas.paste(a, (0, 0))
+		      canvas.paste(b, (a.size[0], 0))
+		      return canvas
+		  ```
+	- d
