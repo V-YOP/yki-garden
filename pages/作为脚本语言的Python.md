@@ -915,6 +915,7 @@ article::
 		- 思路是对每张图先把它扩展高度（同样的，得创建新图像去贴上去），然后在扩展的部分去绘制文字。
 		- 绘制文字使用`ImageDraw`的`multiline_text`方法，该方法（以及`text`方法）在文字超出长度时不会换行，这时候可以使用`textwrap`去进行换行。
 		- 绘制文字时，可以指定**锚点**，参考[官方文档](https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html#text-anchors)。
+		- 同时有`multiline_textbbox`方法，能预先计算出文字块所占位置。
 		- ```python
 		  def expand_on_top(img: Image.Image, expand_height: int, fill_color = (0,0,0)):
 		      canvas = Image.new('RGBA', (img.width, img.height + expand_height), color=fill_color)
@@ -939,3 +940,4 @@ article::
 		  
 		  img.show()
 		  ```
+	-
