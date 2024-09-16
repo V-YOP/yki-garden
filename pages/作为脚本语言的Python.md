@@ -882,3 +882,4 @@ article::
 	  CLOCK: [2024-09-13 Fri 09:56:22]
 	  :END:
 	- Python内置了图像处理库`PIL`（年久失修，现在用的都是它的fork `Pillow`，两者认为是同义词），如果没有内置，就`pip install Pillow`安装。
+	-
