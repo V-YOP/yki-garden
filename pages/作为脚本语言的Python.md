@@ -893,7 +893,7 @@ article::
 		  logseq.order-list-type:: number
 	- PIL太大，只给定可能常用的示例，后面有需要就现查。
 	- ### 水平拼接两张图片，放大高度更小的那一张使得高度一致
-		- PIL没有直接提供拼接方法，**要拼接图像就是创建一张新图像，然后把两张图像贴上去**。
+		- PIL没有直接提供拼接方法，**要拼接图像就是创建一张新图像，然后把两张图像贴上去**。粘贴图像既可以只指定左上角坐标，也可以指定整个粘贴的区域（即指定粘贴的宽高）。粘贴时可以指定一个蒙版图像（做不透明度）。
 		- ```python
 		  from PIL import Image
 		  def horizontal_cocnat_image(a: Image.Image, b: Image.Image):
@@ -906,10 +906,11 @@ article::
 		          a = a.resize((int(w_a / h_a * h_b), h_b))
 		  
 		      canvas = Image.new('RGBA', (a.size[0] + b.size[0], a.size[1]))
-		      canvas.paste(a, (0, 0))
+		      canvas.paste(a, (0, 0)) # 这里只指定左上角坐标，还可以直接指定它整个的box；
 		      canvas.paste(b, (a.size[0], 0))
 		      return canvas
 		  ```
 	- ### 制作[排行视频形式](https://www.bilibili.com/video/BV1sY4y1e7Mm)图片
 		- 一张图，顶上一些文字，这个的目的主要是为了做SD不同参数生成的对比图。要绘制文字，得使用`ImageDraw`。
+		- 先假设所有图像高度都是相同的（这个好做），但不假设宽度相同。思路是对每张图先把它扩展（同样的，得创建新图像去贴上去），然后在扩展的部分去绘制文字。**绘制文字需要处理换行问题**。
 		-
