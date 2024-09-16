@@ -892,5 +892,5 @@ article::
 		- ImageOps模块：提供**更多图像操作**
 		  logseq.order-list-type:: number
 	- PIL太大，只给定可能常用的示例，后面有需要就现查。
+	- ### 水平拼接两张图片，放大高度更小的那一张使得高度一致
 	-
--
