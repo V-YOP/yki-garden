@@ -910,4 +910,6 @@ article::
 		      canvas.paste(b, (a.size[0], 0))
 		      return canvas
 		  ```
-	- d
+	- ### 制作[排行视频形式](https://www.bilibili.com/video/BV1sY4y1e7Mm)图片
+		- 一张图，顶上一些文字，这个的目的主要是为了做SD不同参数生成的对比图。要绘制文字，得使用`ImageDraw`。
+		-
