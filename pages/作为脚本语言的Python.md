@@ -882,4 +882,8 @@ article::
 	  CLOCK: [2024-09-13 Fri 09:56:22]
 	  :END:
 	- Python内置了图像处理库`PIL`（年久失修，现在用的都是它的fork `Pillow`，两者认为是同义词），如果没有内置，就`pip install Pillow`安装。
-	-
+	- PIL中有如下实体/类/模块：
+		- Image模块：PIL的门面，提供最基础和常用的函数，包括打开文件为Image，多个Image的组合操作等，很多时候只导入它就行了
+		  logseq.order-list-type:: number
+		- Image类：代表实际图像，能够获取图像1各种信息，包括大小，
+		  logseq.order-list-type:: number
