@@ -885,7 +885,7 @@ article::
 		  logseq.order-list-type:: number
 		- ImageColor模块，提供`getrgb`和`getcolor`方法，**把各种描述的颜色（似乎所有css表示都支持，如`#ffffff`，`rgb(1,2,3)`，`red`）转换成相应色彩模式的元组**，`getrgb`等价于`getcolor(mode='RGB')`
 		  logseq.order-list-type:: number
-		- ImageDraw模块：**提供绘制操作**
+		- ImageDraw模块：**提供绘制操作**，ImageDraw对象持有Image去进行绘制。
 		  logseq.order-list-type:: number
 		- ImageFilter模块：**提供滤镜操作**，滤镜以`Filter`类的实例去存在
 		  logseq.order-list-type:: number
@@ -912,6 +912,6 @@ article::
 		  ```
 	- ### 在图片外围添加描述性信息
 		- 一张图，顶上一些描述性文字，这个的目的之一是为了做SD不同参数生成的对比图。要绘制文字，得使用`ImageDraw`。
-		- 思路是对每张图先把它扩展高度（同样的，得创建新图像去贴上去），然后在扩展的部分去绘制文字。注意绘制文字不会自动排版，你需要手动关注长度问题。
+		- 思路是对每张图先把它扩展高度（同样的，得创建新图像去贴上去），然后在扩展的部分去绘制文字。
 		- ```python
 		  ```
