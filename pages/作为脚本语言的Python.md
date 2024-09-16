@@ -913,6 +913,7 @@ article::
 	- ### 在图片外围添加描述性信息
 		- 一张图，顶上一些描述性文字，这个的目的之一是为了做SD不同参数生成的对比图。要绘制文字，得使用`ImageDraw`。
 		- 思路是对每张图先把它扩展高度（同样的，得创建新图像去贴上去），然后在扩展的部分去绘制文字。
-		- 绘制文字使用`ImageDraw`的`multiline_text`方法，该方法（以及`text`方法）在文字超出长度时不会换行，因此需要使用`textwrap`去进行换行。
+		- 绘制文字使用`ImageDraw`的`multiline_text`方法，该方法（以及`text`方法）在文字超出长度时不会换行，这时候可以使用`textwrap`去进行换行。
+		- 绘制文字时，可以指定**锚点**，参考[官方文档](https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html#text-anchors)。
 		- ```python
 		  ```
