@@ -916,4 +916,26 @@ article::
 		- 绘制文字使用`ImageDraw`的`multiline_text`方法，该方法（以及`text`方法）在文字超出长度时不会换行，这时候可以使用`textwrap`去进行换行。
 		- 绘制文字时，可以指定**锚点**，参考[官方文档](https://pillow.readthedocs.io/en/stable/handbook/text-anchors.html#text-anchors)。
 		- ```python
+		  def expand_on_top(img: Image.Image, expand_height: int, fill_color = (0,0,0)):
+		      canvas = Image.new('RGBA', (img.width, img.height + expand_height), color=fill_color)
+		      canvas.paste(img, (0, expand_height))
+		      return canvas
+		  
+		  img = Image.open('a.png')
+		  img = expand_on_top(img, 200)
+		  draw = ImageDraw.Draw(img)
+		  text = "高清修复算法：lanczos\n重绘幅度：0.7"
+		  
+		  draw.multiline_text(
+		      xy=(10, 100),                # 文本坐标
+		      text=text,                   # 多行文本
+		      anchor='lm',                 # 文本锚点，这里取左中
+		      align="left",                # 各行水平对齐方式：left, center, right
+		      spacing=4,                   # 行间距：4像素
+		      fill=(255,255,255),          # 文本颜色
+		      font=ImageFont.truetype('simhei.ttf', 30), # 要输出中文必须指定字体
+		      font_size=150,               # 不指定字体的话可以指定font_size，font会覆盖掉该参数
+		  )
+		  
+		  img.show()
 		  ```
