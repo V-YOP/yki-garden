@@ -883,9 +883,15 @@ article::
 	  :END:
 	- Python内置了图像处理库`PIL`（年久失修，现在用的都是它的fork `Pillow`，两者认为是同义词），如果没有内置，就`pip install Pillow`安装。
 	- PIL中有如下实体/类/模块：
-		- Image模块：PIL的门面，提供最基础和常用的函数，包括打开文件为Image，多个Image的组合操作等，很多时候只导入它就行了
+		- Image模块：PIL的门面，提供最基础和常用的函数以及`Image`类，包括打开文件为Image，多个Image的组合操作等，很多时候只导入它就行了
 		  logseq.order-list-type:: number
-		- Image类：代表实际图像，能够获取图像各种信息，包括大小，类型，色彩模式（通道），EXIF，乃至实际像素，同时也能对图像进行操作，如裁剪，翻转，缩放，斜切，设置像素颜色，应用滤镜等。
+		- Image类：**代表实际图像**，能够获取图像各种信息，包括大小，类型，色彩模式（通道），EXIF，乃至实际像素，同时也能对图像进行操作，如裁剪，翻转，缩放，斜切，设置像素颜色，应用滤镜等。
 		  logseq.order-list-type:: number
-		- ImageColor模块，提供`getrgb`和`getcolor`方法，**把各种描述的颜色转换成相应色彩模式的元组**，`getrgb`等价于`getcolor(mode='RGB')`
+		- ImageColor模块，提供`getrgb`和`getcolor`方法，**把各种描述的颜色（似乎所有css表示都支持，如`#ffffff`，`rgb(1,2,3)`，`red`）转换成相应色彩模式的元组**，`getrgb`等价于`getcolor(mode='RGB')`
 		  logseq.order-list-type:: number
+		- ImageDraw模块：**提供绘制操作**
+		  logseq.order-list-type:: number
+		- ImageFilter模块：**提供滤镜操作**，滤镜以`Filter`类的实例去存在
+		  logseq.order-list-type:: number
+		- logseq.order-list-type:: number
+		- logseq.order-list-type:: number
