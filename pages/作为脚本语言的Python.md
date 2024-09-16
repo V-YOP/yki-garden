@@ -877,12 +877,8 @@ article::
 	  ```
 	- {{embed ((66e38f96-e83b-4fdc-a1d3-9b429e1aa8ce))}}
 - ## 图像处理
-	- DOING 简单图像处理时使用imagemagick很可能就足够，但复杂的时候就得上PIL了。
-	  :LOGBOOK:
-	  CLOCK: [2024-09-13 Fri 09:56:22]
-	  :END:
 	- Python内置了图像处理库`PIL`（年久失修，现在用的都是它的fork `Pillow`，两者认为是同义词），如果没有内置，就`pip install Pillow`安装。
-	- PIL中有如下实体/类/模块：
+	- PIL中有如下实体/类/模块可能会常用：
 		- Image模块：PIL的门面，提供最基础和常用的函数以及`Image`类，包括打开文件为Image，多个Image的组合操作等，很多时候只导入它就行了
 		  logseq.order-list-type:: number
 		- Image类：**代表实际图像**，能够获取图像各种信息，包括大小，类型，色彩模式（通道），EXIF，乃至实际像素，直方图，同时也能对图像进行操作，如裁剪，缩放，设置像素颜色，应用滤镜等。滤镜需要结合`ImageFilter`模块去使用，同时`ImageOps`提供了更多操作。注意有的操作是返回新`Image`，而有的操作是原地的，比如在图像上添加图像的`paste`方法，还有设置像素信息的`putXXX`。
@@ -893,6 +889,8 @@ article::
 		  logseq.order-list-type:: number
 		- ImageFilter模块：**提供滤镜操作**，滤镜以`Filter`类的实例去存在
 		  logseq.order-list-type:: number
-		- ImageOps模块：提供更多图像操作
+		- ImageOps模块：提供**更多图像操作**
 		  logseq.order-list-type:: number
-		- logseq.order-list-type:: number
+	- PIL太大，只给定可能常用的示例，后面有需要就现查。
+	-
+-
