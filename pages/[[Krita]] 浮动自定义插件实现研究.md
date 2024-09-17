@@ -1,0 +1,14 @@
+- 需求：
+	- 按特定快捷键在指定位置或鼠标位置去显示我的Widget（配置页）
+	  logseq.order-list-type:: number
+	- 能够**借**原生DockWidget的内容
+	  logseq.order-list-type:: number
+	- 能够随意设置所有子组件的位置，大小
+	  logseq.order-list-type:: number
+	- 能够设置透明背景，背景的鼠标事件能够穿透
+	  logseq.order-list-type:: number
+	- 允许定义多个Layout，按不同快捷键去显示不同Layout
+	  logseq.order-list-type:: number
+	- 提供一些自定义的Widget，如各种ToolButton，笔刷等
+	  logseq.order-list-type:: number
+- 这个的目的是为了让所有常用操作能直接显示在光标旁边，使得最少的鼠标移动
