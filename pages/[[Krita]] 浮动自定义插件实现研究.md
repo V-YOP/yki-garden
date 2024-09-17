@@ -1,16 +1,16 @@
 - 这个的目的是为了让所有常用操作能直接显示在光标旁边，使得最少的鼠标移动
 - 需求：
-	- 按特定快捷键在指定位置或鼠标位置去显示我的Widget（配置页）
+	- 按特定快捷键在**鼠标位置**去显示我的Widget（配置页）
 	  logseq.order-list-type:: number
 	- 能够**借**原生DockWidget的内容
 	  logseq.order-list-type:: number
-	- 能够随意设置所有子组件的位置，大小
+	- **能够随意设置所有子组件的位置，大小**，**不考虑重叠**
 	  logseq.order-list-type:: number
-	- 能够设置透明背景，背景的鼠标事件能够穿透
+	- **能够设置透明背景，背景的鼠标事件能够穿透**
 	  logseq.order-list-type:: number
-	- 允许定义多个Layout，按不同快捷键去显示不同Layout。不考虑多个Layout同时显示的情况，一次只能显示一个Layout
+	- 允许定义多个Layout，按不同快捷键去显示不同Layout。**不考虑多个Layout同时显示的情况，一次只能显示一个Layout**
 	  logseq.order-list-type:: number
-	- 提供一些自定义的Widget，如各种ToolButton，笔刷等
+	- 提供一些自定义的Widget，如各种ToolButton，笔刷，绘画时间等，**先不考虑配置**
 	  logseq.order-list-type:: number
 - 需要研究：
 	- DOING 借原生DockWidget
@@ -30,6 +30,7 @@
 	  CLOCK: [2024-09-17 Tue 21:55:54]
 	  :END:
 - ## 关于透明背景
+  collapsed:: true
 	- 方法二：事件过滤器
 	  
 	  你可以为 `QDockWidget` 安装一个事件过滤器，在过滤器中自定义处理鼠标事件，判断是否在透明区域，如果在透明区域则将事件过滤掉，否则正常处理。
@@ -73,5 +74,77 @@
 	  
 	  ```
 - ## 关于子组件的编辑
-  collapsed:: true
 	- 这个可以先在普通Qt上写个原型看看，不考虑同时操作多个Widget的需求，不考虑任何界面和操作上的优化，功能最优先，毕竟编辑总是少数的。
+	- 要在 PyQt 中创建一个类似 Dashboard 的组件，提供编辑模式以允许用户调整子组件的位置和大小，并能够保存这些修改，可以参考以下思路进行实现。
+	- ### 实现步骤
+	- **编辑模式的切换**：当进入编辑模式时，允许子组件自由调整位置和大小；当退出编辑模式时，子组件的位置和大小固定。
+	- **拖动和调整子组件大小**：需要为每个子组件启用鼠标事件来实现拖动和调整大小的功能。
+	- **保存和恢复组件的布局**：在用户编辑完布局后，保存子组件的位置和大小信息（例如保存到 JSON 文件），下次启动时恢复这些设置。
+	- ### 具体实现步骤
+	- #### 1. 创建 Dashboard Widget
+	  
+	  首先，创建一个包含子组件的容器，比如 `QWidget` 或 `QFrame`，作为 Dashboard 的容器。子组件可以是按钮、图表、面板等。
+	- #### 2. 处理拖动和调整大小
+	  
+	  为了实现组件的拖动和调整大小，需要为每个子组件安装事件过滤器，监听鼠标事件。以下代码处理了鼠标拖动和大小调整。
+	- ```python
+	  class DashboardWidget(QWidget):
+	      def __init__(self):
+	          super().__init__()
+	          self.child_widgets = []
+	          self.edit_mode = False
+	          self.dragging = False
+	          self.resizing = False
+	          self.current_widget = None
+	          self.offset = QPoint()
+	          self.init_ui()
+	  
+	      def init_ui(self):
+	          # 添加子组件，保持和上面一样
+	          btn1 = QPushButton('Button 1', self)
+	          btn1.setGeometry(50, 50, 100, 50)
+	          self.child_widgets.append(btn1)
+	  
+	          btn2 = QPushButton('Button 2', self)
+	          btn2.setGeometry(200, 150, 100, 50)
+	          self.child_widgets.append(btn2)
+	  
+	          self.show()
+	  
+	      def toggle_edit_mode(self):
+	          self.edit_mode = not self.edit_mode
+	          for widget in self.child_widgets:
+	              if self.edit_mode:
+	                  widget.setMouseTracking(True)
+	                  widget.installEventFilter(self)
+	              else:
+	                  widget.removeEventFilter(self)
+	  
+	      def eventFilter(self, obj, event):
+	          if self.edit_mode and event.type() == event.MouseButtonPress:
+	              self.current_widget = obj
+	              self.offset = event.pos()
+	              if event.pos().x() > obj.width() - 10 and event.pos().y() > obj.height() - 10:
+	                  self.resizing = True
+	              else:
+	                  self.dragging = True
+	              return True
+	  
+	          elif self.edit_mode and event.type() == event.MouseMove:
+	              if self.dragging:
+	                  new_pos = obj.pos() + event.pos() - self.offset
+	                  obj.move(new_pos)
+	              elif self.resizing:
+	                  new_width = event.pos().x()
+	                  new_height = event.pos().y()
+	                  obj.setGeometry(obj.x(), obj.y(), new_width, new_height)
+	              return True
+	  
+	          elif self.edit_mode and event.type() == event.MouseButtonRelease:
+	              self.dragging = False
+	              self.resizing = False
+	              return True
+	  
+	          return super().eventFilter(obj, event)
+	  
+	  ```
