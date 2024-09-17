@@ -179,6 +179,7 @@
 	  ```
 - ## 协程间同步
 	- asyncio提供了`Lock`和`Semaphare`去处理临界区的访问，它们都支持使用`async with`。
+	- asyncio提供了`Queue`，即同步队列以方便实现生产者-消费者模式。
 	- asyncio提供`wait_for`函数，使能够超时地await，超时时抛出`TimeoutError`异常。
 	- asyncio提供了`wait`函数，以同时等待多个Task，它允许指定策略——`ALL_COMPLETED`，`FIRST_COMPLETED`，`FIRST_EXCEPTION`；**`wait`函数接受Task（不是Coroutine！）列表，返回两个Task集合，表示当前已完成和未完成的Task**，这些Task还是需要执行`await`去获取结果，注意这时候await会是直接执行的如果Task已经完成或抛出异常。**`wait`函数不会抛出异常**。
 	- asyncio提供了`gather`函数，同js的`Promise.all`。
