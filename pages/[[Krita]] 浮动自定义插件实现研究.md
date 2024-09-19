@@ -13,11 +13,11 @@
 	- 提供一些自定义的Widget，如各种ToolButton，笔刷，绘画时间等，**先不考虑配置**
 	  logseq.order-list-type:: number
 - 需要研究：
-	- DOING 借原生DockWidget
+	- DONE 借原生DockWidget
 	  logseq.order-list-type:: number
 	  :LOGBOOK:
 	  CLOCK: [2024-09-17 Tue 21:54:12]
-	  CLOCK: [2024-09-17 Tue 21:54:19]
+	  CLOCK: [2024-09-17 Tue 21:54:19]--[2024-09-19 Thu 11:21:16] =>  37:26:57
 	  :END:
 	- DOING **编辑**模式……这个恐怕是最难的一步
 	  logseq.order-list-type:: number
@@ -166,8 +166,78 @@
 	  sys.exit(app.exec_())
 	  
 	  ```
-- ## 关于借DockWidget的内容
-	- 之前学习的时候以为只能通过layout去添加子组件，其实只要设置parent就行了，此时就是相对于父组件的绝对布局。Krita的原生DockWidget中，其Layout都是空的，实际组件内容从`widget`方法去获取到。为此，要拿到其中的widget，只需要设置它的parent即可。这里直接抽象成一个类，让
+- ## 关于借Docker
+  collapsed:: true
+	- 之前学习的时候以为只能通过layout去添加子组件，其实只要设置parent就行了，此时就是相对于父组件的绝对布局。Krita的原生DockWidget中，其Layout都是空的，实际组件内容从`widget`方法去获取到。为此，要拿到其中的widget，只需要设置它的parent即可。这里直接抽象成一个类去包装借来的组件，并保证它始终充满自己。
+	- 下面的代码得在Krita的Scripter中执行，其中一个要点是要让QApplication引用它的实例，不然它会被GC掉。**在自己被删除、关闭时还回组件的功能似乎无效，得进一步研究**。
+	- ```python
+	  """在打开文档后在Scripter中开始执行，需要避免窗口被GC"""
+	  from PyQt5.QtGui import QCloseEvent, QResizeEvent
+	  from krita import *
+	  from PyQt5.QtCore import *
+	  from PyQt5.QtCore import QEvent, QObject, Qt
+	  from PyQt5.QtGui import *
+	  from PyQt5.QtWidgets import *
+	  from PyQt5.QtWidgets import QWidget
+	  
+	  class BorrowWidget(QWidget):
+	      def __init__(self, dock_widget: DockWidget, parent: QWidget | None = None) -> None:
+	          super().__init__(parent)
+	          self.__borrowed_widget = None
+	          self.__dock_widget = dock_widget
+	          self.setMinimumSize(100, 100) # 给定一个基准大小
+	          self.destroyed.connect(self.return_back)
+	  
+	      def resizeEvent(self, a0: QResizeEvent) -> None:
+	          if not self.__borrowed_widget:
+	              return super().resizeEvent(a0)
+	          self.__borrowed_widget.setGeometry(self.rect()) # rect 方法返回 (0, 0, *self.size())
+	          return super().resizeEvent(a0)
+	  
+	      def borrow(self):
+	          if self.__borrowed_widget:
+	              return
+	          self.__borrowed_widget = self.__dock_widget.widget()
+	          self.__dock_widget.setWidget(QLabel('Borrowed'))
+	          self.__borrowed_widget.setParent(self)
+	          qInfo(f'{self.__borrowed_widget.geometry()=}')
+	          self.__borrowed_widget.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+	          self.__borrowed_widget.show()
+	          self.adjustSize()
+	          self.show()
+	  
+	      def return_back(self):
+	          if not self.__borrowed_widget:
+	              return
+	          self.__dock_widget.setWidget(self.__borrowed_widget)
+	          self.__borrowed_widget = None
+	          self.hide()
+	          
+	  if __name__ == '__main__':
+	      win = QWidget()
+	      QApplication.instance().win = win # 避免被GC
+	      win.setFixedSize(1000, 800)
+	      dock = next(i for i in Krita.instance().dockers() if i.objectName() == 'sharedtooldocker')
+	  
+	      container = BorrowWidget(dock, win)
+	  
+	      borrow_btn = QPushButton(win)
+	      borrow_btn.clicked.connect(container.borrow)
+	      borrow_btn.setText('borrow')
+	  
+	      return_back_btn = QPushButton(win)
+	      return_back_btn.clicked.connect(container.return_back)
+	      return_back_btn.setText('return back')
+	  
+	      borrow_btn.setGeometry(10, 10, 120, 50)
+	      return_back_btn.setGeometry(150, 10, 120, 50)
+	  
+	      container.setGeometry(10, 100, 600, 300)
+	  
+	      win.show()
+	  ```
+- ## 关于编辑模式
+-
 - ---
 - GPT:::
 - ## 关于透明背景
