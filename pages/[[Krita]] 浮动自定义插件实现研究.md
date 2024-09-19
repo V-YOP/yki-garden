@@ -35,7 +35,7 @@
 	- **组件要为透明背景，并且占据整个屏幕**，使得允许组件距离鼠标任意远都能显示到；组件要stayOnTop以避免失焦，**组件只能再次通过快捷键关闭**
 	- 组件提供一个编辑模式，编辑模式下，在屏幕上显示提示性信息，中间显示一个十字，并且背景绘制半透明蒙版阻止操作；所有子组件相对于十字的位置即是唤起组件时子组件相对于鼠标的位置；**先不考虑组件设置的组件（先手写 json 去处理）**。
 	- 后面的demo中，对应插件的widget总叫Dashboard，还没决定该具体怎么叫。
-- ## 关于透明背景，和编辑模式的提示
+- ## 关于透明背景，和编辑模式的十字线标识
 	- 透明背景，且置顶是容易实现的，只需要在最外层组件上添加相应标识符，该操作会自动地让透明背景不响应鼠标事件，也不聚焦，但Krita的鼠标滚轮会有Bug，但反正我也不用滚轮，其他的画布快捷键都正常。
 	- ```python
 	  dashboard.setAttribute(Qt.WA_TranslucentBackground, True) # 透明背景，必须和无边框结合使用
@@ -44,7 +44,126 @@
 	  ```
 	- 此外，半透明背景，以及十字的绘制的话，**十字比较复杂，需要用子组件的形式，并且需要控制始终置顶且无法操作**。半透明背景通过**重写paintEvent**去操作。虽然GPT死不认账，但是**Qt似乎是根据透明度决定允不允许操作穿过它**。下面是一个可直接运行的pyqt示例，提供一个checkbox表示是否是编辑模式，非编辑模式下是全透明背景，鼠标可穿透，编辑模式下显示十字和半透明背景，鼠标不可穿透。
 	- ```python
-	  TODO
+	  from typing import override
+	  from PyQt5.QtWidgets import QWidget, QApplication, QPushButton
+	  from PyQt5.QtGui import QPaintEvent, QPainter, QPen, QResizeEvent, QColor
+	  from PyQt5.QtCore import QChildEvent, Qt, QPoint, QTimer
+	  import sys
+	  
+	  
+	  class CrossOverlay(QWidget):
+	      """
+	      十字线组件
+	      """
+	      def __init__(self, parent=None):
+	          super().__init__(parent)
+	          self.setAttribute(Qt.WA_TransparentForMouseEvents)  # 让鼠标事件穿透该组件
+	          self.setAttribute(Qt.WA_NoSystemBackground)  # 禁止系统背景绘制
+	          self.setStyleSheet("background: transparent;")  # 设置背景透明
+	          self.raise_()  # 将这个覆盖层放到顶层
+	  
+	      def paintEvent(self, event):
+	          # 绘制十字在顶层组件上
+	          painter = QPainter(self)
+	          painter.setRenderHint(QPainter.Antialiasing)
+	  
+	          pen = QPen(Qt.white, 2)
+	          painter.setPen(pen)
+	  
+	          rect = self.rect()
+	          center = rect.center()
+	  
+	          # 绘制水平线
+	          painter.drawLine(QPoint(rect.left(), center.y()), QPoint(rect.right(), center.y()))
+	  
+	          # 绘制垂直线
+	          painter.drawLine(QPoint(center.x(), rect.top()), QPoint(center.x(), rect.bottom()))
+	  
+	          painter.end()
+	  
+	  class Dashboard(QWidget):
+	      def __init__(self) -> None:
+	          super().__init__()
+	          self.cross = CrossOverlay(self)
+	          self.cross.setGeometry(0,0,30,30)
+	          self.__editing_mode = False
+	          self.setAttribute(Qt.WA_TranslucentBackground, True) # 透明背景，必须和无边框结合使用
+	          self.setWindowFlag(Qt.FramelessWindowHint, True) # 无边框
+	          self.setWindowFlag(Qt.WindowStaysOnTopHint, True) # 置顶
+	          self.__repaint_me()
+	  
+	      def __repaint_me(self):
+	          if self.__editing_mode:
+	              self.cross.show()
+	          else:
+	              self.cross.hide()
+	          self.repaint()
+	  
+	      @override
+	      def paintEvent(self, a0: QPaintEvent) -> None:
+	          if not self.__editing_mode:
+	              return super().paintEvent(a0)
+	          # 创建一个绘制器，绘制一个半透明的背景
+	          painter = QPainter(self)
+	  
+	          # 设置半透明背景颜色（例如：黑色，带有一定透明度）
+	          painter.setBrush(QColor(49, 54, 59, 127))  # ARGB, 150 为透明度
+	          painter.setPen(Qt.NoPen)  # 去掉边框线条
+	  
+	          # 绘制一个矩形作为背景
+	          painter.drawRect(self.rect())
+	          
+	      # 新组件添加时，把十字线往上移以保证它始终置顶（注意添加十字线组件本身也会触发这个事件，很好笑
+	      @override
+	      def childEvent(self, a0: QChildEvent) -> None:
+	          super().childEvent(a0)
+	          if a0.added() and hasattr(self, 'cross'):
+	              self.cross.raise_()
+	  
+	      # 组件大小修改时，保证十字线始终处在中间
+	      @override
+	      def resizeEvent(self, a0: QResizeEvent) -> None:
+	          super().resizeEvent(a0)
+	          geo = self.cross.geometry()
+	          geo.moveCenter(self.rect().center())
+	          self.cross.setGeometry(geo)
+	      
+	      @property
+	      def editing_mode(self):
+	          return self.__editing_mode
+	  
+	      @editing_mode.setter
+	      def editing_mode(self, x: bool):
+	          self.__editing_mode = x
+	          self.__repaint_me()
+	  
+	  # 测试程序
+	  app = QApplication(sys.argv)
+	  window = Dashboard()
+	  window.setMinimumSize(300, 300)
+	  
+	  child1 = QWidget(window)
+	  child1.setStyleSheet("background-color: red;")
+	  child1.setGeometry(50, 50, 120, 120)
+	  
+	  child2 = QWidget(window)
+	  child2.setStyleSheet("background-color: blue;")
+	  child2.setGeometry(130, 130, 120, 120)
+	  
+	  child3 = QPushButton(window) # 检查十字线是否穿透鼠标
+	  child3.setText('center11')
+	  child3.setGeometry(130, 130, 40, 40)
+	  child3.clicked.connect(lambda: print('clicked'))
+	  
+	  def interval_toggle_editing_mode():
+	      size = window.size()
+	      window.setMinimumSize(size.width() + 10, size.height() + 10) # 测试大小调整时十字线是否调整（虽然没必要啦）
+	      window.editing_mode = not window.editing_mode
+	      QTimer.singleShot(1000, interval_toggle_editing_mode)
+	  window.show()
+	  interval_toggle_editing_mode()
+	  sys.exit(app.exec_())
+	  
 	  ```
 -
 - ---
