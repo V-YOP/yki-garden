@@ -381,10 +381,11 @@
 	- 这里需要注意——eventFilter的执行顺序是：
 		- 自己的eventFilter
 		  logseq.order-list-type:: number
-		- 如果返回False的话，转给自己的相应事件处理函数
+		- 如果返回False的话，转给自己的相应事件处理方法，返回True就不再转发（这就是为什么eventFilter叫Filter）
 		  logseq.order-list-type:: number
-		- 如果事件处理函数
+		- that's it。你以为会可以冒泡给父组件？没这事，只能调父类的同方法把事件传递给父类，和父组件无关。**Qt没有冒泡机制**。
 		  logseq.order-list-type:: number
+	- 问题就在这里——eventFIlter没法递归地禁止所有子组件的
 - ---
 - GPT:::
 - ## 关于透明背景
