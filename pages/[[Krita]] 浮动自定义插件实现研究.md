@@ -167,7 +167,6 @@
 	  
 	  ```
 - ## 关于借Docker
-  collapsed:: true
 	- 之前学习的时候以为只能通过layout去添加子组件，其实只要设置parent就行了，此时就是相对于父组件的绝对布局。Krita的原生DockWidget中，其Layout都是空的，实际组件内容从`widget`方法去获取到。为此，要拿到其中的widget，只需要设置它的parent即可。这里直接抽象成一个类去包装借来的组件，并保证它始终充满自己。
 	- 下面的代码得在Krita的Scripter中执行，其中一个要点是要让QApplication引用它的实例，不然它会被GC掉。**在自己被删除、关闭时还回组件的功能似乎无效，得进一步研究**。
 	- ```python
