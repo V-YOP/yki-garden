@@ -237,7 +237,7 @@
 	      win.show()
 	  ```
 - ## 关于编辑模式
-	- 编辑模式的话，使用eventFilter去监听在组件上的QEvent.MouseMove, QEvent.MouseButtonPress, QEvent.MouseButtonRelease事件，鼠标按下时，根据按下的位置是在边界还是在内部去决定是调整大小还是移动位置，并记录初始按下的位置，在后续的移动事件中根据鼠标和原本按下位置的偏移量去操作组件geometry，实际上还是比较简单的，下面贴上该EventFilter（还有提升空间）：
+	- 编辑模式的话，使用eventFilter去监听在组件上的QEvent.MouseMove, QEvent.MouseButtonPress, QEvent.MouseButtonRelease事件，鼠标按下时，根据按下的位置是在边界还是在内部去决定是调整大小还是移动位置，并记录初始按下的位置，在后续的移动事件中根据鼠标和原本按下位置的偏移量去操作组件geometry，实际上还是比较简单的，下面贴上该EventFilter（实现上还有提升空间）：
 	- ```python
 	  class _EditGeometryEventFilter(QObject):
 	          def __init__(self, parent: QObject | None = None) -> None:
