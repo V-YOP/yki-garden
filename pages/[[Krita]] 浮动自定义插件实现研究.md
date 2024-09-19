@@ -41,8 +41,7 @@
 	  dashboard.setWindowFlag(Qt.FramelessWindowHint, True) # 无边框
 	  dashboard.setWindowFlag(Qt.WindowStaysOnTopHint, True) # 置顶
 	  ```
-	- 此外，半透明背景，以及十字的绘制的话，**十字比较复杂，需要用子组件的形式，并且需要控制始终置顶且无法操作**。半透明背景通过**重写paintEvent**去操作。虽然GPT死不认账，但是**Qt似乎是根据透明度决定允不允许操作穿过它**。
-	-
+	- 此外，半透明背景，以及十字的绘制的话，**十字比较复杂，需要用子组件的形式，并且需要控制始终置顶且无法操作**。半透明背景通过**重写paintEvent**去操作。虽然GPT死不认账，但是**Qt似乎是根据透明度决定允不允许操作穿过它**。下面是一个可直接运行的pyqt示例，提供一个checkbox表示是否是编辑模式，非编辑模式下是全透明的，编辑模式下显示箭头
 - ---
 - GPT:::
 - ## 关于透明背景

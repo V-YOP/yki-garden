@@ -495,6 +495,7 @@ article::
 		  wb.save(r'D:\DESKTOP\TMP\dest.xlsx')
 		  ```
 - ## xml/html解析
+  collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:22]
   :END:
@@ -877,6 +878,7 @@ article::
 	  ```
 	- {{embed ((66e38f96-e83b-4fdc-a1d3-9b429e1aa8ce))}}
 - ## 图像处理
+  collapsed:: true
 	- Python内置了图像处理库`PIL`（年久失修，现在用的都是它的fork `Pillow`，两者认为是同义词），如果没有内置，就`pip install Pillow`安装。
 	- PIL中有如下实体/类/模块可能会常用：
 		- Image模块：PIL的门面，提供最基础和常用的函数以及`Image`类，包括打开文件为Image，多个Image的组合操作等，很多时候只导入它就行了
