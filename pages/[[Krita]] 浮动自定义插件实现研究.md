@@ -36,7 +36,6 @@
 	- 组件提供一个编辑模式，编辑模式下，在屏幕上显示提示性信息，中间显示一个十字，并且背景绘制半透明蒙版阻止操作；所有子组件相对于十字的位置即是唤起组件时子组件相对于鼠标的位置；**先不考虑组件设置的组件（先手写 json 去处理）**。
 	- 后面的demo中，对应插件的widget总叫Dashboard，还没决定该具体怎么叫。
 - ## 关于透明背景，和编辑模式的十字线标识
-  collapsed:: true
 	- 透明背景，且置顶是容易实现的，只需要在最外层组件上添加相应标识符，该操作会自动地让透明背景不响应鼠标事件，也不聚焦，但Krita的鼠标滚轮会有Bug，但反正我也不用滚轮，其他的画布快捷键都正常。
 	- ```python
 	  dashboard.setAttribute(Qt.WA_TranslucentBackground, True) # 透明背景，必须和无边框结合使用
@@ -236,9 +235,7 @@
 	      win.show()
 	  ```
 - ## 关于编辑模式
-  collapsed:: true
 	- 编辑模式的话，使用eventFilter去监听在组件上的QEvent.MouseMove, QEvent.MouseButtonPress, QEvent.MouseButtonRelease事件，鼠标按下时，根据按下的位置是在边界还是在内部去决定是调整大小还是移动位置，并记录初始按下的位置，在后续的移动事件中根据鼠标和原本按下位置的偏移量去操作组件geometry，实际上还是比较简单的，下面贴上该EventFilter（实现上还有提升空间）（注意EventFilter对象也需要专门去引用它，不然会被GC掉而且没半点痕迹）：
-	  collapsed:: true
 		- ```python
 		  class _EditGeometryEventFilter(QObject):
 		          def __init__(self, parent: QObject | None = None) -> None:
