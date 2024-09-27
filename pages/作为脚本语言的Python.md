@@ -33,7 +33,7 @@ article::
 		  some_float = 1234.5678
 		  print(f"{some_float:f}")  # 默认6位小数，输出: 12345.678900
 		  print(f"{some_float:.2f}")  # 输出: 1234.57
-		  print(f"{some_float:10.2f}")  # 输出: '   1234.57'
+		  print(f"{some_float:10.2f}")  # 输出: '   1234.57'，.前的10表示包含小数点总共10位
 		  print(f"{some_float:e}")  # 输出: 1.234568e+03
 		  print(f"{some_float:.2e}")  # 保留2位小数，输出: 1.23e+03
 		  
@@ -741,6 +741,7 @@ article::
 		  ```
 	- 关于axes的坐标，axes的坐标根据三个参数去确定——行数，列数，第几个图表，三个参数均从1开始；python用3位整数去表示坐标。不同的axes可以有不同的行数、列数，此时会出现重叠，所以一般都保持行数列数固定。
 - ## 数据库操作
+  collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:34]
   :END:
