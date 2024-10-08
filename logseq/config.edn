@@ -299,7 +299,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["关于画画的鸡汤" "目标池" "每月目标" "snippet" "cheetsheet" "job dashboard"]
+ :favorites ["关于画画的练习" "关于画画的鸡汤" "目标池" "每月目标" "snippet" "cheetsheet" "job dashboard"]
 
  ;; Set flashcards interval.
  ;; Expected value:
