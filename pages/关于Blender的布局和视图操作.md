@@ -2,9 +2,12 @@
   :LOGBOOK:
   CLOCK: [2024-10-09 Wed 10:36:33]
   :END:
-- 第n次尝试学习 [[Blender]]。
-- 在Blender中，所有界面都是特定的Editor，它行为像IDE的侧边栏，或Qt的DockWidget，这给予了Blender界面的极大的灵活性。每个Editor都是……当前正在编辑的场景的一个侧面，或者说它们负责处理特定领域/方面的数据。
-- Editor总是属于特定Area的，Area即一个特定的显示区域，Area中的Editor能够在不改变Area范围的情况下进行替换，只需点击Editor左上角的按钮选择新的Editor即可，想从界面中移除一个Area，就右击该按钮，选`Header-Close Area`。每个Editor都有Header和Menu（可能为空），Menu是Editor自己的子菜单，仅关心该Editor中的操作。Editor左上的按钮能切换该Area的Editor
+- 第n次尝试学习 [[Blender]]，这次要把笔记做好，使得之后再尝试捡起来的时候只要以这里为单一真相来源即可。首先是布局和视图操作。
+- 在Blender中，所有顶层组件都是特定的Editor，如展示3D场景的`3D Viewport`，展示元素及其父子关系的`Outliner`等，它行为像IDE的侧边栏，或Qt的DockWidget，能够随意进行调整，这给予了Blender界面的极大的灵活性。每个Editor都是当前正在编辑的场景的一个侧面，或者说它们负责处理特定领域/方面的数据。
+- Editor总是属于特定Area的，Area即一个特定的显示区域，Area中的Editor能够在不改变Area范围的情况下进行替换，只需点击Editor左上角的按钮选择新的Editor即可，想从界面中移除一个Area（等于是移除该Editor），就右击该按钮，选`Header-Close Area`。每个Editor都有Header和Menu（可能为空），Menu是Editor自己的子菜单，仅关心该Editor中的操作。
+- Area的布局好像和之前研究的Qt的DockWidget的布局是类似的（但没有标签页），任何复杂布局只能通过多次的垂直分和水平分去达到：
+  collapsed:: true
+	- {{embed ((6703f099-d439-43bb-8148-0af7d3f740c3))}}
 - 最顶部的Layout，Modeling，Sculpting称为Workspace，它们都是特定Editor的集合，使得在处理不同领域的问题时能方便地进行切换。
 - 视图操作，即View Navigation，其实更适合翻译成视图导航，但这很怪，还是叫操作吧。所有Navigation操作都是在`3D Viewport` Editor中进行的，这个Editor顾名思义，是用来编辑和查看3D场景的，它包含诸多模式，如对象模式，编辑模式，雕刻模式等。
 - Blender 中存在**视图view** 和**镜头camera**，视图供用户浏览场景，而不影响渲染，镜头则是一个**对象object**，定义渲染图像时的视角。因为镜头是对象，所以视图和镜头的操作是有差别的。但是能够将镜头和视图临时地**双向绑定**，使得两者之间操作能互通，也可以调整视图使视角和镜头一致或者反之。
