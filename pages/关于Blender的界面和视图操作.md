@@ -4,9 +4,9 @@
   :END:
 - 第n次尝试学习 [[Blender]]，这次要把笔记做好，使得之后再尝试捡起来的时候只要以这里为单一真相来源即可。首先是布局和视图操作。
 - 在Blender中，所有顶层组件都是特定的Editor，如展示3D场景的`3D Viewport`，展示元素及其父子关系的`Outliner`等，它行为像IDE的侧边栏，或Qt的DockWidget，能够随意进行调整，这给予了Blender界面的极大的灵活性。每个Editor都是当前正在编辑的场景的一个侧面，或者说它们负责处理特定领域/方面的数据。
-- Editor总是属于特定Area的，Area即一个特定的显示区域，Area中的Editor能够在不改变Area范围的情况下进行替换，只需点击Editor左上角的按钮选择新的Editor即可，想从界面中移除一个Area（等于是移除该Editor），就右击该按钮，选`Header-Close Area`。
+- Editor总是属于特定Area的，Area即一个特定的显示区域，Area中的Editor能够在不改变Area范围的情况下进行替换，只需点击Editor左上角的按钮选择新的Editor即可，想从界面中移除一个Area（等于是移除该Editor），就右击该按钮，选`Header-Close Area`。Area能够最大化（`Ctrl`-`Space`）和占满全屏幕`Ctrl`-`Alt`-`Space`（最大化然后不显示顶层菜单和status bar），再次使用相应快捷键返回原状态。
 - 每个Editor都有Header和Menu（可能为空），Menu是Editor自己的子菜单，仅关心该Editor中的操作。Header如果隐藏了会显示一个小三角在Editor顶部使得后续能再唤出来。
-- Area的布局好像和之前研究的Qt的DockWidget的布局是类似的（但没有标签页），任何复杂布局只能通过多次的垂直分和水平分去达到：
+- Area的布局好像和之前研究的Qt的DockWidget的布局是类似的（但没有标签页），任何复杂布局能和只能通过多次的垂直分和水平分去达到：
   collapsed:: true
 	- {{embed ((6703f099-d439-43bb-8148-0af7d3f740c3))}}
 - 最顶部的Layout，Modeling，Sculpting称为Workspace，它们都是特定Editor的集合，使得在处理不同领域的问题时能方便地进行切换。
@@ -21,7 +21,7 @@
 - ## 绕中心旋转Orbit
 - 旋转可以按下鼠标鼠标中键然后进行拖动。
 - ## 滚转 Roll
--
+- 神经病，视图滚转干什么？
 - ## 轴对齐 Align View
 - ## 自我旋转
 - ## 平移
