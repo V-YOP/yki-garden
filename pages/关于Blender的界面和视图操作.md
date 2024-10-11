@@ -32,6 +32,9 @@
 - `鼠标中键-Alt-拖动`，按住鼠标中键进入Orbit状态后，按住Alt再拖动的话，在接近坐标轴方向以及两两和三三轴的45度方向时会吸附上去。
 - `View-Frame Selected`和`Numpad .`重设中心到所选对象
 - `Home`重设视图到能看到场景中所有对象
+- `Shift-C`重设游标，同时重设中心到场景
+- `View-Align View-Center View To Cursor`重设中心到3D游标
+- `Shift-鼠标右键`设置3D游标
 - ## 自我旋转
 -
 - ## 飞行模式
