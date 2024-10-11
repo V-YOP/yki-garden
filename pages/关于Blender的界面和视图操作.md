@@ -4,7 +4,8 @@
 - 每个Editor都有Header和Menu（可能为空），Menu是Editor自己的子菜单，仅关心该Editor中的操作。Header如果隐藏了会显示一个小三角在Editor顶部使得后续能再唤出来。
 - Area的布局好像和之前研究的Qt的DockWidget的布局是类似的（但没有标签页），任何复杂布局能和只能通过多次的垂直分和水平分去达到：
 	- {{embed ((6703f099-d439-43bb-8148-0af7d3f740c3))}}
-- 从Area的四个边角向Area内拖动，则能够对Editor进行水平或竖直切分，向外移动则能够移动Area的位置，向外移动的行为感觉有点奇异，但没必要研究透彻。
+- 从Area的四个边角向Area内拖动，则能够对Editor进行水平或竖直切分，向外移动则能够移动Area的位置，向外移动的行为则覆盖掉该方向的Area。
+- Editor可以单独掏出来自成一个窗口
 - 最顶部的Layout，Modeling，Sculpting称为Workspace，它们都是特定Editor的集合，使得在处理不同领域的问题时能方便地进行切换。
 - ---
 - 视图操作，即View Navigation，其实更适合翻译成视图导航，但这很怪，还是叫操作吧。所有Navigation操作都是在`3D Viewport` Editor中进行的，这个Editor顾名思义，是用来编辑和查看3D场景的，它包含诸多模式，如对象模式，编辑模式，雕刻模式等。
