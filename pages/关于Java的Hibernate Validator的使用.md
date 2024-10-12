@@ -51,7 +51,15 @@ article:: true
   ```
 - `@Valid`校验能进行嵌套校验，但**它会直接忽略掉null**，因此上面的`SomeDto`定义中，`next`字段为null，以及`dtos`字段为null或空集合，或集合中存在null，都是容忍的。
 - # 关于Service的校验的注意点
-- 一般而言，Spring项目中Service的接口和实现是分离的，如果要校验Service，
+- Hibernate Validator有一条规则：`A method overriding another method must not redefine the parameter constraint configuration`，它是说，**子类无法覆盖掉父类上的校验注解，即使父类上没有校验注解**。
+- 上面的规则同时暗示了，Hibernate Validator的注解是能够继承的。一般而言，Spring项目中Service的接口和实现是分离的，如果要校验Service，根据上面的规则，我们应当：
+	- 在接口上标注`@Validated`注解
+	  logseq.order-list-type:: number
+	- 在接口上的方法参数中添加相应校验注解
+	  logseq.order-list-type:: number
+	- **在实现上不需要添加任何注解**，或者保证注解和接口的相同。
+	  logseq.order-list-type:: number
+- 初看感觉这个要求不太合理，但细想其实还好——按理来说，接口内部使用何种实现对接口的调用者是透明的，因此**值的约束必须是接口层级**上的，如果破坏这个约定就会出岔子。
 - # 常用校验注解
 - # 拦截校验异常
 - # 自定义校验
