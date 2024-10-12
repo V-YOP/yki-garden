@@ -7,4 +7,10 @@ article:: true
     <artifactId>spring-boot-starter-validation</artifactId>
   </dependency>
   ```
-- Hibernate Validator利用**切面**完成自己的逻辑，它根据**类**和**方法**上的`@Validated`（或`@Valid`，但`@Valid`不支持校验组）注解去进行切入，并根据**参数**上的注解去进行校验。
+- Hibernate Validator利用**切面**完成自己的逻辑，它根据**类**上的`@Validated`（或`@Valid`）注解去进行切入，并根据**参数**上的注解去进行校验。总的来说，Hibernate Validator要发挥作用需要：
+	- `spring-boot-starter-validation`依赖引入
+	  logseq.order-list-type:: number
+	- 类上标注`@Validated`或`@Valid`（**必须在类上标注！**）
+	  logseq.order-list-type:: number
+	- 方法的参数上标注相应注解
+	  logseq.order-list-type:: number
