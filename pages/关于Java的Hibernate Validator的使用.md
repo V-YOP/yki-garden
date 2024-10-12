@@ -19,26 +19,39 @@ article:: true
 	- 调用方法时不能从内部调用（切面实现的锅）
 	  logseq.order-list-type:: number
 - 注意，Hibernate Validator通过切面工作，因此**它不仅能切入Controller，也能切入Service**，但仅此而已，某些时候还是需要手动进行校验。
-- 下面是一个极简例子，涉及到控制器和实体类参数的校验：
+- 下面是一个极简例子，涉及到控制器和实体类参数的校验，它已经提出了许多要注意的部分：
 - ```java
   @RestController
   @Validated
   public class SomeController {
+  
+      // 定义带校验的实体类（注意实体类上不需要加任何额外注解）
       @Data
       public static class SomeDto {
-          @NotBlank
-          String name;
-          @NotBlank
-          String value;
+          @NotBlank // 对于实体类，注解加到字段上
+          private String name;
+  
+          @NotBlank @Length(min=10) // 可以同时有多个校验 注解
+          private String value;
+  
+          @Valid // 对实体类用 Valid 进行嵌套校验（注意Valid在字段为null的时候不检查！）
+          private SomeDto next;
+  
+          private List<@Valid SomeDto> dtos; // 对集合进行校验（注意这里不会检查集合是否为null或空！同时也没检查集合元素是否为null！）
       }
       @PostMapping("/query")
-      public SomeDto query(@Valid @RequestBody SomeDto dto) {
+      public SomeDto query(
+              // 实体类参数用 @Valid 或 @Validated注解进行校验
+              @Valid @RequestBody SomeDto dto,
+              @NotBlank @Length(min=10) @RequestParam String param) {
           return dto;
       }
   }
+  
   ```
-- # 校验实体类
+- `@Valid`校验能进行嵌套校验，但**它会直接忽略掉null**，因此上面的`SomeDto`定义中，`next`字段为null，以及`dtos`字段为null或空集合，或集合中存在null，都是容忍的。
 - # 关于Service的校验的注意点
+- 一般而言，Spring项目中Service的接口和实现是分离的，如果要校验Service，
 - # 常用校验注解
 - # 拦截校验异常
 - # 自定义校验
