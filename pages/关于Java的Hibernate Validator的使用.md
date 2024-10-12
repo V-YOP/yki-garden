@@ -75,7 +75,15 @@ article:: true
 - |注解|作用|坑|
   |--|--|--|
   |Email|检查邮箱是否合法|null合法|
-  ||||
+  |Past, Future, ...|时间是否是过去或未来|null合法|
+  |Min, Max, Positive, Negative...|限制数字的最小值，最大值，正负性等|null合法，注意不要用Min和Max限制字符串长度，这个能启动，但**运行时会报错**|
+  |Null|约束字段必须为null||
+  |NotNull|约束字段必须不能为null||
+  |NotEmpty|集合或字符串不能为null且非空||
+  |NotBlank|字符串不能为null且必须包含非空字符||
+  |Pattern|字符串必须满足正则|null合法|
+  |Size|字符串长度或集合必须满足特定大小范围|null合法，大小区间前闭后闭|
+  |Length|字符串长度必须在特定范围|前闭后闭|
 - # 手动校验
 - # 拦截校验异常
 - # 自定义校验
