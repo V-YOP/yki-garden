@@ -11,7 +11,7 @@ article:: true
 	  logseq.order-list-type:: number
 	- 更清晰地规范实体定义，校验注解本身就是一种注释
 	  logseq.order-list-type:: number
-	- 支持自定义校验
+	- 支持自定义校验逻辑
 	  logseq.order-list-type:: number
 - 通过下面的starter引入hibernate validator依赖：
 - ```xml
@@ -33,9 +33,8 @@ article:: true
 - 下面是一个极简例子，涉及到控制器和实体类的校验，它已经提出了许多要注意的部分：
 - ```java
   @RestController
-  @Validated
-  public class SomeController {
-  
+  @Validated // 控制器等于是会自动添加 Validated 注解的，不用显式添加
+  public class SomeController 
       // 定义带校验的实体类（注意实体类上不需要加任何额外注解，加注解也是没用的）
       @Data
       public static class SomeDto {
