@@ -13,6 +13,7 @@ article:: true
 	  logseq.order-list-type:: number
 	- 支持自定义校验逻辑
 	  logseq.order-list-type:: number
+- # 环境搭建和基本使用
 - 通过下面的starter引入hibernate validator依赖：
 - ```xml
   <dependency>
@@ -72,7 +73,7 @@ article:: true
 	  logseq.order-list-type:: number
 - 初看感觉这个要求不太合理，但细想其实还好——按理来说，接口内部使用何种实现对接口的调用者是透明的，因此**值的约束必须是定义自接口层级上的，实现对值的约束只能更宽，不能更窄**，而我们无法判断约束的宽窄，所以就硬性要求它们保持一致。但其实作为业务的开发者来说，还是希望能够将注解只写在实现上。
 - # 常用校验注解
-- 这里列出可能会常用的注解，注意几乎所有注解都认为null是合法的。
+- 这里列出可能会常用的注解，注意几乎所有注解都认为null是合法的。注解主要在`org.hibernate.validator.constraints`和`javax.validation.constraints`包下。
 - |注解|作用|坑|
   |--|--|--|
   |Email|检查邮箱是否合法|null合法|
@@ -86,6 +87,7 @@ article:: true
   |NotEmpty|集合或字符串不能为null且非空||
   |NotBlank|字符串不能为null且必须包含非空字符||
 - # 手动校验
+- 有时候可能会想要进行手动校验，比如我们可能会想写mybatis拦截器，在插入和更新数据前进行校验；
 - # 拦截校验异常
 - # 自定义校验
 - # 分组校验
