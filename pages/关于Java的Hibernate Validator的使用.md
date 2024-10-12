@@ -87,7 +87,25 @@ article:: true
   |NotEmpty|集合或字符串不能为null且非空||
   |NotBlank|字符串不能为null且必须包含非空字符||
 - # 手动校验实体类
-- 有时候可能会想要进行手动校验，**比如我们可能会想写mybatis拦截器，在插入和更新数据前进行校验**，手动校验可以利用Spring提供的 Bean`javax.validation.Validator`（这是它对JSR规范的实现），或者Bean `org.springframework.validation.SmartValidator`，前者返回"vioiationes"，即实体对象对约束的违反，后者是Spring的一般行为，在底层利用前者，通过抛出异常的方式来代表违反。前后者都可以使用，下面的例子使用前者。
+- 有时候可能会想要进行手动校验，**比如我们可能会想写mybatis拦截器，在插入和更新数据前进行校验**，手动校验可以利用Spring提供的 Bean`javax.validation.Validator`（这是它对JSR规范的实现），或者Bean `org.springframework.validation.SmartValidator`，前者返回"vioiations"，即实体对象对约束的违反，**后者是Spring的默认行为**，在底层利用前者，通过抛出异常的方式来代表违反。前后者都可以使用，下面的例子使用前者：
+- ```java
+  @Autowired
+  private javax.validation.Validator validator;
+  
+  public void test() {
+    SomeDto dto = new SomeDto();
+    dto.setName("");
+    dto.setValue("");
+    Set<ConstraintViolation<SomeDto>> violations = validator.validate(dto);
+    if (violations.isEmpty()) {
+      // 校验成功，...
+      return;
+    }
+    for (ConstraintViolation<SomeDto> violation : violations) {
+      System.out.println(violation.getMessage());
+    }
+  }
+  ```
 -
 - # 拦截校验异常
 - # 自定义校验
