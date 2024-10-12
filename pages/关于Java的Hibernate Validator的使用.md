@@ -1,7 +1,18 @@
 article:: true
 
-- 之前学习过hibernate Validator，但当时做的笔记弄丢了，最近可能又要开始写Java，所以把这一部分学习一下，做个笔记，避免到处写丑陋的样板代码。
+- DOING complete me
+  :LOGBOOK:
+  CLOCK: [2024-10-12 Sat 15:59:51]
+  :END:
+- 之前学习过hibernate Validator，但当时做的笔记弄丢了，最近可能又要开始写Java，所以把这一部分学习一下，做个笔记。
 - Hibernate Validator用于值校验，能够避免业务中过多地出现校验业务代码。Hibernate Validator支持对自定义类型，集合类型和内置Java类型进行校验，同时支持定义校验组，即让类型约束从属于特定组，只在进行该组的校验时才发挥作用。
+- 为什么要使用Hibernate Validator：
+	- 声明式，避免到处写丑陋的样板代码
+	  logseq.order-list-type:: number
+	- 更清晰地规范实体定义，校验注解本身就是一种注释
+	  logseq.order-list-type:: number
+	- 支持自定义校验
+	  logseq.order-list-type:: number
 - 通过下面的starter引入hibernate validator依赖：
 - ```xml
   <dependency>
@@ -16,7 +27,7 @@ article:: true
 	  logseq.order-list-type:: number
 	- 方法的参数上标注相应校验注解（其中，实体类参数使用`@Valid`或`@Validated`注解）
 	  logseq.order-list-type:: number
-	- 调用方法时不能从内部调用（切面实现的锅）
+	- 调用方法时不能从内部调用（切面嘛，懂的都懂）
 	  logseq.order-list-type:: number
 - 注意，Hibernate Validator通过切面工作，因此**它不仅能切入Controller，也能切入Service**，但仅此而已，某些时候还是需要手动进行校验。
 - 下面是一个极简例子，涉及到控制器和实体类的校验，它已经提出了许多要注意的部分：
@@ -59,9 +70,10 @@ article:: true
 	  logseq.order-list-type:: number
 	- **在实现上不需要添加任何注解**，或者保证实现上的注解和接口上的**完全相同**。
 	  logseq.order-list-type:: number
-- 初看感觉这个要求不太合理，但细想其实还好——按理来说，接口内部使用何种实现对接口的调用者是透明的，因此**值的约束必须是定义自接口层级上的，实现对值的约束只能更宽，不能更窄**，而我们无法判断宽窄，所以就硬性要求它们保持一致。但其实作为业务的开发者来说，还是希望能够将注解只写在实现上。
+- 初看感觉这个要求不太合理，但细想其实还好——按理来说，接口内部使用何种实现对接口的调用者是透明的，因此**值的约束必须是定义自接口层级上的，实现对值的约束只能更宽，不能更窄**，而我们无法判断约束的宽窄，所以就硬性要求它们保持一致。但其实作为业务的开发者来说，还是希望能够将注解只写在实现上。
 - # 常用校验注解
+-
+- # 手动校验
 - # 拦截校验异常
 - # 自定义校验
 - # 分组校验
-- # 手动校验
