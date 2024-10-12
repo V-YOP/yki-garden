@@ -1,4 +1,4 @@
-- 第n次尝试学习 [[Blender]]，这次要把笔记做好，使得之后再尝试捡起来的时候只要以这里为单一真相来源即可。首先是布局和视图操作。
+- 第n次尝试学习 [[Blender]]，这次要把笔记做好，使得之后再尝试捡起来的时候只要以这里为单一真相来源即可。学习顺序是先实践再理论（但3D建模部分要先把理论稍微过一遍）。首先是布局和视图操作。
 - 在Blender中，所有顶层组件都是特定的Editor，如展示3D场景的`3D Viewport`，展示元素及其父子关系的`Outliner`等，它行为像IDE的侧边栏，或Qt的DockWidget，能够随意进行调整，这给予了Blender界面的极大的灵活性。每个Editor都是当前正在编辑的场景的一个侧面，或者说它们负责处理特定领域/方面的数据。
 - Editor总是属于特定Area的，Area即一个特定的显示区域，Area中的Editor能够在不改变Area范围的情况下进行替换，只需点击Editor左上角的按钮选择新的Editor即可，想从界面中移除一个Area（等于是移除该Editor），就右击该按钮，选`Header-Close Area`。Area能够最大化（`Ctrl-Space`）和占满全屏幕`Ctrl-Alt-Space`（最大化然后不显示顶层菜单和status bar），再次使用相应快捷键返回原状态。
 - 每个Editor都有Header和Menu（可能为空），Menu是Editor自己的子菜单，仅关心该Editor中的操作。Header如果隐藏了会显示一个小三角在Editor顶部使得后续能再唤出来。
