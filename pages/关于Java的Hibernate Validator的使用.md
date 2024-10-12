@@ -33,7 +33,7 @@ article:: true
 - 下面是一个极简例子，涉及到控制器和实体类的校验，它已经提出了许多要注意的部分：
 - ```java
   @RestController
-  @Validated // 控制器等于是会自动添加 Validated 注解的，可以不显式添加
+  @Validated
   public class SomeController 
       // 定义带校验的实体类（注意实体类上不需要加任何额外注解，加注解也是没用的）
       @Data
@@ -60,6 +60,7 @@ article:: true
   
   ```
 - `@Valid`校验能进行嵌套校验，但**它会直接忽略掉null**，因此上面的`SomeDto`定义中，`next`字段为null，以及`dtos`字段为null或空集合，或集合中存在null，都是容忍的。
+- Controller的参数校验似乎并非完全是通过切面完成的——即使Controller上未加`@Validated`注解，`@Valid`注解仍旧会生效，但是其它校验注解不会生效，因此**最佳实践是，总是在类上加`@Validated`，不要嫌麻烦**。
 - # 关于Service的校验
 - Hibernate Validator有一条规则：`A method overriding another method must not redefine the parameter constraint configuration`，它是说，**子类无法覆盖掉父类上的校验注解，即使父类上没有校验注解**。
 - 上面的规则同时暗示了，Hibernate Validator的注解是能够**继承**的。一般而言，Spring项目中Service的接口和实现是分离的，如果要**校验Service**，根据上面的规则，我们应当：
@@ -76,14 +77,14 @@ article:: true
   |--|--|--|
   |Email|检查邮箱是否合法|null合法|
   |Past, Future, ...|时间是否是过去或未来|null合法|
+  |Pattern|字符串必须满足正则|null合法|
+  |Size|字符串长度或集合必须满足特定大小范围|null合法，大小区间前闭后闭|
   |Min, Max, Positive, Negative...|限制数字的最小值，最大值，正负性等|null合法，注意不要用Min和Max限制字符串长度，这个能启动，但**运行时会报错**|
+  |Length|字符串长度必须在特定范围|null合法，前闭后闭|
   |Null|约束字段必须为null||
   |NotNull|约束字段必须不能为null||
   |NotEmpty|集合或字符串不能为null且非空||
   |NotBlank|字符串不能为null且必须包含非空字符||
-  |Pattern|字符串必须满足正则|null合法|
-  |Size|字符串长度或集合必须满足特定大小范围|null合法，大小区间前闭后闭|
-  |Length|字符串长度必须在特定范围|前闭后闭|
 - # 手动校验
 - # 拦截校验异常
 - # 自定义校验
