@@ -87,8 +87,8 @@ article:: true
   |NotEmpty|集合或字符串不能为null且非空||
   |NotBlank|字符串不能为null且必须包含非空字符||
 - # 手动校验实体类
-- 有时候可能会想要进行手动校验，**比如我们可能会想写mybatis拦截器，在插入和更新数据前进行校验**，手动校验可以利用Spring提供的 Bean`javax.validation.Validator`，利用它的`validate`方法检查实体对象是否满足约束。
-- `validate`方法**不抛出异常**，而是返回"vioiationes"，即实体对象对约束的违反。
+- 有时候可能会想要进行手动校验，**比如我们可能会想写mybatis拦截器，在插入和更新数据前进行校验**，手动校验可以利用Spring提供的 Bean`javax.validation.Validator`（这是它对JSR规范的实现），或者Bean `org.springframework.validation.SmartValidator`，前者返回"vioiationes"，即实体对象对约束的违反，后者是Spring的一般行为，在底层利用前者，通过抛出异常的方式来代表违反。前后者都可以使用，下面的例子使用前者。
+-
 - # 拦截校验异常
 - # 自定义校验
 - # 分组校验
