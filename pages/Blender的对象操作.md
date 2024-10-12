@@ -5,7 +5,7 @@
 	- Active -> 未选中
 	- 未选中 -> Active
 	- Selected -> Active
-- `Shift-S`开启Cursor的一个菜单，可以调整Cursor，Active和Selection（即Selected的对象）之间的位置，如移动Cursor到Selection，移动Selected到
+- `Shift-S`开启Cursor的一个菜单，可以调整Cursor，Active和Selection（即Selected的对象）之间的位置，如移动Cursor到Selection，移动Cursor到原点，到Active等。
 - ## 创建对象
 - `Shift-A`呼出创建对象的菜单，**对象会创建于Cursor处**，在创建完对象后，3D Viewport左下角处会出现一个菜单能**调整刚才创建的对象的属性**。这里体现了Blender的设计哲学——**不展示dialog，而是直接用默认配置给你做操作，操作后你再按需更改**。
 -
