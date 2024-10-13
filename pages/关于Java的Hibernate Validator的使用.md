@@ -1,9 +1,5 @@
 article:: true
 
-- DOING complete me
-  :LOGBOOK:
-  CLOCK: [2024-10-12 Sat 15:59:51]
-  :END:
 - 之前学习过hibernate Validator，但当时做的笔记弄丢了，最近可能又要开始写Java，所以把这一部分学习一下，做个笔记。
 - Hibernate Validator用于值校验，能够避免业务中过多地出现校验业务代码。Hibernate Validator支持对自定义类型，集合类型和内置Java类型进行校验，同时支持定义校验组，即让类型约束从属于特定组，只在进行该组的校验时才发挥作用。
 - 为什么要使用Hibernate Validator：
@@ -11,7 +7,7 @@ article:: true
 	  logseq.order-list-type:: number
 	- 更清晰地规范实体定义，校验注解本身就是一种注释
 	  logseq.order-list-type:: number
-	- 支持自定义校验逻辑
+	- 支持自定义校验逻辑和错误消息，其中还能注入依赖以实现更复杂逻辑
 	  logseq.order-list-type:: number
 - # 环境搭建和基本使用
 - 通过下面的starter引入hibernate validator依赖：
@@ -187,7 +183,7 @@ article:: true
           // 实际校验操作
           @Override
           public boolean isValid(String value, ConstraintValidatorContext context) {
-              // 修改掉原来的violation信息
+              // 修改掉原来的violation信息，比如做国际化之类的
               context.disableDefaultConstraintViolation(); // 移除掉原来的violation信息
               context.buildConstraintViolationWithTemplate("身份证不合法：" + value)
                       .addConstraintViolation();
@@ -228,4 +224,4 @@ article:: true
   public void update(@Validated({OnInsert.class, OnUpdate.class}) @RequestBody SomeDto dto) {
   }
   ```
-- 这里又有一个权衡——**是让不同组正交，在使用时选择校验多个组，还是让每个组都负责特定具体业务，校验时只校验一个组？**
+- 这里又有一个权衡——**是让不同组正交，在使用时选择校验多个组，还是让每个组都负责特定具体业务，校验时只校验一个组**？按状况判断吧。
