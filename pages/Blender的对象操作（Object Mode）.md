@@ -1,6 +1,7 @@
 - 对象即场景中出现的物体，包括能看到的物体，镜头，光源，对象集合等。对象能进行变换Transformation，即缩放Scale，旋转Rotate和移动Grab，它们的快捷键还挺好记的，它们都支持按全局坐标系和按局部坐标系进行操作。
   id:: 670a87ba-c425-4206-92f6-bdf6a3804697
 - 对象能够在`N`菜单中进行操作，修改它的属性，也可在Properties Editor中修改，但更多的时候用的还是快捷键。
+- 下面的操作都在3D Viewport的**Object Mode**进行，该模式适合用来布置整个场景。
 - ## 选择对象
 - 关于选择对象的快捷键，常用的就不多说了，符合习惯，注意Blender关于选择的对象有两种状态——Active和Selected，同时能有多个Selected的对象，但只有一个Active的对象，Active可以认为是一种特殊的Selected。**Active对象绿色边框，Selected对象红色边框**。
 - `Shift-鼠标左键`，**toggle对象的选择状态**，简单来说**就是设置对象为Active或者取消选中**：
