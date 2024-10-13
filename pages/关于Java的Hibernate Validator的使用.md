@@ -109,7 +109,11 @@ article:: true
 -
 - # 拦截校验异常
 - Hibernate Validator会抛出如下异常：
-	- `javax.validation.ConstraintViolationException`，约束违反，它会抛出在
+	- `org.springframework.web.bind.MethodArgumentNotValidException`，抛出在Controller的Valid注解的实体类参数（这简直就是历史遗留问题），默认响应码是400
 	  logseq.order-list-type:: number
+	- `javax.validation.ConstraintViolationException`，其他情况，默认响应码是500
+	  logseq.order-list-type:: number
+-
+-
 - # 自定义校验
 - # 分组校验
