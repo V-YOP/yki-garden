@@ -43,7 +43,7 @@ article:: true
   
           @Valid // 对实体类用 Valid 进行嵌套校验（注意Valid在字段为null的时候不检查！）
           private SomeDto next;
-  
+        
           private List<@Valid SomeDto> dtos; // 对集合进行校验（注意这里不会检查集合是否为null或空！同时也没检查集合元素是否为null！）
       }
       @PostMapping("/query")
@@ -72,6 +72,7 @@ article:: true
 - 这里列出可能会常用的注解，注意几乎所有注解都认为null是合法的。注解主要在`org.hibernate.validator.constraints`和`javax.validation.constraints`包下。
 - |注解|作用|坑|
   |--|--|--|
+  |Valid|校验嵌套的实体类|null合法|
   |Email|检查邮箱是否合法|null合法|
   |Past, Future, ...|时间是否是过去或未来|null合法|
   |Pattern|字符串必须满足正则|null合法|
@@ -147,7 +148,7 @@ article:: true
 - Validator不关心它被标注在字段上还是标注到参数上，**它直接拿到值然后去做校验，但同时也允许获取当前的字段路径等信息以构建错误消息**。
 - Spring Boot会惰性地为**为每个不同的注解创建相应的Validator实例**，从而让每个Validator都负责同一个注解（类型相同，且所有字段值相同），避免任何并发问题，同时支持在创建Validator时注入依赖。
 - 编写自定义校验注解需要：
-	- 创建自定义注解，注解需要是Runtime的，需要能够标注到字段和参数上（**也可以让注解能标注到类上，这允许对整个类进行校验**），注解需要引用下一步中编写的自定义Validator，**注解必须包含groups，message, payload字段（可以直接抄现成的）**
+	- 创建自定义注解，注解需要是Runtime的，需要能够标注到字段和参数上（**也可以让注解能标注到类上，这允许对整个类进行校验**），注解需要引用下一步中编写的自定义Validator，**注解必须包含groups，message，payload字段（可以直接抄现成的）**
 	  logseq.order-list-type:: number
 	- 创建自定义Validator，如果注解能够校验多种类型，则每个类型都需要一个Validator，Validator类要实现`ConstraintValidator<注解, T>`，**在构造函数中注入Spring Bean依赖，在`initialize`方法中注入注解，并在`isValid`中线程安全地进行校验**。
 	  logseq.order-list-type:: number
@@ -163,9 +164,10 @@ article:: true
   @Documented
   @Constraint(validatedBy = IsIdCard.IsIdCardValidator.class)
   public @interface IsIdCard {
-      String message() default "Invalid Id Card"; // 这个消息会是默认消息，它里面能使用{}插值注解上的字段
+      String message() default "Invalid Id Card"; // 这个消息会是默认消息，它里面能使用 {} 插值注解上的字段
       Class<?>[] groups() default { };
       Class<? extends Payload>[] payload() default { };
+    
       // 不需要，也不应该标注 @Component
       class IsIdCardValidator implements javax.validation.ConstraintValidator<IsIdCard, String> {
           private final SomeService someService;
@@ -225,4 +227,4 @@ article:: true
   public void update(@Validated(OnUpdate.class) @RequestBody SomeDto dto) {
   }
   ```
-- 这里又有一个权衡——**是让不同组正交，在使用时选择校验多个组，还是让每个组都负责特定具体业务，校验时只校验一个组**？按状况判断吧。
+- 这里又有一个权衡——**是让不同组正交，在使用时选择校验多个组，还是让每个组都负责特定具体业务，校验时只校验一个组**？按状况判断吧，结合着用。
