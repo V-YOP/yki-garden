@@ -149,10 +149,11 @@ article:: true
 - # 自定义校验注解
 - 有时候需要自定义校验，**比如要校验身份证**，这个肯定没有被提供，需要手写。这时候需要自定义Validator和注解。
 - Validator不关心它被标注在字段上还是标注到参数上，**它直接拿到值然后去做校验，但同时也允许获取当前的字段路径等信息以构建错误消息**。
+- Spring Boot会惰性地为**为每个不同的注解创建相应的Validator实例**，从而避免任何并发问题，**用户在`initialize`方法中注入注解，并在`isValid`中线程安全地进行校验即可**。
 - 编写自定义校验注解需要：
 	- 创建自定义注解，注解需要是Runtime的，需要能够标注到字段和参数上，注解需要引用下一步中编写的自定义Validator，**注解必须包含groups，message, payload字段（可以直接抄现成的）**
 	  logseq.order-list-type:: number
-	- 创建自定义Validator，如果注解能够校验多种类型，则每个类型都需要一个Validator，Validator类要实现`ConstraintValidator<注解, T>`
+	- 创建自定义Validator，如果注解能够校验多种类型，则每个类型都需要一个Validator，Validator类要实现`ConstraintValidator<注解, T>`，
 	  logseq.order-list-type:: number
 	- logseq.order-list-type:: number
 - 下面编写一个身份证校验注解，其中也演示了如何在校验过程中获取Bean使得能和系统其他部分进行交互。
