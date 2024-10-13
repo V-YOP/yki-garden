@@ -109,10 +109,11 @@ article:: true
 -
 - # 拦截校验异常
 - Hibernate Validator会抛出如下异常：
-	- `org.springframework.web.bind.MethodArgumentNotValidException`，抛出在Controller的Valid注解的实体类参数（这简直就是历史遗留问题），默认响应码是400
+	- `org.springframework.web.bind.MethodArgumentNotValidException`，抛出在Controller的`@Valid`或`@Validated`注解的实体类参数（这简直就是历史遗留问题），默认响应码是400，消息是"Bad Request"
 	  logseq.order-list-type:: number
-	- `javax.validation.ConstraintViolationException`，其他情况，默认响应码是500
+	- `javax.validation.ConstraintViolationException`，其他情况，默认响应码是500，消息是"Internal Server Error"，这是符合道理的——**控制器的参数错误是用户的错误，服务层的参数错误是开发者的错误**。
 	  logseq.order-list-type:: number
+- 这两个异常都需要被拦截才能妥善把校验信息响应给前端……但这样真的好吗？全给到前端不是会让坏家伙有可乘之机吗？总之贴上：
 -
 -
 - # 自定义校验
