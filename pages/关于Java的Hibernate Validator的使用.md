@@ -155,5 +155,5 @@ article:: true
 	- 创建自定义Validator，如果注解能够校验多种类型，则每个类型都需要一个Validator，Validator类要实现`ConstraintValidator<注解, T>`
 	  logseq.order-list-type:: number
 	- logseq.order-list-type:: number
-- 下面编写一个身份证校验注解
+- 下面编写一个身份证校验注解，其中也演示了如何在校验过程中获取Bean使得能和系统其他部分进行交互。
 - # 分组校验
