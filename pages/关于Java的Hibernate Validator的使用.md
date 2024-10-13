@@ -146,6 +146,10 @@ article:: true
       }
   }
   ```
-- # 自定义校验
-- 有时候需要自定义校验，比如要校验身份证，
+- # 自定义校验注解
+- 有时候需要自定义校验，**比如要校验身份证**，这个肯定没有被提供，需要手写。编写自定义校验注解有如下步骤：
+	- 创建自定义注解，注解需要是Runtime的，需要能够标注到字段和参数上，注解需要引用下一步中编写的自定义Validator
+	  logseq.order-list-type:: number
+	- 创建自定义Validator，如果注解能够校验多种类型，则每个类型都需要一个Validator，Validator类要实现`ConstraintValidator<注解, 类型>`
+	  logseq.order-list-type:: number
 - # 分组校验
