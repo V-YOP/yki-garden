@@ -206,4 +206,26 @@ article:: true
   }
   ```
 - # 分组校验
-- 所有校验注解都有`groups`参数，表示校验所属的校验组。在进行校验时，通过`@Validated`的groups参数指定只校验特定组的注解（注意它标识在参数上时表示只校验这些组的注解，标识在字段上时表示该校验属于这些组，这是两种不同的语义）。校验组使用**任意Class**进行标识，这些Class不需要任何实际操作。
+- 所有校验注解都有`groups`参数（除了Validated，它直接用`value`），表示校验所属的校验组。在进行校验时，通过`@Validated`的value参数指定只校验特定组的注解（注意它标识在参数上时表示只校验这些组的注解，标识在字段上时表示该校验属于这些组，这是两种不同的语义）。校验组使用**任意Class**进行标识，这些Class不需要任何实际操作。
+- ```java
+  interface OnInsert { }
+  interface OnUpdate { }
+  @Data
+  public static class SomeDto {
+    // 插入时不需要id非空
+    @NotBlank(groups = OnUpdate.class)
+    String id;
+    // 创建和更新时value都必需非空
+    @NotBlank(groups = {OnInsert.class, OnUpdate.class})
+    String value;
+  }
+  @PostMapping("/insert")
+  public void insert(@Validated({OnInsert.class}) @RequestBody SomeDto dto) {
+  }
+  
+  @PostMapping("/update")
+  // 同时校验多个组也是可以的，它会按顺序往后校验
+  public void update(@Validated({OnInsert.class, OnUpdate.class}) @RequestBody SomeDto dto) {
+  }
+  ```
+- 这里又有一个权衡——**是让不同组正交，在使用时选择校验多个组，还是让每个组都负责特定具体业务，校验时只校验一个组？**
