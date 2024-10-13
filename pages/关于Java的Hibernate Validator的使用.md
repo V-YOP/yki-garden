@@ -113,8 +113,39 @@ article:: true
 	  logseq.order-list-type:: number
 	- `javax.validation.ConstraintViolationException`，其他情况，默认响应码是500，消息是"Internal Server Error"，这是符合道理的——**控制器的参数错误是用户的错误，服务层的参数错误是开发者的错误**。
 	  logseq.order-list-type:: number
-- 这两个异常都需要被拦截才能妥善把校验信息响应给前端……但这样真的好吗？全给到前端不是会让坏家伙有可乘之机吗？总之贴上：
--
--
+- 这两个异常都需要被拦截才能妥善把校验信息响应给前端……但这样真的好吗？全给到前端不是会让坏家伙有可乘之机吗？总之贴上（实际操作时应当像ruoyi那样，正常响应和错误响应形式保持一致）：
+- ```java
+  @RestControllerAdvice
+  public class GlobalExceptionHandler {
+  
+      // 处理 ConstraintViolationException
+      @ExceptionHandler(ConstraintViolationException.class)
+      public ResponseEntity<?> handleConstraintViolationException(ConstraintViolationException ex, WebRequest request) {
+          Map<String, String> errors = new HashMap<>();
+          ex.getConstraintViolations().forEach(violation ->
+                  errors.put(violation.getPropertyPath().toString(), violation.getMessage())
+          );
+          return new ResponseEntity<>(errors, HttpStatus.INTERNAL_SERVER_ERROR);
+      }
+  
+      // 处理 MethodArgumentNotValidException
+      @ExceptionHandler(MethodArgumentNotValidException.class)
+      public ResponseEntity<?> handleMethodArgumentNotValidException(MethodArgumentNotValidException ex) {
+          Map<String, String> errors = new HashMap<>();
+          String parameterName = ex.getParameter().getParameterName();
+          ex.getBindingResult().getFieldErrors().forEach(error ->
+                  errors.put(parameterName + "." + error.getField(), error.getDefaultMessage())
+          );
+          return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+      }
+  
+      // 处理其他异常
+      @ExceptionHandler(Exception.class)
+      public ResponseEntity<?> handleGlobalException(Exception ex, WebRequest request) {
+          // ...
+      }
+  }
+  ```
 - # 自定义校验
+- 有时候需要自定义校验，比如要校验身份证，
 - # 分组校验
