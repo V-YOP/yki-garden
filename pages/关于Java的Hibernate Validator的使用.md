@@ -156,4 +156,5 @@ article:: true
 	  logseq.order-list-type:: number
 	- logseq.order-list-type:: number
 - 下面编写一个身份证校验注解，其中也演示了如何在校验过程中获取Bean使得能和系统其他部分进行交互。
+-
 - # 分组校验
