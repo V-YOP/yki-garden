@@ -158,5 +158,51 @@ article:: true
 	- 实现`isValid`时，第一个参数是字段值，第二个参数是当前上下文，`isValid`方法返回true或false，true表示校验通过，false表示不通过，此时hibernate validator会根据上下文去构造相应violation，此时可以自定义错误消息。
 	  logseq.order-list-type:: number
 - 下面编写一个身份证校验注解，其中演示了如何在校验过程中获取Bean使得能和系统其他部分进行交互，以及如何修改错误消息。
--
+- ```java
+  /**
+   * 校验是否合法身份证，null 认为是合法
+   */
+  @Target({ FIELD, PARAMETER })
+  @Retention(RUNTIME)
+  @Documented
+  @Constraint(validatedBy = IsIdCard.IsIdCardValidator.class)
+  public @interface IsIdCard {
+      String message() default "Invalid Id Card"; // 这个消息会是默认消息，它里面能使用{}插值注解上的字段
+      Class<?>[] groups() default { };
+      Class<? extends Payload>[] payload() default { };
+      // 不需要，也不应该标注 @Component
+      class IsIdCardValidator implements javax.validation.ConstraintValidator<IsIdCard, String> {
+          private final SomeService someService;
+          private IsIdCard anno;
+          // 通过构造函数注入bean
+          public IsIdCardValidator(SomeService someService) {
+              this.someService = someService;
+          }
+          // 通过initialize方法注入注解
+          @Override
+          public void initialize(IsIdCard constraintAnnotation) {
+              this.anno = constraintAnnotation;
+          }
+  
+          // 实际校验操作
+          @Override
+          public boolean isValid(String value, ConstraintValidatorContext context) {
+              // 修改掉原来的violation信息
+              context.disableDefaultConstraintViolation(); // 移除掉原来的violation信息
+              context.buildConstraintViolationWithTemplate("身份证不合法：" + value)
+                      .addConstraintViolation();
+  
+              // 遵循规范，null认为合法
+              if (value == null) {
+                  return true;
+              }
+  
+              return isValidIdCard(value);
+          }
+          private static boolean isValidIdCard(String idCard) {
+              // ...
+          }
+      }
+  }
+  ```
 - # 分组校验
