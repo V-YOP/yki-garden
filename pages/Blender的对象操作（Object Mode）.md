@@ -16,7 +16,7 @@
   :LOGBOOK:
   CLOCK: [2024-10-12 Sat 23:27:52]
   :END:
-- `Alt-D`**引用链接对象**，**这样创建的对象，和原来的对象共享同样的Mesh**（Mesh反映物体的几何形状，同时包含Material信息，这个后面再表）
+- `Alt-D`**引用链接对象**，**这样创建的对象，和原来的对象共享同样的数据**（对Mesh对象而言就是Mesh数据，Mesh反映物体的几何形状，同时包含Material信息，这个后面再表）
 - `Object-Relations-Make SIngle User-Object & Data & Materials`允许**“断开”链接**，本质上就是把Mesh（以及Mesh中包含的Material）给复制一份（或者叫local化？）。
 - ## 移动Grab
 - `G`：**进入移动模式**，**对象默认会在和视图平行的平面上进行运动**（所以可以实现调整视图为轴向来方便移动）
