@@ -108,6 +108,8 @@ article:: true
   ```
 -
 - # 拦截校验异常
--
+- Hibernate Validator会抛出如下异常：
+	- `javax.validation.ConstraintViolationException`，约束违反，它会抛出在
+	  logseq.order-list-type:: number
 - # 自定义校验
 - # 分组校验
