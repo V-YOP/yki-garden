@@ -4,7 +4,7 @@
 - 下面的操作都在3D Viewport的**Object Mode**进行，该模式适合用来布置整个场景。
 - ## 选择对象
 - 关于选择对象的快捷键，常用的就不多说了，符合习惯，注意Blender关于选择的对象有两种状态——Active和Selected，同时能有多个Selected的对象，但只有一个Active的对象，Active可以认为是一种特殊的Selected。**Active对象绿色边框，Selected对象红色边框**。
-- `Shift-鼠标左键`，**toggle对象的选择状态**，简单来说**就是设置对象为Active或者取消选中**：
+- `Shift-鼠标左键`，**toggle对象的选择状态**，简单来说**就是设置对象为Active或者取消选中**，或者说，**最后一个选中的对象会是Active的**：
 	- Active -> 未选中
 	- 未选中 -> Active
 	- Selected -> Active
@@ -38,7 +38,9 @@
 	  logseq.order-list-type:: number
 	- `3D Cursor`：使用3D光标的位置
 	  logseq.order-list-type:: number
-	- `Individual Origins`：使用各自物体的原点
+	- `Individual Origins`：使用各自对象的原点
 	  logseq.order-list-type:: number
-	- `Median Point`：使用
+	- `Median Point`：使用所有对象的原点组成的点集的中点
+	  logseq.order-list-type:: number
+	- `Active Element`：使用Active的对象的中点
 	  logseq.order-list-type:: number
