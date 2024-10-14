@@ -4,4 +4,5 @@
 	  logseq.order-list-type:: number
 	- ……其他类型，如Curve，Surface，Camera等
 	  logseq.order-list-type:: number
-- 编辑操作允许对对象的数据进行编辑。如果说对象模式主要是布置场景和对对象进行变换的话，**编辑模式主要是用来编辑Mesh**。
+- 编辑操作允许对对象的数据进行编辑。如果说对象模式主要是布置场景和对对象进行变换的话，**编辑模式主要是用来编辑Mesh**，更具体地说，是编辑Mesh对象的顶点Vertex（复数是Vertices），边Edge和面Face，它们都可以是编辑的元素，比如对点可以grab，对边和面可以grab，rotate和scale。编辑模式下会**提供多种工具来操作点，线和面**。
+-
