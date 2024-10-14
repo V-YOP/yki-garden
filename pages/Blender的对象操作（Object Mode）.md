@@ -32,4 +32,13 @@
 - `S`，**进入缩放模式**，其他的同移动，Ctrl的粒度为0.1，Shift+Ctrl粒度为0.01
 - ## 旋转Rotate
 - `R`，进入旋转模式，其他的同移动，Ctrl的粒度是5度，Shift+Ctrl粒度为1度
-- ## Pivot
+- ## 变换中心点Transform Pivot point
+- 变换总是根据一个特定的点去进行变换的，这个点称为pivot，默认配置下，变换中心点是物体的原点（后面提），变换中心点有多种可选项，在3D Viewport的header上能选择（注意它们的“算法”都是考虑选择了多个对象的情况）：
+	- `Bounding Box Center`：使用选择的多个对象用一个盒子包围起来后的中心
+	  logseq.order-list-type:: number
+	- `3D Cursor`：使用3D光标的位置
+	  logseq.order-list-type:: number
+	- `Individual Origins`：使用各自物体的原点
+	  logseq.order-list-type:: number
+	- `Median Point`：使用
+	  logseq.order-list-type:: number
