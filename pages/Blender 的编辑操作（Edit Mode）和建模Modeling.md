@@ -39,4 +39,5 @@
 		  logseq.order-list-type:: number
 			- ![image.png](../assets/image_1728971613237_0.png){:height 415, :width 821}
 - ## 环切Loop Cut
-	- Loop Cut不改变原来的形状，它就像在物体上缠一个橡皮筋包围它，创建对应的顶点和边缘。`Ctrl-R`进行Loop Cut，切完会进入到切面的移动模式。
+	- Loop Cut不改变原来的形状，它就像在物体上**缠一个橡皮筋包围它，创建对应的顶点和边缘**（或者理解为切一刀）。`Ctrl-R`进行Loop Cut，切完会进入到切面的移动模式。
+	-
