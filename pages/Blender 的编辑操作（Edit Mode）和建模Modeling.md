@@ -32,5 +32,6 @@
 	  logseq.order-list-type:: number
 	- Extrude Individual：各个面按自己的法向分别extrude，各个面之间不会有连接
 	  logseq.order-list-type:: number
-	- Extrude Along Normal：各个面按法向分别extrude
+	- Extrude Along Normal：各个面按法向分别extrude，**这些面中，不同面中相交的线会按两个面的平均法线运动，不相交则按该面的法线运动**，运动距离会是一样的，但因为角度有差别，所以结果的面不会和原面是同一法线：
 	  logseq.order-list-type:: number
+		-
