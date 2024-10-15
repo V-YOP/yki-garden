@@ -22,18 +22,22 @@
   CLOCK: [2024-10-14 Mon 16:50:27]
   :END:
 - ## 挤出Extrude
-- **Extrude是最常用的多边形建模工具**，它的行为是**复制选中的元素，并将复制后的元素和原来的元素一一对应连接上**，下图就是他的效果，连接线用红圈标出来了。Extrude按+号时会**按法线方向**把复制后的元素进行移动，但也可以不理会它，任意去移动。
-- 这里并非是完全地复制——能够观察到，如果一个点周围所有点都被选择了，此时进行extrude时，它不会被复制而是被移动……总之不用关心这种细节，能理解就行。
-- 关于法线方向，Blender会根据点旁边的三个面和线旁边的两个面去计算点、线的法线方向。
-- ![image.png](../assets/image_1728953682660_0.png){:height 517, :width 761}
-- Extrude如此常用，以至于它有一个快捷键`E`，选择特定元素后按E就可以进行extrude，**注意按下`E`之后节点就被复制了并进入移动模式，即使后面按下`Esc`，Esc只取消移动操作**。奇妙的是，**只有面会进入沿法线的移动模式，其他的只能任意移动**。Extrude也可以用来让面沿法线移动。
-- Extrude自己也有多种模式：
-	- Extrude Region：默认行为，各个元素按平均的法线方向去extrude。
-	  logseq.order-list-type:: number
-	- Extrude Individual：各个面按自己的法向分别extrude，各个面之间不会有连接
-	  logseq.order-list-type:: number
-	- Extrude Along Normals：各个面按法向分别extrude，**这些面中，不同面中相交的线会按两个面的平均法线运动，不相交则按该面的法线运动**，运动距离会是一样的，但因为角度有差别，所以结果的面不会和原面是同一法线：
-	  logseq.order-list-type:: number
-		- ![image.png](../assets/image_1728961968854_0.png)
-	- Extrude Manifold：**特别适合向内挤**，向内extrude时能够**智能移除重叠面**，避免自相交等。它适合向内挤压时移除重叠面，保持外观合理，但不能直接用于“打通”——尝试打通（即两边对称向内挤直到刚好重叠）时，extrude manifold（仍）会留下一个面（但不会造成多余的点，わーい），这时候手动删除就行了，至少此时没有重复的点：
-	  logseq.order-list-type:: number
+  collapsed:: true
+	- **Extrude是最常用的多边形建模工具**，它的行为是**复制选中的元素，并将复制后的元素和原来的元素一一对应连接上**，下图就是他的效果，连接线用红圈标出来了。Extrude按+号时会**按法线方向**把复制后的元素进行移动，但也可以不理会它，任意去移动。
+	- 这里并非是完全地复制——能够观察到，如果一个点周围所有点都被选择了，此时进行extrude时，它不会被复制而是被移动……总之不用关心这种细节，能理解就行。
+	- 关于法线方向，Blender会根据点旁边的三个面和线旁边的两个面去计算点、线的法线方向。
+	- ![image.png](../assets/image_1728953682660_0.png){:height 517, :width 761}
+	- Extrude如此常用，以至于它有一个快捷键`E`，选择特定元素后按E就可以进行extrude，**注意按下`E`之后节点就被复制了并进入移动模式，即使后面按下`Esc`，Esc只取消移动操作**。奇妙的是，**只有面会进入沿法线的移动模式，其他的只能任意移动**。Extrude也可以用来让面沿法线移动。
+	- Extrude自己也有多种模式，可以通过左边菜单选择当前工具，但更方便的方法恐怕是选择元素后 `Alt+E`唤出菜单：
+		- Extrude Region：默认行为，各个元素按平均的法线方向去extrude。
+		  logseq.order-list-type:: number
+		- Extrude Individual：各个面按自己的法向分别extrude，各个面之间不会有连接
+		  logseq.order-list-type:: number
+		- Extrude Along Normals：各个面按法向分别extrude，**这些面中，不同面中相交的线会按两个面的平均法线运动，不相交则按该面的法线运动**，运动距离会是一样的，但因为角度有差别，所以结果的面不会和原面是同一法线：
+		  logseq.order-list-type:: number
+			- ![image.png](../assets/image_1728961968854_0.png)
+		- Extrude Manifold：**特别适合向内挤**，向内extrude时能够**智能移除重叠面**，避免自相交等。它适合向内挤压时移除重叠面，保持外观合理，但不能直接用于“打通”——尝试打通（即两边对称向内挤直到刚好重叠）时，extrude manifold（仍）会留下一个面（但不会造成多余的点，わーい），这时候手动删除就行了，至少此时没有重复的点：
+		  logseq.order-list-type:: number
+			- ![image.png](../assets/image_1728971613237_0.png){:height 415, :width 821}
+- ## 环切Loop Cut
+	-
