@@ -44,3 +44,13 @@
 	  logseq.order-list-type:: number
 	- `Active Element`：使用Active的对象的中点
 	  logseq.order-list-type:: number
+- ## 变换方向
+- Blender提供了诸多变换方向，变换方向是变换操作依据的方向，变换方向通过顶部菜单指定，默认配置是全局坐标系。**选择全局坐标系时，第一次按XYZ，走全局坐标系，再按则是走本地坐标系；选择其他类型的变换方向时，第一次按XYZ走对应的变换方向，再按则是走全局坐标系**。
+- 此外，也能通过`,`菜单修改变换方向。
+- 有下面的变换方向：
+	- global
+	  logseq.order-list-type:: number
+	- local
+	  logseq.order-list-type:: number
+	- normal：所选元素的平均**法线**方向，**这在试图把面按法线方向移动等操作时特别有用**。
+	  logseq.order-list-type:: number
