@@ -40,4 +40,4 @@
 		  logseq.order-list-type:: number
 			- ![image.png](../assets/image_1728971613237_0.png){:height 415, :width 821}
 - ## 环切Loop Cut
-	-
+	- Loop Cut不创建
