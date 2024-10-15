@@ -35,5 +35,5 @@
 	- Extrude Along Normals：各个面按法向分别extrude，**这些面中，不同面中相交的线会按两个面的平均法线运动，不相交则按该面的法线运动**，运动距离会是一样的，但因为角度有差别，所以结果的面不会和原面是同一法线：
 	  logseq.order-list-type:: number
 		- ![image.png](../assets/image_1728961968854_0.png)
-	- Extrude Manifold：向内extrude时能够**智能移除重叠面**，避免自相交等。它适合向内挤压时移除重叠面，保持外观合理，但不适合用于“打通”——尝试打通（即两边对称向内挤直到刚好重叠）时，普通extrude会留下两个面，但extrude manifold（仍）会留下一个面，这时候手动删除就行了：
+	- Extrude Manifold：向内extrude时能够**智能移除重叠面**，避免自相交等。它适合向内挤压时移除重叠面，保持外观合理，但不能直接用于“打通”——尝试打通（即两边对称向内挤直到刚好重叠）时，extrude manifold（仍）会留下一个面，这时候手动删除就行了，至少此时没有重复的点：
 	  logseq.order-list-type:: number
