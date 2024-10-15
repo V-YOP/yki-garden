@@ -27,3 +27,8 @@
 - 关于法线方向，Blender会根据点旁边的三个面和线旁边的两个面去计算点、线的法线方向。
 - ![image.png](../assets/image_1728953682660_0.png){:height 517, :width 761}
 - Extrude如此常用，以至于它有一个快捷键`E`，选择特定元素后按E就可以进行extrude，**注意按下`E`之后节点就被复制了并进入移动模式，即使后面按下`Esc`，Esc只取消移动操作**。奇妙的是，**只有面会进入沿法线的移动模式，其他的只能任意移动**。Extrude也可以用来让面沿法线移动。
+- Extrude自己也有多种模式：
+	- Extrude Region：默认行为，按轴或随意地extrude
+	  logseq.order-list-type:: number
+	- Extrude Maniford
+	  logseq.order-list-type:: number

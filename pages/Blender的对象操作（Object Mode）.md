@@ -52,5 +52,7 @@
 	  logseq.order-list-type:: number
 	- local
 	  logseq.order-list-type:: number
-	- normal：所选元素的平均**法线**方向，**这在试图把面按法线方向移动等操作时特别有用**。
+	- normal：所选元素的平均**法线**方向，**这在试图把面按法线方向移动等操作时特别有用**
+	  logseq.order-list-type:: number
+	- ...以后再说
 	  logseq.order-list-type:: number
