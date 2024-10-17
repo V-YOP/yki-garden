@@ -52,5 +52,6 @@
 		  logseq.order-list-type:: number
 		- `Esc`以取消移动，做均等切分，否则应用移动
 		  logseq.order-list-type:: number
-	-
-	-
+- ## 连接 Connect
+	- 选择一些点，然后按`F`，就能连接它们。**两个点创建线，更多点创建面**。
+	- 一般而言，要避免三角形的面，它会破坏边环，变形动画时也会不好看。
