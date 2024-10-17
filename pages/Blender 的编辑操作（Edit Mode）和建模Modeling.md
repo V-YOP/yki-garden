@@ -35,7 +35,7 @@
 		- Extrude Along Normals：各个面按法向分别extrude，**这些面中，不同面中相交的线会按两个面的平均法线运动，不相交则按该面的法线运动**，运动距离会是一样的，但因为角度有差别，所以结果的面不会和原面是同一法线：
 		  logseq.order-list-type:: number
 			- ![image.png](../assets/image_1728961968854_0.png)
-		- Extrude Manifold：**特别适合向内挤**，向内extrude时能够**智能移除重叠面**，避免自相交等。它适合向内挤压时移除重叠面，保持外观合理，但不能直接用于“打通”——尝试打通（即两边对称向内挤直到刚好重叠）时，extrude manifold（仍）会留下一个面（但不会造成多余的点，わーい），这时候手动删除就行了，至少此时没有重复的点：
+		- Extrude Manifold：**特别适合向内挤**，能够**智能移除重叠面**，避免自相交等。它适合向内挤压时移除重叠面，保持外观合理，但不能直接用于“打通”——尝试打通（即两边对称向内挤直到刚好重叠）时，extrude manifold（仍）会留下一个面（但不会造成多余的点，わーい），这时候手动删除就行了，至少此时没有重复的点：
 		  logseq.order-list-type:: number
 			- ![image.png](../assets/image_1728971613237_0.png){:height 415, :width 821}
 			- [官方文档](https://docs.blender.org/manual/zh-hans/4.2/modeling/meshes/tools/extrude_manifold.html)的附图更形象，它提到Extrude Manifold能够**融并正交边**，这话似乎是说，如果它发现在移动过程中创建的面和其他的面完全共面，则把这里的其他的面扩大或缩小，详情见附图。
