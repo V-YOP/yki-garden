@@ -39,7 +39,7 @@
 		  logseq.order-list-type:: number
 			- ![image.png](../assets/image_1728971613237_0.png){:height 415, :width 821}
 			- 此外，Extrude Manifold向外挤出时，对“侧边”可能会避免形成新的边，这使得侧边的形状不会再是四边形，不知道这个特性是好还是不好：
-				- ![image.png](../assets/image_1729130229719_0.png)
+				- ![image.png](../assets/image_1729130229719_0.png){:height 543, :width 574}
 - ## 环切Loop Cut
 	- `Ctrl-R`进行Loop Cut，此时需要点击边的中点以进行环切，切完会进入到切面的移动模式。
 	- Loop Cut不改变原来的形状，它就像在物体上**缠一个橡皮筋包围它，创建对应的顶点和边缘**（或者理解为切一刀）。环切不会创建新的形状，而是只是在旧的形状上增加新的点和边。
