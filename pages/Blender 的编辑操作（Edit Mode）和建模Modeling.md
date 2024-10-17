@@ -41,7 +41,11 @@
 			- 此外，Extrude Manifold向外挤出时，对“侧边”可能会避免形成新的边，这使得**Extrude Manifold可以用来沿法线Grab**不知道这个特性是好还是不好：
 				- ![image.png](../assets/image_1729130229719_0.png){:height 543, :width 574}
 - ## 环切Loop Cut
-	- `Ctrl-R`进行Loop Cut，此时需要点击边的中点以进行环切，切完会进入到切面的移动模式。
 	- Loop Cut不改变原来的形状，它就像在物体上**缠一个橡皮筋包围它，创建对应的顶点和边缘**（或者理解为切一刀）。环切不会创建新的形状，而是只是在旧的形状上增加新的点和边。
+	- `Ctrl-R`进入Loop Cut模式，此时：
+		- 鼠标置于要切分的边的中点，能够显示切线的预览
+		  logseq.order-list-type:: number
+		- `鼠标滚轮`调整切面数量，每个此时需要点击边的中点以进行环切，切完会进入到切面的移动模式，`Esc`以退出使得从中点切。此时可以用`鼠标滚轮`进行更多次的均等切分。
+		  logseq.order-list-type:: number
 	-
 	-
