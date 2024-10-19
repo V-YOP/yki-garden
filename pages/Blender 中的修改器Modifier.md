@@ -9,3 +9,6 @@
 - 决定模型光滑程度的是**子面数**以及**算法**，总的来说，有如下配置项：
 	- Level，**细分等级**——对每个原来的面，细分得到的面数为$$2^{Level}$$。viewport和render时能设置不同的细分等级，这是优化策略。
 	  logseq.order-list-type:: number
+	- Algorithm，**细分算法**：
+	  logseq.order-list-type:: number
+		- logseq.order-list-type:: number
