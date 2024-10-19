@@ -7,7 +7,7 @@
   id:: 6712fc8d-bce2-4ecb-a932-772005db4d35
 - ![image.png](../assets/image_1729306064470_0.png){:height 256, :width 641}
 - 决定模型光滑程度的是**子面数**以及**算法**，总的来说，有如下配置项：
-	- Level，**细分等级**——对每个原来的面，细分得到的面数为$$2^{Level}$$。viewport和render时能设置不同的细分等级，这是优化策略。
+	- Level，**细分等级**——对每个原来的面，细分得到的面数为$$2^{Level}$$。viewport和render时能设置不同的细分等级，这是优化策略。调太大会增加计算量，甚至让blender崩溃。
 	  logseq.order-list-type:: number
 	- Algorithm，**细分算法**：
 	  logseq.order-list-type:: number
