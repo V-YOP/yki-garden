@@ -17,4 +17,11 @@
 		  logseq.order-list-type:: number
 	- Quality，细分质量，关系到细分的正确性，高准确度会增加计算开销
 	  logseq.order-list-type:: number
-	- logseq.order-list-type:: number
+	- DOING 其他的
+	  logseq.order-list-type:: number
+	  :LOGBOOK:
+	  CLOCK: [2024-10-19 Sat 16:34:13]
+	  CLOCK: [2024-10-19 Sat 16:34:15]
+	  CLOCK: [2024-10-19 Sat 16:34:15]
+	  :END:
+- 细分曲面时，有时候会发现一些错误的
