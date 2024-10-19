@@ -11,4 +11,8 @@
 	  logseq.order-list-type:: number
 	- Algorithm，**细分算法**：
 	  logseq.order-list-type:: number
-		- logseq.order-list-type:: number
+		- **Catmull-Clark**：**根据**原有网格的顶点和边去生成曲面，适用于有机形态
+		  logseq.order-list-type:: number
+		- **Simple**：**仅细分面**，不改变顶点，即**不改变原始形状**
+		  logseq.order-list-type:: number
+	- logseq.order-list-type:: number
