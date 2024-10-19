@@ -39,4 +39,4 @@
 	- 对象偏移Object Offset，即上面说的参考对象
 	  logseq.order-list-type:: number
 - ## 布尔 Bool
-- 真神来了。布尔
+- 使用布尔运算去创建对象，从这个修改器的角度看来，对象不是线框，而是真真正正的几何体了，布尔运算允许对这些几何体进行交集Intersection，差集Substraction，并集Union运算，从而得到新的几何体。
