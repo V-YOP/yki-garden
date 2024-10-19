@@ -15,4 +15,6 @@
 		  logseq.order-list-type:: number
 		- **Simple**：**仅细分面**，不改变顶点，即**不改变原始形状**
 		  logseq.order-list-type:: number
+	- Quality，细分质量，关系到细分的正确性，高准确度会增加计算开销
+	  logseq.order-list-type:: number
 	- logseq.order-list-type:: number
