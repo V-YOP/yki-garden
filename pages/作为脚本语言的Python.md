@@ -117,7 +117,6 @@ article:: true
 	  
 	  ```
 - ## 文件/路径操作
-  collapsed:: true
 	- 考虑进行文件/路径操作时优先使用`pathlib`。
 	- 文件操作主要使用如下标准库和方法：
 		- `os`：提供一切POSIX提供的玩意儿，在这里包括但不限于删除，重命名，创建/读取文件夹，删除非空文件夹，修改工作目录等操作。
@@ -194,7 +193,7 @@ article:: true
 			  logseq.order-list-type:: number
 			- `with_suffix`：替换最后一个扩展名后的新路径
 			  logseq.order-list-type:: number
-		- `shutil`：提供文件批量拷贝，移动，删除操作；提供`which`操作，提供压缩/解压缩操作（ zip和tar.gz 均支持，wtf在标准库里提供这个）
+		- `shutil`：提供文件批量拷贝，移动，删除操作；提供`which`操作（该`which`操作从`PATH`下获取所有文件，即使不是可执行文件！），提供压缩/解压缩操作（ zip和tar.gz 均支持，wtf在标准库里提供这个）
 		  logseq.order-list-type:: number
 			- `copy/copytree`：复制文件，递归复制目录
 			  logseq.order-list-type:: number
