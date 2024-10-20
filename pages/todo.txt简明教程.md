@@ -47,4 +47,13 @@
 		- 列出所有出现吉他项目的 TODO 中出现的项目：
 			- `todo lsprj 吉他`
 	- ## 自定义动作
-		- todo.txt-cli允许自定义动作，即添加新的子命令。首先在`todo.cfg`下指定子命令的文件夹，然后在该文件夹下创建子命令，或者创建子命令文件夹，并在其中包含同名的文件作为入口，即`action`或。
+		- todo.txt-cli允许自定义动作，即添加新的子命令。首先在`todo.cfg`下指定动作的文件夹，然后在该文件夹下创建动作文件，或者创建动作文件夹，并在其中包含同名的文件作为入口，即`action`或`action/action`，该动作文件需要是可执行的，可以使用`shebang`。
+		- 关于动作的实现：
+			- 能够使用任何语言，只要是能直接执行的
+			  logseq.order-list-type:: number
+			- `todo.cfg`中的环境变量都会被带上，通过环境变量来得到todo文件路径
+			  logseq.order-list-type:: number
+			- 执行`todo help action`时，会使用参数`usage`调用动作，此时应当打印其的参数说明
+			  logseq.order-list-type:: number
+			- 执行`todo action ...`时，会带着所有参数去执行动作，注意其中第一个参数为动作文件路径，第二个参数为动作名。
+			  logseq.order-list-type:: number
