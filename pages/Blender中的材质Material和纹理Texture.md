@@ -4,7 +4,7 @@
 	  logseq.order-list-type:: number
 	- 对象可以有零个或多个材质
 	  logseq.order-list-type:: number
-	- 拷贝对象时，
+	- 无论是拷贝还是链接对象，材质都会被重用，通过`Object-Realtions-Make Single User`把材质“本地化”。
 	  logseq.order-list-type:: number
 	- 可以通过Append或Link引用其他blend文件中的材质
 	  logseq.order-list-type:: number
