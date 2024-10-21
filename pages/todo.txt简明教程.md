@@ -53,7 +53,7 @@
 			  logseq.order-list-type:: number
 			- `todo.cfg`中的环境变量都会被带上，通过环境变量来得到todo文件路径
 			  logseq.order-list-type:: number
-			- 执行`todo help action`时，会使用参数`usage`调用动作，此时应当打印其的参数说明
+			- 执行`todo help action`时，会使用参数`usage`调用动作，此时应当打印动作的参数说明
 			  logseq.order-list-type:: number
 			- 执行`todo action ...`时，会带着所有参数去执行动作，注意其中第一个参数为动作文件路径，第二个参数为动作名。
 			  logseq.order-list-type:: number
