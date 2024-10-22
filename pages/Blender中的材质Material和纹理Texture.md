@@ -17,7 +17,7 @@
   :LOGBOOK:
   CLOCK: [2024-10-22 Tue 00:40:44]
   :END:
-- Blender提供了一堆着色器，其中BSDF这个词经常出现，它指的是Bidirectional Scattering Distribution Function，一种处理物体对光照的反映的**数学模型**。
+- Blender提供了一堆着色器，其中BSDF这个词经常出现，它指的是Bidirectional Scattering Distribution Function，一种处理物体对光照的反映的**数学模型**，它并非是Blender独有的东西。
 - 下面从简单到复杂学习各种着色器。观察高光的效果时，应当使用球而非正方体，球的高光从各种角度来看都会很显眼，其他的则不然。
 - ## Diffuse BSDF 漫反射
 - Diffuse BSDF，**简单**不透明漫反射，**没有高光**（**高光是镜面反射**）。
