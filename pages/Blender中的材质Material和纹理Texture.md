@@ -8,5 +8,9 @@
 	  logseq.order-list-type:: number
 	- 可以通过Append或Link引用其他blend文件中的材质
 	  logseq.order-list-type:: number
+- 上面说对象引用材质，但更实践地来说，**对象包含材质槽Material Slots，对象的每个面属于特定材质槽，材质槽引用（Assign）材质**。默认地，对象的所有面属于同一个材质槽，但可以在Shader Editor中修改它以允许物体的各个面持有不同材质。
 - 材质相关配置见`Properties-Material` tab页，调整该页的配置，实际上就是调整`Shader Editor`中相应Shader Node的配置。
--
+- DOING shader是啥，shader和material是什么关系，所有节点都叫shader节点吗？
+  :LOGBOOK:
+  CLOCK: [2024-10-22 Tue 00:40:44]
+  :END:
