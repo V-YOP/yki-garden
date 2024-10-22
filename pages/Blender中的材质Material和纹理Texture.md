@@ -18,4 +18,6 @@
   CLOCK: [2024-10-22 Tue 00:40:44]
   :END:
 - Blender提供了一堆着色器，其中BSDF这个词经常出现，它指的是Bidirectional Scattering Distribution Function，一种处理物体对光照的反映的**数学模型**。
--
+- 有如下可能常用的着色器：
+	- Diffuse BSDF：简单不透明漫反射
+	  logseq.order-list-type:: number
