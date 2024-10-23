@@ -1,6 +1,6 @@
 article:: true
 
-- 之前学习过hibernate Validator，但当时做的笔记弄丢了，最近可能又要开始写Java，所以把这一部分学习一下，做个笔记。
+- 之前学习过hibernate Validator，但当时做的笔记弄丢了，最近可能又要开始写[[Java]]，所以把这一部分学习一下，做个笔记。
 - Hibernate Validator用于值校验，能够避免业务中过多地出现校验业务代码。Hibernate Validator支持对自定义类型，集合类型和内置Java类型进行校验，同时支持定义校验组，即让类型约束从属于特定组，只在进行该组的校验时才发挥作用。
 - 为什么要使用Hibernate Validator：
 	- 声明式，避免到处写丑陋的样板代码
