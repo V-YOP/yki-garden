@@ -795,7 +795,6 @@ article:: true
 		- XXXBLOB -> `bytes`
 		  logseq.order-list-type:: number
 - ## HTTP请求
-  collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:18]
   :END:
@@ -835,7 +834,7 @@ article:: true
 	  # 上面的json换成data即可
 	  
 	  ### POST，multipart/form-data
-	  # 上面的json换成file即可
+	  # 上面的json换成files即可
 	  ```
 	- **异步**的话需要使用AsyncClient，它自带连接池和cookie持久化，**异步的返回结果的类型和同步的是相同的**……不太优雅：
 	- ```python
