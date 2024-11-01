@@ -40,7 +40,7 @@
 	- Extrude自己也有多种模式，可以通过左边菜单选择当前工具，但更方便的方法恐怕是选择元素后 `Alt+E`唤出菜单：
 		- Extrude Region：默认行为，各个元素按平均的法线方向去extrude。
 		  logseq.order-list-type:: number
-		- Extrude Individual：各个面按自己的法向分别extrude，各个面之间不会有连接
+		- Extrude Individual：各个面按自己的法向分别extrude，各个面之间不会有连接。这个适合做**手指**等。
 		  logseq.order-list-type:: number
 		- Extrude Along Normals：各个面按法向分别extrude，**这些面中，不同面中相交的线会按两个面的平均法线运动，不相交则按该面的法线运动**，运动距离会是一样的，但因为角度有差别，所以结果的面不会和原面是同一法线：
 		  logseq.order-list-type:: number
@@ -50,7 +50,8 @@
 			- ![image.png](../assets/image_1728971613237_0.png){:height 415, :width 821}
 			- [官方文档](https://docs.blender.org/manual/zh-hans/4.2/modeling/meshes/tools/extrude_manifold.html)的附图更形象，它提到Extrude Manifold能够**融并正交边**，这话似乎是说，如果它发现在移动过程中创建的面和其他的面完全共面，则把这里的其他的面扩大或缩小，详情见附图。
 			- ![modeling_meshes_tools_extrude-manifold_example.gif](../assets/modeling_meshes_tools_extrude-manifold_example_1729132966757_0.gif)
-			-
+		- Extrude To Cursor，挤出到光标，这个可以直接`Ctrl-右键`去操作。
+		  logseq.order-list-type:: number
 - ## 环切Loop Cut
 	- Loop Cut不改变原来的形状，它就像在物体上**缠一个橡皮筋包围它，创建对应的顶点和边缘**（或者理解为切一刀）。环切不会创建新的形状，而是只是在旧的形状上增加新的点和边。
 	- `Ctrl-R`进入Loop Cut模式，此时：
