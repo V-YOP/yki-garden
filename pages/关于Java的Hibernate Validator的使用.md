@@ -205,7 +205,7 @@ article:: true
   ```
 - # 分组校验
 - 所有校验注解都有`groups`参数（除了Validated，它直接用`value`），表示校验所属的校验组。在进行校验时，通过`@Validated`的value参数指定只校验特定组的注解（注意它标识在参数上时表示只校验这些组的注解，标识在字段上时表示该校验属于这些组，这是两种不同的语义）。校验组使用**任意Class**进行标识，这些Class不需要任何实际操作。
-- 注意——一切未指定groups的注解，它默认属于`javax.validation.groups.Default`组，因此**一旦指定了校验组，那没有处在任何校验组中的校验注解不会生效**。如果希望此时也生效，应当在groups中加入Default组。
+- 注意——一切未指定groups的注解，它默认属于`javax.validation.groups.Default`组，因此**一旦指定了校验组，那没有处在任何校验组中的校验注解不会生效**。如果希望此时也生效，应当在groups中加入Default组。可以使用GroupSequence
 - ```java
   interface OnInsert { }
   interface OnUpdate { }
