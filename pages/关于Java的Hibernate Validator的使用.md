@@ -215,11 +215,15 @@ article:: true
 - ```java
   interface OnInsert { }
   interface OnUpdate { }
+  interface Always extends Default, OnInsert, OnUpdate {}
   // 定义带校验的实体类（注意实体类上不需要加任何额外注解）
   @Data
   public static class SomeDto {
-    @NotNull
+    @NotNull // 等同于@NotNull(groups=Default.class)，它在创建和更新时均未被校验
     String key;
+    
+    @NotNull(groups=Always.class) // 创建，更新，以及未指定groups时均校验
+    String x;
     
     // 创建时ID必须为null，更新时必须不为空
     @Null(groups = OnInsert.class)
