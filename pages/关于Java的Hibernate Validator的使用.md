@@ -204,23 +204,28 @@ article:: true
   }
   ```
 - # 分组校验
-- 所有校验注解都有`groups`参数（除了Validated，它直接用`value`），表示校验所属的校验组。在进行校验时，通过`@Validated`的value参数指定只校验特定组的注解（注意它标识在参数上时表示只校验这些组的注解，标识在字段上时表示该校验属于这些组，这是两种不同的语义）。校验组使用**任意Class**进行标识，这些Class不需要任何实际操作。
+- 所有校验注解都有`groups`参数（除了Validated，它直接用`value`），表示校验所属的校验组。在进行校验时，通过`@Validated`的value参数指定只校验特定组的注解（注意它标识在参数上时表示只校验这些组的注解，标识在字段上时表示该校验属于这些组，这是两种不同的语义）。校验组使用**任意Interface**进行标识，这些Inteface不需要任何实际操作。
 - 分组有如下性质：
 	- 未指定groups的校验注解，默认属于`javax.validation.groups.Default`组，因此**一旦指定了校验组，那没有处在任何校验组中的校验注解不会生效**。
 	  logseq.order-list-type:: number
-	- 校验组可以继承，表示它同时对应多个组，比如可以定义组去继承`Default`，这样即使在groups参数中只指定该组，
+	- 校验组可以继承，表示**它同时对应多个组**，比如可以**定义组去继承`Default`**，这样即使在groups参数中只指定该组，也会校验到未指定groups的校验注解。
 	  logseq.order-list-type:: number
-- 注意——一切，因此**一旦指定了校验组，那没有处在任何校验组中的校验注解不会生效**。如果希望此时也生效，应当在groups中加入Default组。
+	- 可以使用`GroupSequence`表示**按顺序校验多个组**，但它不会引入继承关系。
+	  logseq.order-list-type:: number
 - ```java
   interface OnInsert { }
   interface OnUpdate { }
   // 定义带校验的实体类（注意实体类上不需要加任何额外注解）
   @Data
   public static class SomeDto {
+    @NotNull
+    String key;
+    
     // 创建时ID必须为null，更新时必须不为空
     @Null(groups = OnInsert.class)
     @NotBlank(groups = OnUpdate.class)
     String id;
+    
     // 创建和更新时都需要验证value非空
     @NotBlank(groups = {OnInsert.class, OnUpdate.class})
     String value;
