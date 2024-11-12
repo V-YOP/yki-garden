@@ -271,7 +271,7 @@ article:: true
 			- `%p`：AM 或 PM
 			- `%w`：星期几，0是星期天
 			- `%z`：UTC偏移
-			- `%Z`：时区名称（考虑到有歧义，尽量别用）
+			- `%Z`：时区名称（考虑到有歧义，如中国时区CST=美国中部时区CST，尽量别用）
 			- `%j`：年中的第几天
 			- `%U/%W`：年中的第几周，分别以星期日和星期一作为每周第一天
 		- 注意，对naive时间，它是没有时区信息的，格式化时`%z`和`%Z`会得到空。
@@ -795,6 +795,7 @@ article:: true
 		- XXXBLOB -> `bytes`
 		  logseq.order-list-type:: number
 - ## HTTP请求
+  collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:18]
   :END:
