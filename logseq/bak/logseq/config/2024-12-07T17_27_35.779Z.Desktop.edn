@@ -299,7 +299,7 @@
  ;;  :charge-range    600}   ; Default value: 600
 
  ;; Favorites to list on the left sidebar
- :favorites ["job dashboard"]
+ :favorites ["关于单干的一些路子？" "人生目标" "关于画画的练习" "关于画画的鸡汤" "目标池" "每月目标" "snippet" "cheetsheet" "job dashboard"]
 
  ;; Set flashcards interval.
  ;; Expected value:
@@ -420,11 +420,12 @@
  ;;      ;use Percent-encoding for other invalid characters
  :file/name-format :triple-lowbar
  :graph/settings {:journal? false
- :excluded-pages? false
- :orphan-pages? true
+ :excluded-pages? true
+ :orphan-pages? false
  :builtin-pages? false}
  :editor/preferred-pasting-file? true
  :journal/page-title-format "yyyy-MM-dd"
  :graph/forcesettings {:link-dist 180
  :charge-strength -1000
- :charge-range 500}}
+ :charge-range 500}
+ :publishing/all-pages-public? true}
