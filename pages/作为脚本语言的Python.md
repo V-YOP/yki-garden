@@ -680,7 +680,6 @@ article:: true
 	  print(user_login(is_login, LOGIN_URL))
 	  ```
 - ## 数据可视化
-  collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:31]--[2024-08-28 Wed 12:20:25] =>  20:13:54
   :END:
@@ -698,8 +697,9 @@ article:: true
 		  logseq.order-list-type:: number
 		- `Figure Canvas`和`Backend`：绘图后端，和GUI后端相关，配置此可以将所绘制图表集成到其他GUI框架中，如PyQt5。
 		  logseq.order-list-type:: number
-	- `matplotlib`有两种调用方式——基于命令式和基于面向对象式的，**前者假设只有一个figure，一个axes，然后把所有操作该figure和axes的函数都暴露在顶层**。
+	- `matplotlib`有两种调用方式——基于命令式和基于面向对象式的，**前者假设只有一个figure，一个axes，然后把所有操作该figure和axes的函数都暴露在顶层**。在命令式中，`gcX`方法获取当前的X，如`gcf`得到当前figure，`gca`得到当前axes。
 	- 命令式的示例：
+	  collapsed:: true
 		- ```python
 		  import matplotlib.pyplot as plt
 		  
@@ -719,6 +719,7 @@ article:: true
 		  plt.show()
 		  ```
 	- 声明式的示例：
+	  collapsed:: true
 		- ```python
 		  import matplotlib.pyplot as plt
 		  
@@ -740,6 +741,7 @@ article:: true
 		  plt.show()
 		  ```
 	- 关于axes的坐标，axes的坐标根据三个参数去确定——行数，列数，第几个图表，三个参数均从1开始；python用3位整数去表示坐标。不同的axes可以有不同的行数、列数，此时会出现重叠，所以一般都保持行数列数固定。
+	-
 - ## 数据库操作
   collapsed:: true
   :LOGBOOK:
@@ -944,6 +946,7 @@ article:: true
 		  ```
 	-
 - ## Numpy
+  collapsed:: true
 	- Numpy是最常用的科学计算库，进行数据处理或矩阵运算时，它是不可或缺的。Numpy提供了高性能的n维数组的实现，以及提供了一些重要静态方法方便编码。
 	- 一些常用静态方法有：
 		- `array`：将数组转换为numpy数组，dtype参数指定类型
