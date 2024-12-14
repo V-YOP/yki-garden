@@ -952,4 +952,5 @@ article:: true
 		  logseq.order-list-type:: number
 		- `linspace`：线性空间，返回一个给定的范围内均匀的特定数量的个点，如`np.linspace(-10, 10, 100)`返回-10到10的均匀的100个点。更准确的说，`np.linspace(x, y, n)`是从向量x到向量y进行均匀地线性插值得到的n个点。
 		  logseq.order-list-type:: number
-	- Numpy提供了各种数学方法如三角函数，应用到向量的话会应用到它上面的每个值。
+	- Numpy提供了各种数学方法如三角函数，那些操作标量的方法，应用到数组的话会应用到它上面的每个值。`np.vectorize`方法将接受标量的方法转换为接受numpy数组的方法，操作numpy数组的每一个值。
+	- 一般来说，一维数组称为向量，二维数组称为矩阵。
