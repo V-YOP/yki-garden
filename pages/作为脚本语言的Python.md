@@ -950,5 +950,6 @@ article:: true
 		  logseq.order-list-type:: number
 		- `arange`：array range，类似range，但返回值是numpy数组，同时step可以为浮点数
 		  logseq.order-list-type:: number
-		- `linspace`：线性空间，返回一个给定的范围内均匀的特定数量的个点，如`np.linspace(-10, 10, 100)`返回-10到10的100个点
+		- `linspace`：线性空间，返回一个给定的范围内均匀的特定数量的个点，如`np.linspace(-10, 10, 100)`返回-10到10的均匀的100个点。更准确的说，`np.linspace(x, y, n)`是从向量x到向量y进行均匀地线性插值得到的n个点。
 		  logseq.order-list-type:: number
+	- Numpy提供了各种数学方法如三角函数，应用到向量的话会应用到它上面的每个值。
