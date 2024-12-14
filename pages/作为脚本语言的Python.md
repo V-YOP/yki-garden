@@ -240,7 +240,7 @@ article:: true
 		- `pathlib`：本身是路径操作库，但也提供了功能和内置`open`一样的方法用来打开文件
 		  logseq.order-list-type:: number
 	- 仅仅是要完整读取文件内容的话，可以使用`pathlib`的`read_text`，如果要流式读取等，才使用`open`。
-- ## 时间、日期处理
+- ## 时间、日期处理datetime
   collapsed:: true
 	- 注意要安装`tzdata`包，否则无法在win系统上使用时区！
 	- Python的时间处理主要来自包`datetime`，其提供了下面的类以抽象各种时间概念：
@@ -325,7 +325,7 @@ article:: true
 		  
 		  print(start_of_week(now))
 		  ```
-- ## 解析命令行参数
+- ## 解析命令行参数argparse
   collapsed:: true
 	- 参考 <https://blog.csdn.net/craftsman2020/article/details/129237425>。考虑到这个用的不会很多，用的时候现查文档就是了。
 	- `sys.argv`列表第一个参数是脚本名称，剩余是命令行参数，但Python提供了内置库`argparse`去解析命令行参数。
@@ -392,7 +392,7 @@ article:: true
 		  logseq.order-list-type:: number
 		- `append_const`：参数存储为列表，用户通过`const`参数传入该给定值
 		  logseq.order-list-type:: number
-- ## 系统调用
+- ## 系统调用subprocess
   collapsed:: true
 	- 系统调用使用`subprocess`包下的函数，Python在本进程中执行其他程序似乎有限制，所以建议使用子进程的形式。
 	- 这玩意儿酷炫之处在于它能自动处理不同命令行的转义，nodejs的标准库中即使使用数组传递命令，仍旧需要进行转义。
@@ -409,7 +409,7 @@ article:: true
 	  print(result)
 	  ```
 	- 注意：`subprocess.run`在返回值非0时不抛异常，除非给定`check=True`；`subprocess.check_output`则会抛出异常。
-- ## Excel操作
+- ## Excel操作Openpyxl
   collapsed:: true
 	- 关于Excel操作，我只需要进行简单读写就行了。使用`openpyxl`库。
 	- openpyxl基本上和Excel一致，提供3个抽象——Workbook，Worksheet和Cell。
@@ -494,7 +494,7 @@ article:: true
 		  
 		  wb.save(r'D:\DESKTOP\TMP\dest.xlsx')
 		  ```
-- ## xml/html解析
+- ## xml/html解析BeautifulSoup
   collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:22]
@@ -604,7 +604,7 @@ article:: true
 		  body > :last-child           # body 的最后一个子元素
 		  body > p:last-of-type        # body 的最后一个 p 子元素
 		  ```
-- ## 浏览器自动化
+- ## 浏览器自动化Selenium
   collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:25]
@@ -679,7 +679,8 @@ article:: true
 	          
 	  print(user_login(is_login, LOGIN_URL))
 	  ```
-- ## 数据可视化
+- ## 数据可视化Matplotlib
+  collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:31]--[2024-08-28 Wed 12:20:25] =>  20:13:54
   :END:
@@ -741,7 +742,6 @@ article:: true
 		  plt.show()
 		  ```
 	- 关于axes的坐标，axes的坐标根据三个参数去确定——行数，列数，第几个图表，三个参数均从1开始；python用3位整数去表示坐标。不同的axes可以有不同的行数、列数，此时会出现重叠，所以一般都保持行数列数固定。
-	-
 - ## 数据库操作
   collapsed:: true
   :LOGBOOK:
@@ -797,7 +797,7 @@ article:: true
 		  logseq.order-list-type:: number
 		- XXXBLOB -> `bytes`
 		  logseq.order-list-type:: number
-- ## HTTP请求
+- ## HTTP请求httpx
   collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:18]
@@ -879,7 +879,7 @@ article:: true
 	  asyncio.run(go())
 	  ```
 	- {{embed ((66e38f96-e83b-4fdc-a1d3-9b429e1aa8ce))}}
-- ## 图像处理
+- ## 图像处理PIL
   collapsed:: true
 	- Python内置了图像处理库`PIL`（年久失修，现在用的都是它的fork `Pillow`，两者认为是同义词），如果没有内置，就`pip install Pillow`安装。
 	- PIL中有如下实体/类/模块可能会常用：
@@ -945,8 +945,7 @@ article:: true
 		  img.show()
 		  ```
 	-
-- ## Numpy
-  collapsed:: true
+- ## 科学计算Numpy
 	- Numpy是最常用的科学计算库，进行数据处理或矩阵运算时，它是不可或缺的。Numpy提供了高性能的n维数组的实现，以及提供了一些重要静态方法方便编码。
 	- 一些常用静态方法有：
 		- `array`：将数组转换为numpy数组，dtype参数指定类型
