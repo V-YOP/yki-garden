@@ -680,7 +680,6 @@ article:: true
 	  print(user_login(is_login, LOGIN_URL))
 	  ```
 - ## 数据可视化matplotlib
-  collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:31]--[2024-08-28 Wed 12:20:25] =>  20:13:54
   :END:
@@ -742,6 +741,25 @@ article:: true
 		  plt.show()
 		  ```
 	- 关于axes的坐标，axes的坐标根据三个参数去确定——行数，列数，第几个图表，三个参数均从1开始；python用3位整数去表示坐标。不同的axes可以有不同的行数、列数，此时会出现重叠，所以一般都保持行数列数固定。
+	- 下面是一个绘制动画的示例，在jupyter中跑：
+		- ```python
+		  import matplotlib.pyplot as plt
+		  import numpy as np
+		  from IPython.display import HTML
+		  
+		  from matplotlib.animation import FuncAnimation
+		  
+		  xs = np.linspace(-10, 10, 100)
+		  line, = plt.plot(xs, np.sin(xs))
+		  def anim(frame: int):
+		      line.set_ydata(np.sin(xs - frame / 10))
+		      return line,
+		      
+		  ani = FuncAnimation(plt.gcf(), anim, frames=100, interval=50, blit=True)
+		  
+		  plt.close() # prevent the default static image to display
+		  HTML(ani.to_jshtml())
+		  ```
 - ## 数据库操作
   collapsed:: true
   :LOGBOOK:
@@ -946,6 +964,7 @@ article:: true
 		  ```
 	-
 - ## 科学计算numpy
+  collapsed:: true
 	- Numpy是最常用的科学计算库，进行数据处理或矩阵运算时，它是不可或缺的。Numpy提供了高性能的n维数组的实现，以及提供了一些重要静态方法方便编码。
 	- 一些常用静态方法有：
 		- `array`：将数组转换为numpy数组，dtype参数指定类型
