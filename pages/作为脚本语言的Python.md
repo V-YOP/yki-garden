@@ -409,7 +409,7 @@ article:: true
 	  print(result)
 	  ```
 	- 注意：`subprocess.run`在返回值非0时不抛异常，除非给定`check=True`；`subprocess.check_output`则会抛出异常。
-- ## Excel操作Openpyxl
+- ## Excel操作openpyxl
   collapsed:: true
 	- 关于Excel操作，我只需要进行简单读写就行了。使用`openpyxl`库。
 	- openpyxl基本上和Excel一致，提供3个抽象——Workbook，Worksheet和Cell。
@@ -494,7 +494,7 @@ article:: true
 		  
 		  wb.save(r'D:\DESKTOP\TMP\dest.xlsx')
 		  ```
-- ## xml/html解析BeautifulSoup
+- ## xml/html解析beautifulsoup4
   collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:22]
@@ -604,7 +604,7 @@ article:: true
 		  body > :last-child           # body 的最后一个子元素
 		  body > p:last-of-type        # body 的最后一个 p 子元素
 		  ```
-- ## 浏览器自动化Selenium
+- ## 浏览器自动化selenium
   collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:25]
@@ -679,7 +679,7 @@ article:: true
 	          
 	  print(user_login(is_login, LOGIN_URL))
 	  ```
-- ## 数据可视化Matplotlib
+- ## 数据可视化matplotlib
   collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:31]--[2024-08-28 Wed 12:20:25] =>  20:13:54
@@ -945,7 +945,7 @@ article:: true
 		  img.show()
 		  ```
 	-
-- ## 科学计算Numpy
+- ## 科学计算numpy
 	- Numpy是最常用的科学计算库，进行数据处理或矩阵运算时，它是不可或缺的。Numpy提供了高性能的n维数组的实现，以及提供了一些重要静态方法方便编码。
 	- 一些常用静态方法有：
 		- `array`：将数组转换为numpy数组，dtype参数指定类型
