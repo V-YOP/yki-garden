@@ -326,6 +326,7 @@ article:: true
 		  print(start_of_week(now))
 		  ```
 - ## 解析命令行参数
+  collapsed:: true
 	- 参考 <https://blog.csdn.net/craftsman2020/article/details/129237425>。考虑到这个用的不会很多，用的时候现查文档就是了。
 	- `sys.argv`列表第一个参数是脚本名称，剩余是命令行参数，但Python提供了内置库`argparse`去解析命令行参数。
 	- `argparse`功能强大，允许声明式地添加参数，选项，提供完善的帮助消息，以及通过字典形式去获取用户输入。
@@ -679,7 +680,6 @@ article:: true
 	  print(user_login(is_login, LOGIN_URL))
 	  ```
 - ## 数据可视化
-  collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:31]--[2024-08-28 Wed 12:20:25] =>  20:13:54
   :END:
