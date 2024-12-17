@@ -117,6 +117,7 @@ article:: true
 	  
 	  ```
 - ## 文件/路径操作
+  collapsed:: true
 	- 考虑进行文件/路径操作时优先使用`pathlib`。
 	- 文件操作主要使用如下标准库和方法：
 		- `os`：提供一切POSIX提供的玩意儿，在这里包括但不限于删除，重命名，创建/读取文件夹，删除非空文件夹，修改工作目录等操作。
@@ -325,7 +326,6 @@ article:: true
 		  print(start_of_week(now))
 		  ```
 - ## 解析命令行参数
-  collapsed:: true
 	- 参考 <https://blog.csdn.net/craftsman2020/article/details/129237425>。考虑到这个用的不会很多，用的时候现查文档就是了。
 	- `sys.argv`列表第一个参数是脚本名称，剩余是命令行参数，但Python提供了内置库`argparse`去解析命令行参数。
 	- `argparse`功能强大，允许声明式地添加参数，选项，提供完善的帮助消息，以及通过字典形式去获取用户输入。
