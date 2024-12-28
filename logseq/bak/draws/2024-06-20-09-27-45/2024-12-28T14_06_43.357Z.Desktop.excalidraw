@@ -5,8 +5,8 @@
   "elements": [
     {
       "type": "text",
-      "version": 182,
-      "versionNonce": 975338431,
+      "version": 188,
+      "versionNonce": 1534549941,
       "isDeleted": false,
       "id": "JRpeephZ150C-a3Oepfry",
       "fillStyle": "hachure",
@@ -26,7 +26,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868002190,
+      "updated": 1733751410623,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -37,7 +37,7 @@
       "containerId": null,
       "originalText": "考虑找到点A的沿短边中垂线的轴对称点，以及对中点的对称点， 这里假装有个坐标系",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "line",
@@ -489,8 +489,8 @@
     },
     {
       "type": "text",
-      "version": 33,
-      "versionNonce": 1410540607,
+      "version": 39,
+      "versionNonce": 1106731547,
       "isDeleted": false,
       "id": "ZhanA2imvhu_ARvdsDQJP",
       "fillStyle": "hachure",
@@ -510,7 +510,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868002190,
+      "updated": 1733751410624,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -521,7 +521,7 @@
       "containerId": null,
       "originalText": "A",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -1065,8 +1065,8 @@
     },
     {
       "type": "text",
-      "version": 82,
-      "versionNonce": 800693471,
+      "version": 88,
+      "versionNonce": 87793941,
       "isDeleted": false,
       "id": "JO8GiS4JUzd4Q4U06zUEM",
       "fillStyle": "hachure",
@@ -1086,7 +1086,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868002190,
+      "updated": 1733751410624,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1097,7 +1097,7 @@
       "containerId": null,
       "originalText": "A",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -1189,8 +1189,8 @@
     },
     {
       "type": "text",
-      "version": 16,
-      "versionNonce": 1076472433,
+      "version": 22,
+      "versionNonce": 916088507,
       "isDeleted": false,
       "id": "AhanowADMOikL3j5zh6yw",
       "fillStyle": "hachure",
@@ -1210,7 +1210,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868002191,
+      "updated": 1733751410625,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1221,12 +1221,12 @@
       "containerId": null,
       "originalText": "X",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 20,
-      "versionNonce": 1886466335,
+      "version": 26,
+      "versionNonce": 1672525429,
       "isDeleted": false,
       "id": "d3awAwRQHshDD7k_JRRZM",
       "fillStyle": "hachure",
@@ -1251,7 +1251,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1718868002191,
+      "updated": 1733751410625,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1262,7 +1262,7 @@
       "containerId": null,
       "originalText": "Y",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "freedraw",
@@ -1478,8 +1478,8 @@
     },
     {
       "type": "text",
-      "version": 126,
-      "versionNonce": 1764000305,
+      "version": 132,
+      "versionNonce": 1974720347,
       "isDeleted": false,
       "id": "NiihiliDufBBqbIssWAX4",
       "fillStyle": "hachure",
@@ -1499,7 +1499,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868002191,
+      "updated": 1733751410625,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1510,7 +1510,7 @@
       "containerId": null,
       "originalText": "轴对称下Y轴不变，所以这里找X轴的对称分量",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "line",
@@ -2242,8 +2242,8 @@
     },
     {
       "type": "text",
-      "version": 130,
-      "versionNonce": 2120776191,
+      "version": 136,
+      "versionNonce": 1369186261,
       "isDeleted": false,
       "id": "RgB65xkK1v9onmJoeUNIw",
       "fillStyle": "hachure",
@@ -2263,7 +2263,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868002191,
+      "updated": 1733751410626,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2274,7 +2274,7 @@
       "containerId": null,
       "originalText": "A",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -2858,8 +2858,8 @@
     },
     {
       "type": "text",
-      "version": 138,
-      "versionNonce": 591921791,
+      "version": 144,
+      "versionNonce": 1033253883,
       "isDeleted": false,
       "id": "mz9VJnqdu60Zq0fWUSV65",
       "fillStyle": "hachure",
@@ -2879,7 +2879,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868002191,
+      "updated": 1733751410626,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -2890,7 +2890,7 @@
       "containerId": null,
       "originalText": "然后，从对称后的点做Y轴平行线，从A点做X轴平行线，焦点即为对称点",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "line",
@@ -3182,8 +3182,8 @@
     },
     {
       "type": "text",
-      "version": 25,
-      "versionNonce": 1690034353,
+      "version": 31,
+      "versionNonce": 890461493,
       "isDeleted": false,
       "id": "Y4Tunx2P-i1iAmemw-L87",
       "fillStyle": "hachure",
@@ -3203,7 +3203,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868002191,
+      "updated": 1733751410627,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -3214,12 +3214,12 @@
       "containerId": null,
       "originalText": "轴对称",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 14,
-      "versionNonce": 1039433439,
+      "version": 20,
+      "versionNonce": 1581513883,
       "isDeleted": false,
       "id": "tLXoJgkulx0YilVk1tOvB",
       "fillStyle": "hachure",
@@ -3239,7 +3239,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868002191,
+      "updated": 1733751410627,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -3250,7 +3250,7 @@
       "containerId": null,
       "originalText": "中心对称",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "line",
@@ -3702,8 +3702,8 @@
     },
     {
       "type": "text",
-      "version": 66,
-      "versionNonce": 1477483423,
+      "version": 72,
+      "versionNonce": 360443541,
       "isDeleted": false,
       "id": "qE1i1vmUuJFqGVGcUWWOx",
       "fillStyle": "hachure",
@@ -3723,7 +3723,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868004139,
+      "updated": 1733751410628,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -3734,7 +3734,7 @@
       "containerId": null,
       "originalText": "A",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -3830,8 +3830,8 @@
     },
     {
       "type": "text",
-      "version": 49,
-      "versionNonce": 2089430015,
+      "version": 55,
+      "versionNonce": 57651515,
       "isDeleted": false,
       "id": "L99G4G5xF-1euNkfUsBH6",
       "fillStyle": "hachure",
@@ -3851,7 +3851,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868004139,
+      "updated": 1733751410628,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -3862,12 +3862,12 @@
       "containerId": null,
       "originalText": "X",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 53,
-      "versionNonce": 931288095,
+      "version": 59,
+      "versionNonce": 1904956405,
       "isDeleted": false,
       "id": "iP6BuSbkitMOQNDHSHpNa",
       "fillStyle": "hachure",
@@ -3892,7 +3892,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1718868004139,
+      "updated": 1733751410628,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -3903,7 +3903,7 @@
       "containerId": null,
       "originalText": "Y",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "line",
@@ -4039,8 +4039,8 @@
     },
     {
       "type": "text",
-      "version": 27,
-      "versionNonce": 1329282993,
+      "version": 33,
+      "versionNonce": 1048302043,
       "isDeleted": false,
       "id": "7CHzJUbad5bExBG_OLy-5",
       "fillStyle": "hachure",
@@ -4060,7 +4060,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868215523,
+      "updated": 1733751410629,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -4071,7 +4071,7 @@
       "containerId": null,
       "originalText": "首先能够知道，中心对称的话连线必过中点，所以可以先做一下",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "line",
@@ -4119,8 +4119,8 @@
     },
     {
       "type": "text",
-      "version": 42,
-      "versionNonce": 243949393,
+      "version": 48,
+      "versionNonce": 1430719829,
       "isDeleted": false,
       "id": "OXezNbxP3AgAJAEBeTKBE",
       "fillStyle": "hachure",
@@ -4140,7 +4140,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868363974,
+      "updated": 1733751410630,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -4151,7 +4151,7 @@
       "containerId": null,
       "originalText": "此后，只需要一个分量便可确认对称点，这里和轴对称做同样操作",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "line",
@@ -4603,8 +4603,8 @@
     },
     {
       "type": "text",
-      "version": 96,
-      "versionNonce": 72364799,
+      "version": 102,
+      "versionNonce": 1350229627,
       "isDeleted": false,
       "id": "uSFfDuk_bl_zr25grtaqM",
       "fillStyle": "hachure",
@@ -4624,7 +4624,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868377913,
+      "updated": 1733751410630,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -4635,7 +4635,7 @@
       "containerId": null,
       "originalText": "A",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "arrow",
@@ -4731,8 +4731,8 @@
     },
     {
       "type": "text",
-      "version": 79,
-      "versionNonce": 435453791,
+      "version": 85,
+      "versionNonce": 805608117,
       "isDeleted": false,
       "id": "UpnbSK_fm1LzURs19Rvs7",
       "fillStyle": "hachure",
@@ -4752,7 +4752,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868377913,
+      "updated": 1733751410630,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -4763,12 +4763,12 @@
       "containerId": null,
       "originalText": "X",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "text",
-      "version": 83,
-      "versionNonce": 252394367,
+      "version": 89,
+      "versionNonce": 875517723,
       "isDeleted": false,
       "id": "BOVUDyygQzcIiserXfCre",
       "fillStyle": "hachure",
@@ -4793,7 +4793,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1718868377913,
+      "updated": 1733751410630,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -4804,7 +4804,7 @@
       "containerId": null,
       "originalText": "Y",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "line",
@@ -5732,8 +5732,8 @@
     },
     {
       "type": "text",
-      "version": 16,
-      "versionNonce": 700107167,
+      "version": 22,
+      "versionNonce": 1785297941,
       "isDeleted": false,
       "id": "qwKGs40iNFofLU5FaHt0y",
       "fillStyle": "hachure",
@@ -5753,7 +5753,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718868533905,
+      "updated": 1733751410631,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -5764,7 +5764,7 @@
       "containerId": null,
       "originalText": "一个实际的例子：",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "line",

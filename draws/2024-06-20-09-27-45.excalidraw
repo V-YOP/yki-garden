@@ -37,7 +37,7 @@
       "containerId": null,
       "originalText": "考虑找到点A的沿短边中垂线的轴对称点，以及对中点的对称点， 这里假装有个坐标系",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -521,7 +521,7 @@
       "containerId": null,
       "originalText": "A",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "arrow",
@@ -1097,7 +1097,7 @@
       "containerId": null,
       "originalText": "A",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "arrow",
@@ -1221,7 +1221,7 @@
       "containerId": null,
       "originalText": "X",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
@@ -1262,7 +1262,7 @@
       "containerId": null,
       "originalText": "Y",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "freedraw",
@@ -1510,7 +1510,7 @@
       "containerId": null,
       "originalText": "轴对称下Y轴不变，所以这里找X轴的对称分量",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -2274,7 +2274,7 @@
       "containerId": null,
       "originalText": "A",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "arrow",
@@ -2890,7 +2890,7 @@
       "containerId": null,
       "originalText": "然后，从对称后的点做Y轴平行线，从A点做X轴平行线，焦点即为对称点",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -3214,7 +3214,7 @@
       "containerId": null,
       "originalText": "轴对称",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
@@ -3250,7 +3250,7 @@
       "containerId": null,
       "originalText": "中心对称",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -3734,7 +3734,7 @@
       "containerId": null,
       "originalText": "A",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "arrow",
@@ -3862,7 +3862,7 @@
       "containerId": null,
       "originalText": "X",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
@@ -3903,7 +3903,7 @@
       "containerId": null,
       "originalText": "Y",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -4071,7 +4071,7 @@
       "containerId": null,
       "originalText": "首先能够知道，中心对称的话连线必过中点，所以可以先做一下",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -4151,7 +4151,7 @@
       "containerId": null,
       "originalText": "此后，只需要一个分量便可确认对称点，这里和轴对称做同样操作",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -4635,7 +4635,7 @@
       "containerId": null,
       "originalText": "A",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "arrow",
@@ -4763,7 +4763,7 @@
       "containerId": null,
       "originalText": "X",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "text",
@@ -4804,7 +4804,7 @@
       "containerId": null,
       "originalText": "Y",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",
@@ -5764,7 +5764,7 @@
       "containerId": null,
       "originalText": "一个实际的例子：",
       "lineHeight": 1.25,
-      "baseline": 18
+      "baseline": 17
     },
     {
       "type": "line",

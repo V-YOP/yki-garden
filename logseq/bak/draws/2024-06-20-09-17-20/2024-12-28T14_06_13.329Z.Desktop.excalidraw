@@ -581,8 +581,8 @@
     },
     {
       "type": "text",
-      "version": 11,
-      "versionNonce": 1746418705,
+      "version": 17,
+      "versionNonce": 1129265877,
       "isDeleted": false,
       "id": "KqpuhJu8ajipi4cp7GOOm",
       "fillStyle": "hachure",
@@ -602,7 +602,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718846703060,
+      "updated": 1733751410673,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -613,7 +613,7 @@
       "containerId": null,
       "originalText": "两消失点在同一垂线上",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     }
   ],
   "appState": {

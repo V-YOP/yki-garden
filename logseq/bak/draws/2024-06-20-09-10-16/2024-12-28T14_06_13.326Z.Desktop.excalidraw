@@ -1734,8 +1734,8 @@
     },
     {
       "type": "text",
-      "version": 55,
-      "versionNonce": 897450961,
+      "version": 61,
+      "versionNonce": 1013657973,
       "isDeleted": false,
       "id": "tQyx7wHx53znvp1J-jLZG",
       "fillStyle": "hachure",
@@ -1755,7 +1755,7 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1718846729270,
+      "updated": 1733751410665,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1766,7 +1766,7 @@
       "containerId": null,
       "originalText": "侧视图",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     },
     {
       "type": "freedraw",
