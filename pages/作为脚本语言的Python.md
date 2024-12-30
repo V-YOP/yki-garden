@@ -495,7 +495,6 @@ article:: true
 		  wb.save(r'D:\DESKTOP\TMP\dest.xlsx')
 		  ```
 - ## xml/html解析beautifulsoup4
-  collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:22]
   :END:
@@ -680,6 +679,7 @@ article:: true
 	  print(user_login(is_login, LOGIN_URL))
 	  ```
 - ## 数据可视化matplotlib
+  collapsed:: true
   :LOGBOOK:
   CLOCK: [2024-08-27 Tue 16:06:31]--[2024-08-28 Wed 12:20:25] =>  20:13:54
   :END:
@@ -699,6 +699,7 @@ article:: true
 		  logseq.order-list-type:: number
 	- `matplotlib`有两种调用方式——基于命令式和基于面向对象式的，**前者假设只有一个figure，一个axes，然后把所有操作该figure和axes的函数都暴露在顶层**。在命令式中，`gcX`方法获取当前的X，如`gcf`得到当前figure，`gca`得到当前axes。
 	- 命令式的示例：
+	  collapsed:: true
 		- ```python
 		  import matplotlib.pyplot as plt
 		  
@@ -718,6 +719,7 @@ article:: true
 		  plt.show()
 		  ```
 	- 声明式的示例：
+	  collapsed:: true
 		- ```python
 		  import matplotlib.pyplot as plt
 		  
